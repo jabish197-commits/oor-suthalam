@@ -1,0 +1,22 @@
+# Local HTTP deployment for this laptop. Use HTTPS and production settings online.
+[Unit]
+Description=Oor Suthalam local Ubuntu backend
+After=network.target docker.service
+Wants=docker.service
+
+[Service]
+Type=simple
+User=jabish
+WorkingDirectory=/home/jabish/apps/oor-suthalam/server
+Environment=NODE_ENV=development
+Environment=PORT=5001
+Environment=HOST=127.0.0.1
+Environment=MONGO_URI=mongodb://127.0.0.1:27018/oor_suthalam_local
+Environment=CLIENT_URL=http://localhost:8081
+ExecStart=/usr/bin/node --use-system-ca src/server.js
+Restart=on-failure
+RestartSec=5
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

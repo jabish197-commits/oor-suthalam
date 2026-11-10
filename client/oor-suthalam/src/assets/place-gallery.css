@@ -1,0 +1,206 @@
+.place-gallery {
+  margin-top: 40px;
+}
+.place-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+.place-gallery-card {
+  border: 1px solid #e5e0d3;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+}
+.place-gallery-photo {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 0;
+  padding: 0;
+  background: #dce7df;
+  cursor: zoom-in;
+}
+.place-gallery-photo img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.place-gallery-photo span {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  background: #183b2fe0;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 14px;
+  font-size: 0.75rem;
+}
+.place-gallery-caption {
+  padding: 20px;
+}
+.place-gallery-caption h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+.place-gallery-caption p {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.place-gallery-placeholder {
+  min-height: 155px;
+  background: linear-gradient(130deg, #e4eddf, #f5eedc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+  color: #677560;
+}
+.place-gallery-placeholder > span {
+  font:
+    400 3rem Georgia,
+    serif;
+}
+.place-gallery-placeholder small {
+  font-size: 0.7rem;
+}
+.destination-detail-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+.destination-detail-tabs button {
+  padding: 10px 17px;
+  border: 1px solid #dadfd2;
+  background: #fff;
+  border-radius: 24px;
+}
+.destination-detail-tabs button[aria-pressed='true'] {
+  background: #2e5846;
+  color: white;
+  border-color: #2e5846;
+}
+.place-photo-dialog {
+  max-width: min(900px, 94vw);
+  max-height: 90vh;
+  padding: 24px;
+  border: 0;
+  border-radius: 18px;
+}
+.place-photo-dialog::backdrop {
+  background: #0c201bcc;
+}
+.place-photo-dialog > img {
+  display: block;
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  margin: auto;
+}
+.place-photo-dialog > button {
+  float: right;
+  border: 0;
+  background: #e9eee4;
+  border-radius: 50%;
+  font-size: 24px;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 12px;
+}
+.admin-video-preview {
+  width: 100%;
+  max-height: 360px;
+  object-fit: contain;
+  border-radius: 14px;
+  background: #172d24;
+}
+.admin-media-form {
+  max-width: 850px;
+}
+.admin-gallery-select {
+  display: block;
+  max-width: 500px;
+  margin-bottom: 24px;
+}
+.admin-gallery-editor {
+  max-width: 850px;
+}
+.admin-gallery-editor .summary-row h3 {
+  margin: 0;
+}
+.home-discovery-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.86rem;
+}
+.home-discovery-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 650px) {
+  .place-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  .place-gallery-photo img {
+    height: 220px;
+  }
+  .home-discovery-links {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .admin-gallery-editor .panel {
+    padding: 18px;
+  }
+}
+.admin-assistant {
+  max-width: 1100px;
+}
+.admin-assistant form.panel {
+  max-width: 740px;
+}
+.admin-assistant-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.admin-assistant-prompts {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.admin-assistant-prompts button {
+  background: #f3f5f0;
+  border: 1px solid #dce1d7;
+  border-radius: 18px;
+  font-size: 0.75rem;
+  padding: 8px 13px;
+}
+.admin-assistant-stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.admin-assistant-stats > div {
+  background: #f2f5ed;
+  border-radius: 12px;
+  padding: 15px;
+}
+.admin-assistant-stats small {
+  display: block;
+  font-size: 0.7rem;
+}
+.admin-assistant-stats strong {
+  font-size: 1.7rem;
+}
+@media (max-width: 700px) {
+  .admin-assistant-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.destination-card .destination-art { position: relative; }
+.destination-slideshow-toggle { position: absolute; right: 10px; bottom: 10px; z-index: 2; border: 1px solid #ffffff70; border-radius: 20px; background: #152b24cc; color: white; padding: 7px 12px; cursor: pointer; }
+.destination-card .destination-art img { cursor: pointer; }
+.destination-card a.card-body { display: block; color: inherit; text-decoration: none; }

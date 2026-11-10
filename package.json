@@ -1,0 +1,14 @@
+{
+  "name": "oor-suthalam",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "format": "node client/oor-suthalam/node_modules/prettier/bin/prettier.cjs --write client/oor-suthalam/src server/src server/scripts scripts",
+    "format:check": "node client/oor-suthalam/node_modules/prettier/bin/prettier.cjs --check client/oor-suthalam/src server/src server/scripts scripts",
+    "dev:local": "node scripts/dev.js --local",
+    "dev": "node scripts/dev.js",
+    "setup": "npm --prefix server install && npm --prefix client/oor-suthalam install",
+    "build": "npm --prefix client/oor-suthalam run build",
+    "test": "npm --prefix server test && npm --prefix client/oor-suthalam test"
+  }
+}

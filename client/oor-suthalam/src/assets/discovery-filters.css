@@ -1,0 +1,180 @@
+.destination-filterbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 18px 0 24px;
+}
+.destination-search {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  background: #fff;
+  border: 1px solid #dce0d5;
+  border-radius: 30px;
+  padding: 0 16px;
+  min-width: 120px;
+}
+.destination-search input {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 12px 0 !important;
+  font-size: 0.9rem !important;
+  min-width: 0;
+}
+.destination-search svg {
+  flex-shrink: 0;
+  color: #64745d;
+}
+.destination-category {
+  width: 125px !important;
+  min-width: 0;
+  padding: 11px 12px !important;
+  border-radius: 22px !important;
+  font-size: 0.8rem !important;
+}
+.destination-options {
+  position: relative;
+  flex-shrink: 0;
+}
+.destination-options summary {
+  cursor: pointer;
+  border: 1px solid #dce0d5;
+  border-radius: 22px;
+  padding: 11px 15px;
+  list-style: none;
+  font-size: 0.8rem;
+  background: #f5f7ef;
+}
+.destination-options > div {
+  position: absolute;
+  z-index: 15;
+  right: 0;
+  top: 48px;
+  width: 250px;
+  padding: 18px;
+  background: white;
+  border: 1px solid #dce0d5;
+  border-radius: 16px;
+  box-shadow: 0 14px 35px #24472d20;
+  display: grid;
+  gap: 12px;
+}
+.destination-options small {
+  font-size: 0.7rem;
+  color: #6e7868;
+}
+.destination-location {
+  border-top: 1px solid #e0e3d7;
+  border-bottom: 1px solid #e0e3d7;
+  padding: 18px 0;
+}
+.destination-location h3 {
+  margin: 0 0 10px;
+  font-size: 1rem !important;
+}
+.destination-location > strong {
+  display: block;
+  color: #3c6c4c;
+  font-size: 1.3rem;
+}
+.destination-location small {
+  display: block;
+  font-size: 0.7rem;
+  color: #74806a;
+  line-height: 1.6;
+}
+.destination-location > div {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 13px 0;
+}
+.destination-location .button {
+  font-size: 0.8rem;
+  padding: 10px 12px;
+}
+.destination-distance {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 12px;
+  background: #edf4e6;
+  color: #4b7041;
+  margin-bottom: 8px;
+}
+.destination-detail-page .page-heading {
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .destination-filterbar {
+    gap: 7px;
+    flex-wrap: wrap;
+  }
+  .destination-search {
+    flex-basis: 100%;
+  }
+  .destination-category {
+    flex: 1;
+  }
+  .destination-options > div {
+    width: 240px;
+  }
+  .destination-filterbar {
+    margin-top: 10px;
+  }
+}
+.destination-map-frame {
+  width: 100%;
+  height: 300px;
+  border: 1px solid #dce1d5;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+.destination-map-tab {
+  padding: 9px 14px;
+  border: 1px solid #d9dfd2;
+  border-radius: 20px;
+  background: #f2f5e9;
+  color: #49633d;
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+}
+.destination-map-tab[aria-pressed='true'] {
+  background: #3b634c;
+  color: white;
+}
+.destination-search input {
+  padding: 9px 0 !important;
+  font-size: 0.82rem !important;
+}
+.destination-category {
+  width: 110px !important;
+  padding: 8px 11px !important;
+  font-size: 0.76rem !important;
+}
+.destination-options summary {
+  padding: 9px 13px;
+  font-size: 0.76rem;
+}
+.destination-detail-tabs {
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.destination-detail-tabs button {
+  font-size: 0.8rem;
+  padding: 9px 13px;
+  margin: 0;
+}
+
+/* Compact search without mobile focus zoom. */
+.destination-filterbar { gap: 8px; margin: 12px 0 18px; }
+.destination-search { max-width: 420px; border-radius: 12px; padding: 0 12px; }
+.destination-search input { padding: 9px 0 !important; height: 40px; }
+@media(max-width:800px) { .travel-site input, .travel-site textarea, .travel-site select, .destination-search input { font-size:16px !important; } .destination-search { flex:1; } }
+
+.destination-map-frame.leaflet-container { z-index: 0; height: 320px; width: 100%; }
+.destination-origin-select { display: grid; gap: 7px; max-width: 320px; margin: 16px 0; }
+
+.location-help { color: #5b6559; background: #eff3e9; padding: 10px 14px; border-radius: 10px; font-size: 14px; line-height: 1.5; }

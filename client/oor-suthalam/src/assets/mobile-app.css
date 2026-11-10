@@ -1,0 +1,1764 @@
+.mobile-app-nav,
+.mobile-home-welcome,
+.mobile-trip-shortcuts {
+  display: none;
+}
+@media (max-width: 800px) {
+  .travel-site.mobile-app {
+    padding-bottom: calc(75px + env(safe-area-inset-bottom));
+    background: #f8f6f0;
+  }
+  .mobile-app .navbar {
+    position: sticky;
+    top: 0;
+    min-height: 64px;
+    padding: 5px 20px;
+    background: #fffcf6f5;
+    border-bottom: 1px solid #eee8db;
+    box-shadow: 0 3px 12px #47372205;
+  }
+  .mobile-app .brand-logo {
+    width: 48px;
+    height: 48px;
+  }
+  .mobile-app .navbar .nav-actions {
+    display: none;
+  }
+  .mobile-app .navbar .mobile-nav-toggle {
+    grid-column: 3;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background: #eee8dc;
+  }
+  .mobile-app .navbar nav {
+    padding: 15px 0;
+    gap: 23px;
+  }
+  .mobile-app .navbar nav a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .mobile-app-nav {
+    display: flex;
+    position: fixed;
+    z-index: 50;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    justify-content: space-around;
+    background: #fffdf9f5;
+    border-top: 1px solid #eee6d6;
+    padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+    backdrop-filter: blur(20px);
+    box-shadow: 0 -6px 30px #352c2108;
+  }
+  .mobile-app-nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    min-height: 49px;
+    min-width: 56px;
+    color: #8d877d;
+    text-decoration: none;
+    border-radius: 12px;
+    transition:
+      color 0.2s,
+      background 0.2s;
+  }
+  .mobile-app-nav a > span {
+    height: 24px;
+    display: grid;
+    place-items: center;
+  }
+  .mobile-app-nav small {
+    font-size: 9px;
+    font-weight: 600;
+  }
+  .mobile-app-nav a.active {
+    color: #a34f34;
+    background: #f6eee1;
+  }
+  .mobile-app-nav .mobile-plan-link > span {
+    width: 43px;
+    height: 35px;
+    border-radius: 12px;
+    background: #b75a3f;
+    color: white;
+    box-shadow: 0 4px 10px #a34f3425;
+    margin-top: -17px;
+  }
+  .mobile-app-nav .mobile-plan-link {
+    padding-top: 4px;
+  }
+  .mobile-app-nav a:active {
+    transform: scale(0.96);
+  }
+  .mobile-home-welcome {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 22px 20px;
+  }
+  .mobile-home-welcome small {
+    font-size: 8px;
+    letter-spacing: 0.14em;
+    color: #a08f79;
+  }
+  .travel-site .mobile-home-welcome h2 {
+    font-family: Inter, 'Segoe UI', sans-serif;
+    font-size: 25px;
+    font-weight: 650;
+    letter-spacing: -0.04em;
+    margin: 7px 0 3px;
+  }
+  .mobile-home-welcome p {
+    font-size: 12px;
+    margin: 0;
+  }
+  .mobile-saved-shortcut {
+    border: 1px solid #e9dfce;
+    border-radius: 14px;
+    background: #fffaf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 51px;
+    height: 58px;
+    text-decoration: none;
+    font-size: 26px;
+    color: #a25838 !important;
+  }
+  .mobile-saved-shortcut span {
+    font-size: 8px;
+    font-weight: 600;
+    margin-top: -3px;
+  }
+  .mobile-app .original-travel-banner {
+    margin: 0 18px;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px #5d45230b;
+  }
+  .mobile-app .original-travel-banner > img {
+    width: 100%;
+    height: auto;
+  }
+  .mobile-app .original-travel-banner .travel-animation {
+    top: 0;
+  }
+  .mobile-app .cinematic-home .original-travel-banner + .trip-finder {
+    margin: 20px 18px 0;
+    padding: 18px;
+    border: 0;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px #45351e08;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .mobile-app .trip-finder label {
+    gap: 7px;
+  }
+  .mobile-app .trip-finder label + label {
+    border-left: 0;
+    padding-left: 0;
+    border-top: 1px solid #eee9df;
+    padding-top: 13px;
+  }
+  .mobile-app .trip-finder label > span {
+    font-size: 8px;
+    letter-spacing: 0.13em;
+  }
+  .mobile-app .trip-finder input,
+  .mobile-app .trip-finder select {
+    min-height: 34px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .mobile-app .trip-finder .button {
+    min-height: 48px;
+    font-size: 13px;
+    width: 100%;
+    border-radius: 12px;
+    background: #b75a3f;
+  }
+  .mobile-trip-shortcuts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 16px 18px 0;
+  }
+  .mobile-trip-shortcuts > a {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border: 1px solid #eadcc4;
+    border-radius: 14px;
+    background: #f1e7d3;
+    text-decoration: none;
+    padding: 14px 10px;
+    min-height: 75px;
+  }
+  .mobile-trip-shortcuts > a + a {
+    background: #eee6df;
+    border-color: #e6d8cc;
+  }
+  .mobile-trip-shortcuts > a > span {
+    font-size: 25px;
+    color: #a3774b;
+  }
+  .mobile-trip-shortcuts strong {
+    display: block;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+  .mobile-trip-shortcuts small {
+    display: block;
+    font-size: 9px;
+    color: #95775c;
+    margin-top: 4px;
+  }
+  .mobile-app .explore-section {
+    padding: 31px 18px 0;
+  }
+  .mobile-app .section-heading {
+    gap: 12px;
+    margin-bottom: 17px;
+  }
+  .mobile-app .section-heading .eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.1em;
+  }
+  .mobile-app .cinematic-home .section-heading h2 {
+    font-size: 23px;
+    line-height: 1.2;
+    margin-top: 8px;
+  }
+  .mobile-app .section-heading .escape-text-link {
+    font-size: 9px;
+    max-width: 85px;
+    text-align: right;
+    margin-top: 22px;
+  }
+  .mobile-app .mood-grid {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+    padding: 0 0 10px;
+    scrollbar-width: thin;
+  }
+  .mobile-app .mood-card {
+    flex: 0 0 145px;
+    scroll-snap-align: start;
+    min-height: 65px;
+    border: 0;
+    border-radius: 14px;
+    background: #eee7d9;
+    padding: 11px;
+    gap: 9px;
+  }
+  .mobile-app .mood-card h3 {
+    font-size: 10px;
+  }
+  .mobile-app .mood-card > span {
+    background: #fff9ed;
+    width: 31px;
+    height: 34px;
+  }
+  .mobile-app .mood-card > b {
+    display: none;
+  }
+  .mobile-app .cinematic-home .card-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin;
+    padding: 4px 2px 18px;
+  }
+  .mobile-app .cinematic-home .card-grid .destination-card {
+    flex: 0 0 78%;
+    scroll-snap-align: start;
+    border: 0;
+    box-shadow: 0 5px 15px #3f2b1306;
+    border-radius: 18px;
+  }
+  .mobile-app .cinematic-home .destination-art {
+    height: 185px;
+  }
+  .mobile-app .cinematic-home .card-body {
+    padding: 16px;
+  }
+  .mobile-app .cinematic-home .card-body h3 {
+    font-size: 20px;
+  }
+  .mobile-app .card-body > p {
+    font-size: 11px;
+    min-height: 38px;
+  }
+  .mobile-app .card-body > small {
+    font-size: 8px;
+  }
+  .mobile-app .card-bottom strong {
+    font-size: 16px;
+  }
+  .mobile-app .card-bottom small {
+    font-size: 9px;
+  }
+  .mobile-app .tag {
+    font-size: 8px;
+    padding: 6px 9px;
+  }
+  .mobile-app .cinematic-home .planner-invite {
+    margin: 25px 18px 0;
+    padding: 25px;
+    border-radius: 20px;
+    gap: 22px;
+  }
+  .mobile-app .planner-invite h2 {
+    font-size: 30px;
+  }
+  .mobile-app .planner-invite .button {
+    width: 100%;
+    border-radius: 12px;
+  }
+  .mobile-app .itinerary-peek {
+    padding: 17px;
+  }
+  .mobile-app .itinerary-peek > div {
+    padding: 16px 0;
+  }
+  .mobile-app .escape-package-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 13px;
+    padding: 0 0 12px;
+    scroll-snap-type: x mandatory;
+  }
+  .mobile-app .escape-package {
+    flex: 0 0 86%;
+    scroll-snap-align: start;
+    padding: 21px;
+  }
+  .mobile-app .escape-package h3 {
+    font-size: 21px;
+  }
+  .mobile-app .escape-ending {
+    margin-top: 30px;
+    padding: 45px 20px;
+  }
+  .mobile-app .escape-ending h2 {
+    font-size: 34px;
+  }
+  .mobile-app .footer {
+    padding: 25px 20px;
+    gap: 15px;
+  }
+  .mobile-app .footer-brand {
+    font-size: 21px;
+  }
+  .mobile-app .footer p {
+    font-size: 11px;
+  }
+  .mobile-app .footer-links {
+    font-size: 10px;
+    gap: 15px;
+  }
+  .mobile-app .page {
+    padding: 28px 18px;
+  }
+  .mobile-app .page-heading h1 {
+    font-family: Inter, 'Segoe UI', sans-serif;
+    font-size: 31px;
+    font-weight: 650;
+  }
+  .mobile-app .page-heading p {
+    font-size: 12px;
+  }
+  .mobile-app .filters {
+    padding: 17px;
+    border-radius: 16px;
+    gap: 15px;
+    background: #fff;
+    border: 0;
+    box-shadow: 0 5px 20px #352b1906;
+  }
+  .mobile-app input,
+  .mobile-app select,
+  .mobile-app textarea {
+    font-size: 16px;
+    min-height: 46px;
+  }
+  .mobile-app .detail-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  .mobile-app .detail-grid > *,
+  .mobile-app .detail-grid .panel {
+    width: 100%;
+    min-width: 0;
+  }
+  .mobile-app .detail-grid h1 {
+    font-size: 35px;
+    line-height: 1.15;
+  }
+  .mobile-app .detail-grid .lead {
+    font-size: 13px;
+  }
+  .mobile-app .detail-grid .detail-image {
+    border-radius: 16px;
+    max-height: 300px;
+    object-fit: cover;
+  }
+  .mobile-app .detail-grid aside {
+    position: static;
+  }
+  .mobile-app .panel {
+    padding: 20px;
+  }
+  .mobile-app .panel .button {
+    min-height: 48px;
+  }
+  .mobile-app .workspace {
+    padding: 22px 18px;
+  }
+  .mobile-app .sidebar {
+    padding: 10px;
+    background: #efe8da;
+    border: 0;
+    margin-bottom: 22px;
+  }
+  .mobile-app .sidebar nav {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 6px;
+  }
+  .mobile-app .sidebar nav a {
+    flex-shrink: 0;
+    min-height: 40px;
+    font-size: 11px;
+  }
+  .mobile-app .workspace-content .page-heading h1,
+  .mobile-app .workspace-content h1 {
+    font-size: 30px;
+  }
+  .mobile-app .workspace-content .section-heading {
+    flex-wrap: wrap;
+  }
+  .mobile-app .workspace-content .section-heading > .button {
+    width: 100%;
+  }
+  .mobile-app .quick-links {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .mobile-app .trip-link {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .mobile-app .trip-link h3 {
+    font-size: 17px;
+  }
+  .mobile-app .trip-link p {
+    font-size: 12px;
+  }
+  .mobile-app .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .mobile-app .actions {
+    flex-wrap: wrap;
+  }
+  .mobile-app .booking-list {
+    min-width: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-app-nav * {
+    transition: none !important;
+  }
+}
+.mobile-menu-account,
+.mobile-more-label {
+  display: none;
+}
+@media (max-width: 800px) {
+  .mobile-app .mobile-home-welcome .mobile-saved-shortcut {
+    display: none;
+  }
+  .mobile-app .navbar {
+    grid-template-columns: auto 1fr auto;
+    row-gap: 0;
+    padding-top: 4px;
+    padding-bottom: 7px;
+  }
+  .mobile-app .navbar .brand {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+  }
+  .mobile-app .navbar .mobile-nav-toggle {
+    grid-column: 1;
+    grid-row: 2;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 67px;
+    height: 30px;
+    min-height: 30px;
+    border-radius: 8px;
+    background: #eee7da;
+    font-size: 23px;
+    line-height: 1;
+  }
+  .mobile-app .mobile-more-label {
+    display: inline;
+    font-size: 9px;
+    font-weight: 600;
+    color: #766c5e;
+  }
+  .mobile-app .navbar nav {
+    grid-row: 3;
+    grid-column: 1/-1;
+    margin-top: 8px;
+    border-top: 1px solid #e8dfce;
+    display: none;
+    padding-bottom: 3px;
+  }
+  .mobile-app .navbar.menu-open nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 12px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a {
+    padding: 10px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+    background: #f2ecdf;
+  }
+  .mobile-app .mobile-menu-account {
+    display: grid;
+    grid-column: 1/-1;
+    grid-template-columns: 1fr 1fr;
+    gap: 7px 12px;
+    border-top: 1px solid #e8dfce;
+    padding-top: 12px;
+    margin-top: 6px;
+  }
+  .mobile-app .mobile-menu-account a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 11px 12px;
+    min-height: 44px;
+    border: 1px solid #e8dfce;
+    background: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #55483a;
+  }
+  .mobile-app .mobile-menu-account button {
+    min-height: 44px;
+    border: 1px solid #e4cfc3;
+    border-radius: 10px;
+    background: #f7ede5;
+    color: #9e4f35;
+    font-size: 12px;
+    text-align: left;
+    padding: 11px 12px;
+    cursor: pointer;
+  }
+  .mobile-app .navbar nav .mobile-menu-account a.active:after {
+    display: none;
+  }
+  .mobile-app .navbar .mobile-menu-account a.active {
+    border-color: #be9877;
+    background: #fcf5ea;
+  }
+}
+.mobile-drawer-heading,
+.mobile-drawer-scrim {
+  display: none;
+}
+@media (max-width: 800px) {
+  .mobile-app .navbar.menu-open {
+    z-index: 60;
+    backdrop-filter: none;
+  }
+  .mobile-app .navbar.menu-open nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(320px, 86vw);
+    margin: 0;
+    padding: 24px 18px calc(25px + env(safe-area-inset-bottom));
+    overflow-y: auto;
+    background: #fffaf2;
+    border: 0;
+    border-right: 1px solid #dfd3c0;
+    box-shadow: 12px 0 45px #32241525;
+    z-index: 62;
+    animation: mobile-drawer-enter 0.22s ease-out;
+  }
+  .mobile-app .mobile-drawer-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 5px 22px;
+    border-bottom: 1px solid #e8dece;
+    margin-bottom: 13px;
+  }
+  .mobile-drawer-heading small {
+    font-size: 8px;
+    letter-spacing: 0.13em;
+    color: #a08767;
+    display: block;
+    margin-bottom: 7px;
+  }
+  .mobile-drawer-heading strong {
+    font-size: 22px;
+    letter-spacing: -0.04em;
+    color: #3c3026;
+  }
+  .mobile-drawer-heading button {
+    background: #ede4d6;
+    border: 0;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: #675544;
+    cursor: pointer;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a {
+    display: flex;
+    align-items: center;
+    min-height: 46px;
+    padding: 12px 15px;
+    background: #f2eadc;
+  }
+  .mobile-app .mobile-menu-account {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 20px;
+    margin-top: 13px;
+  }
+  .mobile-app .mobile-menu-account a {
+    font-size: 13px;
+    min-height: 48px;
+  }
+  .mobile-app .mobile-drawer-scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 55;
+    border: 0;
+    background: #21180f80;
+    backdrop-filter: blur(3px);
+    cursor: pointer;
+  }
+  @keyframes mobile-drawer-enter {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mobile-app .navbar.menu-open nav {
+    animation: none;
+  }
+}
+@media (max-width: 800px) {
+  .mobile-app .navbar.menu-open nav {
+    justify-content: flex-start;
+  }
+  .mobile-app .navbar.menu-open nav .travel-menu-content > a,
+  .mobile-app .mobile-drawer-heading,
+  .mobile-app .mobile-menu-account {
+    flex: 0 0 auto;
+  }
+  .mobile-app .mobile-menu-account a {
+    justify-content: space-between;
+    padding: 12px 15px;
+  }
+}
+/* Mobile visual refinement: charcoal travel drawer and image-first cards. */
+.mobile-header-account,
+.drawer-profile,
+.drawer-section-label,
+.drawer-chevron,
+.drawer-heart {
+  display: none;
+}
+@media (min-width: 801px) {
+  .travel-site .navbar nav .travel-menu-content > a > svg {
+    display: none;
+  }
+}
+@media (max-width: 800px) {
+  .mobile-app .navbar {
+    background: #fcfaf5;
+    box-shadow: none;
+    border-bottom: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .mobile-app .mobile-header-account {
+    display: grid;
+    place-items: center;
+    grid-column: 3;
+    grid-row: 1;
+    width: 39px;
+    height: 39px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    background: #37322b;
+    color: #f8d39a;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 0 0 1px #e4d9c7;
+  }
+  .mobile-app .mobile-home-welcome {
+    padding-top: 18px;
+    padding-bottom: 21px;
+  }
+  .mobile-app .mobile-home-welcome h2 {
+    font-size: 29px;
+    letter-spacing: -0.055em;
+  }
+  .mobile-app .mobile-home-welcome p {
+    font-size: 13px;
+    color: #8d8375;
+  }
+  .mobile-app .original-travel-banner {
+    border-radius: 20px;
+    box-shadow: 0 10px 23px #4d341a13;
+  }
+  .mobile-app .cinematic-home .original-travel-banner + .trip-finder {
+    border: 1px solid #eae3d6;
+    box-shadow: 0 10px 25px #32251608;
+    background: linear-gradient(125deg, #fff, #fffcf5);
+  }
+  .mobile-app .trip-finder .button {
+    background: #353029;
+    color: #ffe2b0;
+    border-radius: 13px;
+    box-shadow: 0 5px 12px #30271f13;
+  }
+  .mobile-trip-shortcuts > a {
+    background: #eee0c6;
+    border: 0;
+    border-radius: 16px;
+  }
+  .mobile-trip-shortcuts > a + a {
+    background: #e7ded6;
+    border: 0;
+  }
+  .mobile-trip-shortcuts > a > span {
+    color: #8e6236;
+  }
+  .mobile-app .cinematic-home .card-grid {
+    gap: 14px;
+    padding-bottom: 20px;
+  }
+  .mobile-app .cinematic-home .card-grid .destination-card {
+    flex-basis: 83%;
+    position: relative;
+    border-radius: 22px;
+    background: #544f45;
+    overflow: hidden;
+    box-shadow: 0 8px 22px #32251715;
+  }
+  .mobile-app .cinematic-home .card-grid .destination-card > a {
+    display: block;
+    position: relative;
+    min-height: 310px;
+  }
+  .mobile-app .cinematic-home .card-grid .destination-art {
+    height: 310px;
+    border-radius: 0;
+  }
+  .mobile-app .cinematic-home .card-grid .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 70px 19px 20px;
+    background: linear-gradient(transparent, #171713db);
+    color: white;
+  }
+  .mobile-app .cinematic-home .card-grid .card-body > small {
+    color: #ffe0b2;
+    font-size: 8px;
+    letter-spacing: 0.14em;
+  }
+  .mobile-app .cinematic-home .card-grid .card-body h3 {
+    font-size: 29px;
+    color: #fff;
+    letter-spacing: -0.055em;
+    margin: 8px 0 14px;
+  }
+  .mobile-app .cinematic-home .card-grid .card-body > p {
+    display: none;
+  }
+  .mobile-app .cinematic-home .card-grid .card-bottom {
+    border-color: #ffffff30;
+    margin-top: 12px;
+    padding-top: 13px;
+  }
+  .mobile-app .cinematic-home .card-grid .card-bottom strong {
+    color: #fff2db;
+    font-size: 19px;
+  }
+  .mobile-app .cinematic-home .card-grid .card-bottom small {
+    color: #e1d8ca;
+    font-size: 8px;
+  }
+  .mobile-app .cinematic-home .card-grid .tag {
+    top: 15px;
+    left: 15px;
+    border-radius: 20px;
+    background: #fffdf3e8;
+    color: #544536;
+    padding: 7px 12px;
+  }
+  .mobile-app .cinematic-home .card-grid .landscape-symbol {
+    opacity: 0.55;
+  }
+  .mobile-app .mobile-app-nav {
+    left: 10px;
+    right: 10px;
+    bottom: calc(9px + env(safe-area-inset-bottom));
+    border: 1px solid #e6ddce;
+    border-radius: 22px;
+    background: #fffdf7ed;
+    padding: 8px 5px;
+    box-shadow: 0 5px 30px #211b1617;
+  }
+  .mobile-app-nav a {
+    min-width: 53px;
+  }
+  .mobile-app-nav a.active {
+    background: #f1e3cb;
+    color: #876130;
+  }
+  .mobile-app-nav .mobile-plan-link > span {
+    background: #373129;
+    color: #f5cc89;
+  }
+  .mobile-app-nav small {
+    font-size: 8px;
+  }
+  .mobile-app .navbar.menu-open nav {
+    width: min(330px, 88vw);
+    background: #282823;
+    color: #f8f0e0;
+    padding: 26px 21px;
+    gap: 4px;
+    border: 0;
+    box-shadow: 18px 0 60px #0004;
+    border-radius: 0 28px 28px 0;
+  }
+  .mobile-app .mobile-drawer-heading {
+    border-color: #ffffff13;
+    padding: 3px 0 20px;
+    margin: 0 0 18px;
+    align-items: center;
+  }
+  .mobile-app .mobile-drawer-heading small {
+    font-size: 7px;
+    color: #b6a88d;
+    letter-spacing: 0.18em;
+  }
+  .mobile-app .mobile-drawer-heading strong {
+    color: #fff5df;
+    font-size: 24px;
+  }
+  .mobile-drawer-heading strong > span {
+    color: #e3b568;
+    margin-left: 9px;
+  }
+  .mobile-app .mobile-drawer-heading button {
+    background: #ffffff0d;
+    color: #f0dcb9;
+    border: 1px solid #ffffff12;
+    width: 35px;
+    height: 35px;
+    font-size: 15px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a.drawer-profile {
+    display: flex;
+    gap: 12px;
+    min-height: 87px;
+    padding: 17px 13px;
+    background: linear-gradient(120deg, #494333, #35332b);
+    border: 1px solid #e6c38525;
+    border-radius: 16px;
+    color: #fff3da;
+    margin-bottom: 22px;
+  }
+  .drawer-profile > span {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 13px;
+    display: grid;
+    place-items: center;
+    background: #e1b66e;
+    color: #3a2e1b;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .drawer-profile div {
+    min-width: 0;
+  }
+  .drawer-profile small {
+    font-size: 6px;
+    letter-spacing: 0.1em;
+    color: #bcb094;
+    display: block;
+  }
+  .drawer-profile strong {
+    font-size: 15px;
+    display: block;
+    margin-top: 6px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 155px;
+  }
+  .travel-site .drawer-profile p {
+    font-size: 8px;
+    color: #b9ad96;
+    line-height: 1.4;
+    margin: 5px 0 0;
+  }
+  .drawer-profile > b {
+    margin-left: auto;
+    color: #cfb483;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .mobile-app .drawer-section-label {
+    display: block;
+    font-size: 8px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: #8f8e79;
+    padding: 0 12px;
+    margin: 1px 0 9px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a:not(.drawer-profile) {
+    min-height: 47px;
+    padding: 12px;
+    border-radius: 11px;
+    background: transparent;
+    color: #dedbd0;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    font-size: 12px;
+    border: 0;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a > svg {
+    color: #aaa48c;
+    flex-shrink: 0;
+  }
+  .mobile-app .drawer-chevron {
+    display: inline;
+    margin-left: auto;
+    color: #7d7b69;
+    font-size: 13px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a.active:not(.drawer-profile) {
+    background: #e3b66e;
+    color: #322b1e;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a.active > svg,
+  .mobile-app .navbar nav .travel-menu-content > a.active .drawer-chevron {
+    color: #635032;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a.active:after {
+    display: none;
+  }
+  .mobile-app .mobile-menu-account {
+    border-color: #ffffff10;
+    margin-top: 18px;
+    padding-top: 21px;
+    gap: 4px;
+  }
+  .mobile-app .mobile-menu-account a {
+    border: 0;
+    border-radius: 11px;
+    background: transparent !important;
+    color: #dedbd0 !important;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 13px;
+    min-height: 47px;
+    padding: 12px;
+  }
+  .mobile-app .mobile-menu-account a > svg {
+    color: #aaa48c;
+  }
+  .mobile-app .drawer-heart {
+    display: grid;
+    place-items: center;
+    width: 18px;
+    font-size: 23px;
+    color: #aaa48c;
+  }
+  .mobile-app .mobile-menu-account .drawer-chevron {
+    margin-left: auto;
+  }
+  .mobile-app .mobile-menu-account a.active {
+    background: #ffffff0c !important;
+    color: #f7d39b !important;
+  }
+  .mobile-app .mobile-menu-account button {
+    margin-top: 18px;
+    padding: 12px 15px;
+    min-height: 45px;
+    border-color: #ffffff16;
+    background: #ffffff08;
+    color: #d5c3a4;
+    border-radius: 12px;
+    font-size: 11px;
+  }
+  .mobile-app .navbar .mobile-menu-account > a:last-of-type {
+    color: #e5bc7f !important;
+  }
+}
+/* Compact header and clean logo presentation. */
+.travel-site .navbar {
+  min-height: 64px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  gap: 22px;
+}
+.travel-site .brand-logo {
+  width: 48px;
+  height: 48px;
+  mix-blend-mode: multiply;
+  background: transparent;
+}
+.travel-site .navbar nav {
+  gap: 25px;
+}
+.travel-site .navbar nav a {
+  font-size: 12px;
+}
+.travel-site .nav-actions .button {
+  min-height: 35px;
+  padding: 8px 15px;
+  border-radius: 7px;
+  font-size: 11px;
+}
+.travel-site .nav-actions {
+  font-size: 11px;
+  gap: 16px;
+}
+@media (max-width: 800px) {
+  .mobile-app .navbar {
+    padding: 3px 18px 5px;
+    row-gap: 0;
+    min-height: 0;
+  }
+  .mobile-app .brand-logo {
+    width: 35px;
+    height: 35px;
+    display: block;
+    mix-blend-mode: multiply;
+  }
+  .mobile-app .navbar .mobile-nav-toggle {
+    width: 49px;
+    height: 24px;
+    min-height: 24px;
+    font-size: 23px;
+    gap: 0;
+    background: #eee7d9;
+    border: 1px solid #e3d9c7;
+    border-radius: 6px;
+    line-height: 1;
+  }
+  .mobile-app .mobile-more-label {
+    display: none;
+  }
+  .mobile-app .mobile-header-account {
+    width: 32px;
+    height: 32px;
+    border-width: 2px;
+    font-size: 12px;
+  }
+  .mobile-app .mobile-home-welcome {
+    padding-top: 14px;
+  }
+  .mobile-app .navbar .drawer-profile b,
+  .mobile-app .drawer-chevron {
+    display: none;
+  }
+  .mobile-app .navbar.menu-open nav {
+    padding-top: 20px;
+  }
+}
+/* Unified travel palette and quieter content hierarchy. */
+.travel-site {
+  --accent: #a66d30;
+  --ink: #2e302c;
+  --paper: #faf9f5;
+  --muted: #74756d;
+}
+.travel-site .button {
+  background: #ac793e;
+  color: white;
+}
+.travel-site .button:hover {
+  background: #8e602e;
+}
+.travel-site .button.secondary {
+  background: #fff;
+  color: #373a32;
+}
+.travel-site .navbar {
+  background: #faf9f5f5;
+  border-color: #e9e5db;
+  padding-bottom: 19px;
+  position: sticky;
+  min-height: 73px;
+}
+.travel-site .brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+.nav-wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.nav-wordmark strong {
+  font-size: 15px;
+  color: #373a31;
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  white-space: nowrap;
+}
+.nav-wordmark small {
+  font-size: 6px;
+  letter-spacing: 0.16em;
+  color: #8e836c;
+  white-space: nowrap;
+}
+.nav-journey {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15px;
+  background: #e8e4d9;
+  border-top: 1px solid #ddd7c8;
+  overflow: hidden;
+  pointer-events: none;
+}
+.nav-journey:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 4px;
+  height: 1px;
+  background: repeating-linear-gradient(90deg, #b4a994 0 12px, transparent 12px 24px);
+}
+.nav-journey-bus {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #a9793c;
+  z-index: 1;
+  animation: nav-road-trip 24s linear infinite;
+  will-change: transform;
+}
+.nav-journey-bus svg {
+  display: block;
+  width: 31px;
+  height: 15px;
+}
+@keyframes nav-road-trip {
+  from {
+    transform: translateX(-48px);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+.travel-site .simple-planner {
+  display: flex;
+  justify-content: space-between;
+  gap: 35px;
+  padding: 37px 42px;
+  background: #eee9dd;
+  align-items: center;
+}
+.travel-site .simple-planner h2 {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #33382e;
+  margin: 0 0 10px;
+  letter-spacing: -0.04em;
+}
+.travel-site .simple-planner p {
+  max-width: 620px;
+  margin: 0;
+  font-size: 13px;
+  color: #77766b;
+}
+.travel-site .simple-planner .button {
+  margin: 0;
+  flex-shrink: 0;
+}
+.refined-home .section-heading {
+  margin-bottom: 24px;
+}
+.refined-home .section-heading h2 {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+.refined-home .section-heading p {
+  font-size: 13px;
+  margin: 9px 0 0;
+}
+.refined-home .refined-packages {
+  padding-bottom: 65px;
+}
+.refined-home .escape-package {
+  border-top: 1px solid #e1dbc9;
+  box-shadow: 0 3px 15px #29271e03;
+}
+.refined-home .escape-package > span {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: 11px;
+}
+.travel-site .refined-home .escape-package h3 {
+  font-family: Inter, 'Segoe UI', sans-serif;
+  font-size: 20px;
+  font-weight: 550;
+  letter-spacing: -0.03em;
+}
+.refined-home .escape-package p {
+  font-size: 11px;
+  color: #858377;
+}
+@media (max-width: 1100px) and (min-width: 801px) {
+  .nav-wordmark {
+    display: none;
+  }
+  .travel-site .navbar {
+    gap: 15px;
+  }
+}
+@media (max-width: 800px) {
+  .mobile-app .navbar {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 35px 35px;
+    gap: 10px;
+    align-items: center;
+    min-height: 70px;
+    padding: 6px 16px 21px;
+    background: #faf9f5f7;
+  }
+  .mobile-app .navbar .brand {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    min-width: 0;
+  }
+  .mobile-app .brand-logo {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+  .mobile-app .nav-wordmark {
+    display: flex;
+    gap: 4px;
+  }
+  .mobile-app .nav-wordmark strong {
+    font-size: 14px;
+  }
+  .mobile-app .nav-wordmark small {
+    font-size: 6px;
+    letter-spacing: 0.12em;
+  }
+  .mobile-app .navbar .mobile-nav-toggle {
+    grid-column: 2;
+    grid-row: 1;
+    width: 35px;
+    height: 35px;
+    min-height: 35px;
+    border-radius: 11px;
+    background: #eae5d8;
+    border: 1px solid #e2dbca;
+    color: #5f5e4e;
+    display: grid;
+    place-items: center;
+    padding: 0;
+  }
+  .mobile-app .mobile-header-account {
+    grid-column: 3;
+    grid-row: 1;
+    width: 33px;
+    height: 33px;
+    background: #3d4137;
+    color: #ead6ac;
+    box-shadow: none;
+    border: 1px solid #e1d8c5;
+  }
+  .mobile-app .nav-journey {
+    height: 14px;
+    background: #e4e0d4;
+  }
+  .mobile-app .nav-journey-bus {
+    animation-duration: 15s;
+  }
+  .mobile-app .nav-journey-bus svg {
+    width: 28px;
+    height: 14px;
+  }
+  .mobile-app .navbar.menu-open .nav-journey {
+    display: none;
+  }
+  .mobile-app .mobile-home-welcome {
+    padding: 17px 19px 18px;
+  }
+  .mobile-app .mobile-home-welcome h2 {
+    font-size: 24px;
+    margin: 0 0 5px;
+    font-weight: 600;
+  }
+  .mobile-app .mobile-home-welcome p {
+    font-size: 12px;
+  }
+  .mobile-app .refined-home .section-heading h2 {
+    font-size: 23px;
+  }
+  .mobile-app .refined-home .section-heading p {
+    font-size: 11px;
+    margin-top: 7px;
+  }
+  .mobile-app .refined-home .simple-planner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    padding: 24px;
+    background: #343a30;
+  }
+  .mobile-app .refined-home .simple-planner h2 {
+    color: #f8f2e8;
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .mobile-app .refined-home .simple-planner p {
+    color: #c0c2b4;
+    font-size: 12px;
+  }
+  .mobile-app .refined-home .simple-planner .button {
+    background: #c69756;
+    color: #282b23;
+    width: 100%;
+  }
+  .mobile-app .refined-home .refined-packages {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 350px) {
+  .mobile-app .nav-wordmark strong {
+    font-size: 12px;
+  }
+  .mobile-app .nav-wordmark small {
+    font-size: 5px;
+  }
+  .mobile-app .navbar {
+    gap: 7px;
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-journey-bus {
+    animation: none;
+    transform: translateX(20px);
+  }
+}
+@media (max-width: 800px) {
+  .mobile-app .mobile-app-nav {
+    bottom: calc(5px + env(safe-area-inset-bottom));
+    padding: 5px 4px;
+    border-radius: 18px;
+  }
+  .mobile-app-nav .mobile-plan-link > span {
+    margin-top: 0;
+    width: 35px;
+    height: 29px;
+    border-radius: 9px;
+  }
+  .mobile-app-nav .mobile-plan-link {
+    padding-top: 0;
+  }
+  .mobile-app-nav a {
+    min-height: 47px;
+    gap: 3px;
+  }
+}
+/* Drawer must scroll vertically; inherited header wrapping must never create columns. */
+@media (max-width: 800px) {
+  .travel-site.mobile-app .navbar.menu-open #travel-navigation {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    align-content: normal;
+    justify-content: flex-start;
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-sizing: border-box;
+  }
+  .travel-site.mobile-app #travel-navigation > * {
+    flex-shrink: 0;
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .travel-site.mobile-app #travel-navigation .mobile-menu-account {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .travel-site.mobile-app #travel-navigation .mobile-menu-account > a,
+  .travel-site.mobile-app #travel-navigation .mobile-menu-account > button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+/* Compact mobile drawer while retaining comfortable tap targets. */
+@media (max-width: 800px) {
+  .travel-site.mobile-app .navbar.menu-open #travel-navigation {
+    width: min(285px, 86vw);
+    padding: 18px 15px calc(18px + env(safe-area-inset-bottom));
+    border-radius: 0 20px 20px 0;
+    gap: 3px;
+  }
+  .mobile-app .mobile-drawer-heading {
+    padding: 0 0 14px;
+    margin-bottom: 13px;
+  }
+  .mobile-app .mobile-drawer-heading strong {
+    font-size: 20px;
+  }
+  .mobile-app .mobile-drawer-heading small {
+    font-size: 6px;
+    margin-bottom: 5px;
+  }
+  .mobile-app .mobile-drawer-heading button {
+    width: 31px;
+    height: 31px;
+    font-size: 14px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a.drawer-profile {
+    min-height: 72px;
+    padding: 12px 10px;
+    gap: 10px;
+    margin-bottom: 17px;
+    border-radius: 12px;
+  }
+  .mobile-app .drawer-profile > span {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .mobile-app .drawer-profile strong {
+    font-size: 13px;
+    margin-top: 4px;
+    max-width: 150px;
+  }
+  .mobile-app .drawer-profile p {
+    font-size: 7px;
+    margin-top: 4px;
+  }
+  .mobile-app .drawer-section-label {
+    font-size: 7px;
+    padding: 0 10px;
+    margin-bottom: 6px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a:not(.drawer-profile),
+  .mobile-app .mobile-menu-account a {
+    min-height: 44px;
+    padding: 10px;
+    font-size: 11px;
+    gap: 10px;
+    border-radius: 9px;
+  }
+  .mobile-app .navbar nav .travel-menu-content > a > svg,
+  .mobile-app .mobile-menu-account a > svg {
+    width: 16px;
+    height: 16px;
+  }
+  .mobile-app .mobile-menu-account {
+    margin-top: 13px;
+    padding-top: 16px;
+    gap: 3px;
+  }
+  .mobile-app .mobile-menu-account button {
+    min-height: 44px;
+    padding: 10px 12px;
+    margin-top: 12px;
+    font-size: 10px;
+  }
+}
+/* Isolate drawer content from desktop navigation flex wrapping. */
+.travel-menu-content {
+  display: contents;
+}
+@media (max-width: 800px) {
+  .travel-site .navbar.menu-open #travel-navigation {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: min(285px, 86vw);
+    height: 100dvh;
+    max-height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    column-count: 1;
+    box-sizing: border-box;
+    padding: 18px 15px;
+  }
+  .travel-site #travel-navigation > .travel-menu-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 3px;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
+    column-count: 1;
+  }
+  .travel-site #travel-navigation > .travel-menu-content > * {
+    flex: 0 0 auto;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  .travel-site #travel-navigation .mobile-menu-account {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    width: 100%;
+    column-count: 1;
+  }
+  .travel-site #travel-navigation .mobile-menu-account > * {
+    flex: 0 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 800px) {
+  .travel-site .navbar.menu-open #travel-navigation > .travel-menu-content {
+    display: block !important;
+    height: auto !important;
+    max-height: none !important;
+    columns: auto !important;
+  }
+  .travel-site .navbar.menu-open #travel-navigation .mobile-menu-account {
+    display: block !important;
+    position: relative !important;
+    height: auto !important;
+    max-height: none !important;
+    columns: auto !important;
+    float: none !important;
+    width: 100% !important;
+  }
+  .travel-site .navbar.menu-open #travel-navigation .mobile-menu-account > a {
+    display: flex !important;
+    margin: 0 0 4px !important;
+    min-height: 44px;
+    width: 100% !important;
+  }
+  .travel-site .navbar.menu-open #travel-navigation .mobile-menu-account > button {
+    display: block !important;
+    margin-top: 12px;
+  }
+  .travel-site
+    .navbar.menu-open
+    #travel-navigation
+    .travel-menu-content
+    > a:not(.drawer-profile) {
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 800px) {
+  .travel-site .navbar.menu-open #travel-navigation {
+    columns: auto !important;
+    column-count: auto !important;
+    column-width: auto !important;
+    column-fill: auto !important;
+  }
+}
+/* Only the drawer close button remains visible while the mobile menu is open. */
+@media (max-width: 800px) {
+  .travel-site .navbar.menu-open > .mobile-nav-toggle,
+  .travel-site .navbar.menu-open > .mobile-header-account,
+  .travel-site .navbar.menu-open > .brand,
+  .travel-site .navbar.menu-open > .nav-actions {
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .travel-site .navbar.menu-open {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+/* Decorative round trip: pause at each destination, then return. */
+.nav-journey {
+  height: 26px;
+  overflow: hidden;
+}
+.nav-journey-stop {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  transform: translateX(-50%);
+  text-align: center;
+  max-width: 95px;
+  color: #786e59;
+  font-size: 6px;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  white-space: nowrap;
+}
+.nav-journey-stop > span {
+  display: block;
+  max-width: 95px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.nav-journey-stop i {
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #a28b64;
+}
+.nav-journey-bus {
+  left: 10%;
+  animation: nav-destination-trip 28s linear infinite;
+  bottom: 0;
+  will-change: left, transform;
+}
+@keyframes nav-destination-trip {
+  0%,
+  8% {
+    left: 10%;
+    transform: translateX(-50%) scaleX(1);
+  }
+  23%,
+  31% {
+    left: 50%;
+    transform: translateX(-50%) scaleX(1);
+  }
+  46%,
+  50% {
+    left: 90%;
+    transform: translateX(-50%) scaleX(1);
+  }
+  51%,
+  58% {
+    left: 90%;
+    transform: translateX(-50%) scaleX(-1);
+  }
+  73%,
+  81% {
+    left: 50%;
+    transform: translateX(-50%) scaleX(-1);
+  }
+  96%,
+  99% {
+    left: 10%;
+    transform: translateX(-50%) scaleX(-1);
+  }
+  100% {
+    left: 10%;
+    transform: translateX(-50%) scaleX(1);
+  }
+}
+.travel-site .navbar {
+  padding-bottom: 30px;
+  min-height: 84px;
+}
+@media (max-width: 800px) {
+  .mobile-app .navbar {
+    padding-bottom: 30px;
+    min-height: 80px;
+  }
+  .mobile-app .nav-journey {
+    height: 24px;
+  }
+  .mobile-app .nav-journey-bus {
+    animation-duration: 24s;
+  }
+  .nav-journey-stop {
+    font-size: 6px;
+    max-width: 72px;
+  }
+  .nav-journey-stop > span {
+    max-width: 72px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav-journey-bus {
+    animation: none;
+    left: 10%;
+    transform: translateX(-50%);
+  }
+}

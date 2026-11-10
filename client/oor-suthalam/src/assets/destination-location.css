@@ -1,0 +1,213 @@
+/* Location picker, distance summary and map for destination details. */
+.location-card {
+  border: 1px solid #e1e5dc;
+  border-radius: 20px;
+  padding: 20px;
+  background: #fffefa;
+}
+.location-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+.location-eyebrow {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  color: #8a7049;
+  margin-bottom: 7px;
+}
+.location-card .location-heading h3 {
+  margin: 0;
+  font-size: 20px !important;
+  line-height: 1.35;
+}
+.location-pin {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #edf3e8;
+  color: #38634c;
+  font-size: 23px;
+  flex-shrink: 0;
+}
+.location-card > .location-origin-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  gap: 12px;
+  align-items: end;
+  margin: 0 0 16px;
+}
+.location-town-field {
+  display: grid;
+  gap: 7px;
+  color: #514d43;
+  font-size: 12px;
+  margin: 0;
+}
+.location-town-field select {
+  width: 100%;
+  min-width: 0;
+  height: 46px;
+  border: 1px solid #dce1d5;
+  border-radius: 11px;
+  background: #fff;
+  padding: 8px 12px;
+  font-size: 16px;
+}
+.location-or {
+  color: #8b8b7f;
+  font-size: 12px;
+  padding-bottom: 15px;
+}
+.location-gps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  height: 46px;
+  padding: 8px 13px;
+  border: 1px solid #dce1d5;
+  background: #f2f5ed;
+  color: #345b43;
+  border-radius: 11px;
+  cursor: pointer;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.location-gps:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+.location-card > .location-distance-summary {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #edf4e9;
+  padding: 15px;
+  border-radius: 13px;
+  margin: 0 0 16px;
+}
+.location-distance-summary span {
+  color: #3b6047;
+  font-size: 12px;
+}
+.location-distance-summary strong {
+  display: block;
+  color: #30583d;
+  font-size: 30px;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+.location-distance-summary strong small {
+  display: inline;
+  font-size: 15px;
+  color: inherit;
+}
+.location-distance-summary p {
+  margin: 5px 0 0;
+  font-size: 11px;
+  color: #687360;
+  line-height: 1.5;
+}
+.location-clear {
+  background: transparent;
+  border: 0;
+  color: #41654d;
+  text-decoration: underline;
+  padding: 8px;
+  font-size: 11px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.location-intro {
+  margin: 0 0 16px;
+  font-size: 13px;
+  color: #72786b;
+}
+.location-card > .destination-map-frame {
+  display: block;
+  width: 100%;
+  margin: 0;
+  border-radius: 13px;
+}
+.location-card > .destination-map-frame.leaflet-container {
+  height: 280px;
+}
+.location-footer {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+.location-card .location-directions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border-radius: 11px;
+  background: #315c48;
+  color: white;
+  min-height: 44px;
+  padding: 10px 18px;
+  white-space: nowrap;
+}
+.location-footer small {
+  font-size: 10px;
+  max-width: 280px;
+}
+.location-card > .location-status {
+  font-size: 12px;
+  color: #66745f;
+  margin-bottom: 14px;
+}
+.location-status button {
+  background: transparent;
+  border: 0;
+  text-decoration: underline;
+  color: inherit;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .location-card {
+    padding: 14px;
+    border-radius: 16px;
+  }
+  .location-card .location-heading h3 {
+    font-size: 18px !important;
+  }
+  .location-card > .location-origin-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 9px;
+  }
+  .location-or {
+    display: none;
+  }
+  .location-gps {
+    width: 100%;
+  }
+  .location-card > .destination-map-frame.leaflet-container {
+    height: 230px;
+  }
+  .location-distance-summary strong {
+    font-size: 27px;
+  }
+  .location-card > .location-distance-summary {
+    gap: 4px;
+    padding: 12px;
+  }
+  .location-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .location-footer small {
+    max-width: none;
+    text-align: center;
+  }
+}

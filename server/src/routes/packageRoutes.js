@@ -1,0 +1,16 @@
+import { Router } from 'express';
+import * as c from '../controllers/packageController.js';
+import authenticate from '../middleware/authenticate.js';
+import authorize from '../middleware/authorize.js';
+import validate from '../middleware/validate.js';
+import { schemas } from '../validators/index.js';
+import validateId from '../middleware/validateId.js';
+const router = Router();
+router.param('id', validateId);
+router.get('/', c.list);
+router.get('/:id', c.detail);
+router.use(authenticate, authorize('admin'));
+router.post('/', validate(schemas.package), c.create);
+router.put('/:id', validate(schemas.package), c.update);
+router.delete('/:id', c.remove);
+export default router;

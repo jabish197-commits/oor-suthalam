@@ -1,0 +1,92 @@
+/* Destination overview and planning card, scoped to this page. */
+.travel-site .destination-detail-page {
+  max-width: 1200px;
+  padding-block: 32px 56px;
+}
+.destination-detail-page .back-link {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.travel-site .destination-detail-page .detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 32px;
+  align-items: start;
+}
+.destination-detail-page .detail-grid > div {
+  min-width: 0;
+}
+.travel-site .destination-detail-page .detail-grid h1 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.15;
+  margin: 12px 0 24px;
+  overflow-wrap: anywhere;
+}
+.travel-site .destination-detail-page .detail-image {
+  width: 100%;
+  height: auto;
+  max-height: 620px;
+  object-fit: contain;
+  background: #eeeae2;
+  border-radius: 14px;
+  display: block;
+}
+.travel-site .destination-detail-page .lead {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-block: 24px;
+}
+.destination-detail-page .eyebrow {
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.travel-site .destination-detail-page aside {
+  position: sticky;
+  top: 110px;
+  padding: 24px;
+  gap: 18px;
+}
+.destination-detail-page aside h2 {
+  font-family: inherit;
+  font-size: 20px;
+  margin: 0;
+}
+.destination-detail-page aside h3 {
+  font-family: inherit;
+  font-size: 28px;
+  margin: 0;
+}
+.destination-detail-page aside h3 small {
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+.destination-detail-page aside p {
+  font-size: 14px;
+  line-height: 1.7;
+  margin: 0;
+}
+.destination-detail-page .feature-list {
+  padding-left: 20px;
+}
+@media (max-width: 760px) {
+  .travel-site .destination-detail-page {
+    padding: 24px 18px 40px;
+  }
+  .travel-site .destination-detail-page .detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .travel-site .destination-detail-page .detail-image {
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+  }
+  .travel-site .destination-detail-page aside {
+    position: static;
+    width: 100%;
+    padding: 22px;
+  }
+}

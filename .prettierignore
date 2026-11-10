@@ -1,0 +1,7 @@
+**/node_modules/**
+**/dist/**
+**/coverage/**
+**/.env*
+**/package-lock.json
+server/uploads/**
+docs/frontend-before-cleanup.zip

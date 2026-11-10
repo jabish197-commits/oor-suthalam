@@ -1,0 +1,29 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+*.log
+server/uploads/
+
+# Local credentials, backups, and editor/runtime state
+.codex/
+.agents/
+.aws/
+private/
+backups/
+*.archive
+*.archive.gz
+*.tar.gz
+*.zip
+*.pem
+*.key
+restore.yml
+mongodb.env
+
+# Generated documents and scratch files
+output/
+tmp/
+.DS_Store
+Thumbs.db

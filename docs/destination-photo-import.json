@@ -1,0 +1,2126 @@
+[
+  {
+    "name": "Chennai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chettinad",
+    "status": "preserved existing gallery",
+    "photos": 14
+  },
+  {
+    "name": "Coonoor",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Courtallam",
+    "source": "https://www.holidify.com/places/kutralam/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Hogenakkal",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kanchipuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kanyakumari",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kodaikanal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kolli Hills",
+    "status": "preserved existing gallery",
+    "photos": 5
+  },
+  {
+    "name": "Kotagiri",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kumbakonam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Madurai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Mamallapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Ooty",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Pichavaram",
+    "source": "https://www.holidify.com/places/pichavaram/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Pollachi",
+    "source": "https://www.holidify.com/places/pollachi/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/POLLACHI.jpg",
+        "title": "Pollachi",
+        "local": "/images/destinations/pollachi/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rameswaram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thanjavur",
+    "source": "https://www.holidify.com/places/thanjavur/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Tharangambadi",
+    "status": "preserved existing gallery",
+    "photos": 9
+  },
+  {
+    "name": "Tiruchendur",
+    "source": "https://www.holidify.com/places/tiruchendur/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Tiruchirappalli",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruvannamalai",
+    "source": "https://www.holidify.com/places/tiruvannamalai/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Valparai",
+    "source": "https://www.holidify.com/places/valparai/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VALPARAI.jpg",
+        "title": "Valparai",
+        "local": "/images/destinations/valparai/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chennai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chettinad",
+    "status": "preserved existing gallery",
+    "photos": 14
+  },
+  {
+    "name": "Coonoor",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Courtallam",
+    "source": "https://www.holidify.com/places/kutralam/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Hogenakkal",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kanchipuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kanyakumari",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kodaikanal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kolli Hills",
+    "status": "preserved existing gallery",
+    "photos": 5
+  },
+  {
+    "name": "Kotagiri",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kumbakonam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Madurai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Mamallapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Ooty",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Pichavaram",
+    "source": "https://www.holidify.com/places/pichavaram/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Pollachi",
+    "source": "https://www.holidify.com/places/pollachi/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/POLLACHI.jpg",
+        "title": "Pollachi",
+        "local": "/images/destinations/pollachi/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rameswaram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thanjavur",
+    "source": "https://www.holidify.com/places/thanjevur/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/THANJEVUR.jpg",
+        "title": "Thanjavur, Tamil Nadu",
+        "local": "/images/destinations/thanjevur/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/2978.jpg?v=1.1",
+        "title": "Brahadeshwara Temple",
+        "local": "/images/destinations/thanjevur/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2978_20231220182328.jpg",
+        "title": "Brihadeeswara Temple",
+        "local": "/images/destinations/thanjevur/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/8035_20200804142314.jpg",
+        "title": "Shiva Ganga Garden",
+        "local": "/images/destinations/thanjevur/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-A_view_of_Brihadeeshwarar_Temple_in_GangaikondaCholapuram_which_leaves_its_visitors_into_Ecstasies_20190116135001.jpg",
+        "title": "Gangaikonda Cholapuram",
+        "local": "/images/destinations/thanjevur/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-Tanjore_palace1_20190716175704.jpg",
+        "title": "Vijayanagar Fort",
+        "local": "/images/destinations/thanjevur/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1200px-2013-Sarasvati-Mahal-Library-101_20180604124541.JPG",
+        "title": "Saraswathi Mahal Library",
+        "local": "/images/destinations/thanjevur/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/%252818%2529_Hindu_temple_Chola_dynasty_Brihadishwara_Periya_Kovil_Brihadeeswara_RajaRajeswara_Tanjore_Tamil_Nadu_India_2014_20190116140820.jpg",
+        "title": "Thanjai Mamani Koil",
+        "local": "/images/destinations/thanjevur/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Thanjavur_VijayaRaman_Temple(2)_20180604123247.JPG",
+        "title": "Bangaru Kamakshi Amman Temple",
+        "local": "/images/destinations/thanjevur/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Thanjavur_Royal_Palace_Museum_28529_283682901057329_20240102145103.jpg",
+        "title": "Royal Palace Museum",
+        "local": "/images/destinations/thanjevur/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Maratha-Palace-Thanjavur-00007_20240102090900.jpg",
+        "title": "Thanjavur Maratha Palace",
+        "local": "/images/destinations/thanjevur/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/KUMBAKONAM_20240102145634.jpg",
+        "title": "Day trip to Kumbakonam",
+        "local": "/images/destinations/thanjevur/attraction-12.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/86406323_20180604115909.jpg",
+        "title": "Schwartz Church"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1920px-Punnainallur_Mariamman_Gopuram_20240102144607.jpg",
+        "title": "Shri Mariamman Kovil Punnainallur"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1200px-Aalangudi_Temple_20180331213700.jpg",
+        "title": "Alangudi Guru Temple"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1200px-Swamimalai_temple_20180604121538.jpg",
+        "title": "Swami Malai Temple"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/thanjavur-140696_1280_20191227160918_20191227160948.jpg",
+        "title": "Chandra Bagwan Temple"
+      }
+    ]
+  },
+  {
+    "name": "Tharangambadi",
+    "status": "preserved existing gallery",
+    "photos": 9
+  },
+  {
+    "name": "Tiruchendur",
+    "source": "https://www.holidify.com/places/tiruchendur/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Tiruchirappalli",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruvannamalai",
+    "source": "https://www.holidify.com/places/thiruvannamalai/photos.html",
+    "photos": 11,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/THIRUVANNAMALAI.jpg",
+        "title": "Thiruvannamalai, Tamil Nadu",
+        "local": "/images/destinations/thiruvannamalai/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/3303.jpg?v=1.1",
+        "title": "Annamalaiyar temple",
+        "local": "/images/destinations/thiruvannamalai/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/3312_20190226112023jpg",
+        "title": "Gingee Fort",
+        "local": "/images/destinations/thiruvannamalai/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Sathanur_Dam_Park_Area_20180110123118.jpg",
+        "title": "Sathanur Dam",
+        "local": "/images/destinations/thiruvannamalai/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/21731707424_10173767ae_b_20171219194000.jpg",
+        "title": "Annamalaiyar Temple",
+        "local": "/images/destinations/thiruvannamalai/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Samadhi-Room-Ramana-Ashram_20180112193613.jpg",
+        "title": "Ramana Ashram",
+        "local": "/images/destinations/thiruvannamalai/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/MahaviraJainTempleTirumalai_20191218150730_20191218150749.jpeg",
+        "title": "Tiruamalai",
+        "local": "/images/destinations/thiruvannamalai/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/5826.jpg",
+        "title": "Mamara Guhai",
+        "local": "/images/destinations/thiruvannamalai/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/3309.jpg",
+        "title": "Skandashramam",
+        "local": "/images/destinations/thiruvannamalai/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/8138.jpg",
+        "title": "Seshadri Swamigal Ashram",
+        "local": "/images/destinations/thiruvannamalai/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/8177_20200312111921.jpg",
+        "title": "Virupaksha Cave",
+        "local": "/images/destinations/thiruvannamalai/attraction-11.webp"
+      }
+    ]
+  },
+  {
+    "name": "Valparai",
+    "source": "https://www.holidify.com/places/valparai/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VALPARAI.jpg",
+        "title": "Valparai",
+        "local": "/images/destinations/valparai/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Alappuzha",
+    "source": "https://www.holidify.com/places/alleppey/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/ALLEPPEY.jpg",
+        "title": "Alleppey, Kerala",
+        "local": "/images/destinations/alleppey/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/297.jpg?v=1.1",
+        "title": "Sunset...Alleppey Backwaters...",
+        "local": "/images/destinations/alleppey/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Alleppey-houseboats-Kerala_20180321162358.jpg",
+        "title": "Houseboats in Alleppey",
+        "local": "/images/destinations/alleppey/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/A12_20170925211413.PNG",
+        "title": "Alleppey Beach",
+        "local": "/images/destinations/alleppey/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/82ccf2e93313c6f31b8fe1dcd56067c07b901c5f_20210513104242.jpeg",
+        "title": "Alappuzha Lighthouse",
+        "local": "/images/destinations/alleppey/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Scenes_fom_Vembanad_lake_en_route_Alappuzha_Kottayam48_20180324212726.jpg",
+        "title": "Vembanad Lake",
+        "local": "/images/destinations/alleppey/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-Ambalapuzha_Sri_Krishna_Temple8_20180413145101.jpg",
+        "title": "Ambalappuzha Sree Krishna Swamy Temple",
+        "local": "/images/destinations/alleppey/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2840929320_c6e3c3979f_o_20180413153237.jpg",
+        "title": "Marari Beach",
+        "local": "/images/destinations/alleppey/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_2099_20190314124520.jpg",
+        "title": "Krishnapuram Palace",
+        "local": "/images/destinations/alleppey/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_2427_20190315131619.jpg",
+        "title": "Alleppey Backwaters",
+        "local": "/images/destinations/alleppey/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/revi_karuna_karan_memorial_museum_alappuzha20131125145005_417_1_20180413151340.jpg",
+        "title": "Revi Karunakaran Memorial Museum",
+        "local": "/images/destinations/alleppey/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-St._Andrews_Forane_Church_of_Arthunkal_20180413152100.jpg",
+        "title": "St. Andrew's Basilica Arthunkal",
+        "local": "/images/destinations/alleppey/attraction-12.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Mannarasala-Nagaraja-Temple_rev_20240923113810.jpg",
+        "title": "Mannarasala Sree Nagaraja Temple"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/37_20240923113004.jpg",
+        "title": "International Coir Museum"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/St._Marys_Church,_Chambakulam_20180413164332.jpg",
+        "title": "Kalloorkad St. Mary's Basilica"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/4082_20190314125306.jpg",
+        "title": "Kuttanad"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Thumpoly-Beach-4_20241203224407.jpg",
+        "title": "Thumpoly Beach"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/House_boat._punnamada_lake._Alappuzha_-_panoramio_20181129234617.jpg",
+        "title": "Punnamada Lake"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-EdathuaChurch_Cross_20180413161408.jpg",
+        "title": "St George Forane Church, Edathua"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/AjFMv4fm_4x_20230317173525.jpg",
+        "title": "Triveni Floating Market"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/287d8849952d9afed2ff194d1954a603_1000x1000_20241203224540.jpg",
+        "title": "Punnapra Beach"
+      }
+    ]
+  },
+  {
+    "name": "Athirappilly",
+    "source": "https://www.holidify.com/places/athirapally/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Bekal",
+    "source": "https://www.holidify.com/places/bekal/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/BEKAL.jpg",
+        "title": "Bekal, Kerala",
+        "local": "/images/destinations/bekal/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Bakel_Fort_Beach_Kasaragod7_20210203115756.jpg",
+        "title": "Bekal Fort",
+        "local": "/images/destinations/bekal/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-Bekal_fort_kasaragod_20_20180301110101.jpg",
+        "title": "Bekal Beach",
+        "local": "/images/destinations/bekal/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kappil_beach_02.jpeg_20180301110730.jpeg",
+        "title": "Kappil Beach",
+        "local": "/images/destinations/bekal/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/4159.jpg",
+        "title": "The Bekal Hole Aqua Park",
+        "local": "/images/destinations/bekal/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/4160_20200512144421.JPG",
+        "title": "Valiyaparamba Backwaters",
+        "local": "/images/destinations/bekal/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/4158.jpg",
+        "title": "Nityanandashram Caves",
+        "local": "/images/destinations/bekal/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/4153.jpg",
+        "title": "Ananthapura Temple",
+        "local": "/images/destinations/bekal/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/4155_20200515113316.jpg",
+        "title": "Chandragiri fort",
+        "local": "/images/destinations/bekal/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2756_20200514130800.jpg",
+        "title": "Nileswaram",
+        "local": "/images/destinations/bekal/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/4156_20200512122043.jpg",
+        "title": "Hosdurg Beach",
+        "local": "/images/destinations/bekal/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2757_20200512121216.jpg",
+        "title": "Malik Deena Mosque",
+        "local": "/images/destinations/bekal/attraction-12.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/8357300046_e473dbe695_b_20190121123041.jpg",
+        "title": "Uroos Festival"
+      }
+    ]
+  },
+  {
+    "name": "Chennai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chettinad",
+    "status": "preserved existing gallery",
+    "photos": 14
+  },
+  {
+    "name": "Coonoor",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Courtallam",
+    "source": "https://www.holidify.com/places/kutralam/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Hogenakkal",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kanchipuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kanyakumari",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kochi",
+    "source": "https://www.holidify.com/places/kochi/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/KOCHI.jpg",
+        "title": "Kochi, Kerala",
+        "local": "/images/destinations/kochi/attraction-1.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/b20d5be8b389bb97c9989ef3e4bdf085_20241203113929.jpeg",
+        "title": "Fort Kochi",
+        "local": "/images/destinations/kochi/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_1101_20190412091253.jpg",
+        "title": "Mattancherry Palace",
+        "local": "/images/destinations/kochi/attraction-3.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Kumbalangi-815x459_20241204190052.jpg",
+        "title": "Kumbalangi Integrated Tourism Village",
+        "local": "/images/destinations/kochi/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Jew_town_mattancherry_20230302105152.jpg",
+        "title": "Jew Town",
+        "local": "/images/destinations/kochi/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Chinese-Fishing-Nets_20190418150128.jpg",
+        "title": "Chinese Fishing Nets",
+        "local": "/images/destinations/kochi/attraction-6.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/mattancherry_synagogue20131104110916_163_1_20241203114019.jpg",
+        "title": "Jewish Synagogue",
+        "local": "/images/destinations/kochi/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_1841_20190315123946.jpg",
+        "title": "Marine Drive, Kochi",
+        "local": "/images/destinations/kochi/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-Fort_Cochin_cathedral_20171018152251.jpg",
+        "title": "Santa Cruz Basilica",
+        "local": "/images/destinations/kochi/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/6950_20190416160738.jpg",
+        "title": "Willingdon Island",
+        "local": "/images/destinations/kochi/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/B12_20171003012733.PNG",
+        "title": "Bolgatty Palace",
+        "local": "/images/destinations/kochi/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/KWM_Boat_20240103133931.jpg",
+        "title": "Kochi Water Metro",
+        "local": "/images/destinations/kochi/attraction-12.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Hill_Palace_Museum_Tripunithura_DSC_1243_08_20190416115416.jpg",
+        "title": "Hill Palace Museum"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_wiki_1680_20190411135528.jpg",
+        "title": "Cherai Beach"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/RdQ0PulW_4x_20230306220226.jpg",
+        "title": "Vypin Beach"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/MangalavanamBirdSanctuary,KochiKeralakeralatrips.co.in5_20180328134500.jpg",
+        "title": "Mangalavanam Bird Sanctuary"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1200px-Museum_of_Kerala_History_20230307231618.jpg",
+        "title": "Museum of Kerala History"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/6150_20190422115628.jpg",
+        "title": "Kerala Folklore Museum"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/alleppey-3170776_1920_20180228163215.jpg",
+        "title": "Veeranpuzha Lake and Backwaters"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/lulumall_20180226120812.jpg",
+        "title": "Lulu Mall"
+      }
+    ]
+  },
+  {
+    "name": "Kodaikanal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kolli Hills",
+    "status": "preserved existing gallery",
+    "photos": 5
+  },
+  {
+    "name": "Kotagiri",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kovalam",
+    "source": "https://www.holidify.com/places/kovalam/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/KOVALAM.jpg",
+        "title": "Kovalam, Kerala",
+        "local": "/images/destinations/kovalam/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kovalam_Lighthouse_20180331130307.jpg",
+        "title": "Kovalam Beach",
+        "local": "/images/destinations/kovalam/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/18012896756459725002342073886034o_20230403150147.jpg",
+        "title": "Vizhinjam Lighthouse",
+        "local": "/images/destinations/kovalam/attraction-3.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Neyyar_20241222104045.jpg",
+        "title": "Neyyar Wildlife Sanctuary",
+        "local": "/images/destinations/kovalam/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/6580072031_bd440e0838_b_20180205133850.jpg",
+        "title": "Padmanabhaswamy Temple",
+        "local": "/images/destinations/kovalam/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Sunset_20210611133839.jpeg",
+        "title": "Hawah Beach",
+        "local": "/images/destinations/kovalam/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Vellayani_lake_-_Morning_view_-_panoramio_20180226100801.jpg",
+        "title": "Vellayani Lake, Kovalam",
+        "local": "/images/destinations/kovalam/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/UTyRQEl8_4x_20230521195349.jpg",
+        "title": "Aazhimala Shiva Temple",
+        "local": "/images/destinations/kovalam/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2_20230527001221.jpg",
+        "title": "Fly Kovalam Parasailing",
+        "local": "/images/destinations/kovalam/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/velitouristvillage_20180226104445.jpg",
+        "title": "Veli Lake Tourist Village",
+        "local": "/images/destinations/kovalam/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kovalam_Samodra_Beach_20190422155831.JPG",
+        "title": "Samudra Beach Park",
+        "local": "/images/destinations/kovalam/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Vizhinjam_cave_temple_20180226105558.JPG",
+        "title": "Vizhinjam Rock Cut Cave Temple",
+        "local": "/images/destinations/kovalam/attraction-12.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2635883022_0a33f53866_o_20181118005121_20181118005319.jpg",
+        "title": "Vizhinjam Beach"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/3lXvTa8z_4x_20230527000612.jpg",
+        "title": "Kunnumpara Sree Murugan Temple"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Natural_harbor_in_Vizhinjam_930218630_a6a5d892d0_o_20180309143528.jpg",
+        "title": "Vizhinjam"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/POOVAR_20230307092535.jpg",
+        "title": "Poovar"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_wiki_5250_20190417162136.jpg",
+        "title": "Water Sports in Kovalam"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Artificial-off-shore-coral-reef_1506663979t_20180226113434.jpg",
+        "title": "Artificial Off Shore Coral Reef"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/thiruvallaparasuramatemple_20180226112508.jpeg",
+        "title": "Thiruvallam Parasurama Temple"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/valiyathurapier_20180226111143.jpg",
+        "title": "Valiyathura Pier"
+      }
+    ]
+  },
+  {
+    "name": "Kumarakom",
+    "source": "https://www.holidify.com/places/kumarakom/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/KUMARAKOM.jpg",
+        "title": "Kumarakom, Kerala",
+        "local": "/images/destinations/kumarakom/attraction-1.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/image--028_20241004105758.png",
+        "title": "Thanneermukkom Bund",
+        "local": "/images/destinations/kumarakom/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/backwater5_20230404182056.jpg",
+        "title": "Village Life Experience",
+        "local": "/images/destinations/kumarakom/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/houseboat-alleppey-boat-house-boat_20200528083823.jpg",
+        "title": "Vaikom Beach",
+        "local": "/images/destinations/kumarakom/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Pathiramanal_Island_in_Vembanad_lake_20190116144308.jpg",
+        "title": "Pathiramanal Island",
+        "local": "/images/destinations/kumarakom/attraction-5.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Kumarakom_Craft_Museum_20240311155849.jpg",
+        "title": "Kumarakom Craft Museum",
+        "local": "/images/destinations/kumarakom/attraction-6.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/0a_20250127131610.jpg",
+        "title": "Night Kayaking at Vembanad",
+        "local": "/images/destinations/kumarakom/attraction-7.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/selection-729_20250127131951.png",
+        "title": "Ayurvedic Spa Kumarakom",
+        "local": "/images/destinations/kumarakom/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Aruvikkuzhi_Waterfalls_Kottayam_20190116144237.jpg",
+        "title": "Aruvikkuzhi Waterfalls",
+        "local": "/images/destinations/kumarakom/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/13848210825_012650e048_b_20190116144305.jpg",
+        "title": "St Mary's Church, Cheriapally",
+        "local": "/images/destinations/kumarakom/attraction-10.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/6968_20250127131406.jpg",
+        "title": "Go Fishing in Kumarakom",
+        "local": "/images/destinations/kumarakom/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kodungallur-RD-11Nov11_20180429215604.jpg",
+        "title": "Ettumanoor Mahadeva Temple",
+        "local": "/images/destinations/kumarakom/attraction-12.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1090_20240311180700.jpg",
+        "title": "Thirunakkara Mahadev Temple"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/8298_20240311180830.jpg",
+        "title": "Thazhathangady Juma Masjid"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/lake_20250127133019.jpg",
+        "title": "Mango Meadows Agricultural Theme Park"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/4081_20200507151637.jpg",
+        "title": "Bay Island Driftwood Museum"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/IMG20230316150028_20230316150121.jpg",
+        "title": "Vaikom Mahadeva Temple"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/5723_20230303160936.jpg",
+        "title": "Toddy Shops in Kumarakom"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Boat_Beauty_W_20180305163857.jpg",
+        "title": "Kumarakom Backwaters"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kumarakom_(23658063913)_20171004142739.jpg",
+        "title": "Kumarakom Bird Sanctuary"
+      }
+    ]
+  },
+  {
+    "name": "Kumbakonam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Madurai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Mamallapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Munnar",
+    "source": "https://www.holidify.com/places/munnar/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/MUNNAR.jpg",
+        "title": "Munnar, Kerala",
+        "local": "/images/destinations/munnar/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Munnar_hillstation_kerala_20190207123437jpg",
+        "title": "Munnar is a beautiful town in Kerala State at an elevation of 1,532 m",
+        "local": "/images/destinations/munnar/attraction-2.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/top-station-munnar-kerala-1-attr-hero_20250207214228_20250207214307.jpg",
+        "title": "Top Station",
+        "local": "/images/destinations/munnar/attraction-3.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Screenshot2025-09-11115507_20250911115538.png",
+        "title": "Mattupetty Dam",
+        "local": "/images/destinations/munnar/attraction-4.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1200px-Kolukkumalai_20250207212515_20250207212551.jpg",
+        "title": "Kolukkumalai Tea Estate",
+        "local": "/images/destinations/munnar/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/E1_20170907143409.PNG",
+        "title": "Eravikulam National Park",
+        "local": "/images/destinations/munnar/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1_20220325175424.jpeg",
+        "title": "Munnar Jeep Safari",
+        "local": "/images/destinations/munnar/attraction-7.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/9234151911373087066334793098820415892488192n_20250207215141_20250207215218.jpg",
+        "title": "Pothamedu View Point",
+        "local": "/images/destinations/munnar/attraction-8.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/47063809210577956126974514697939821201436554n_20250207221700_20250207221740.jpg",
+        "title": "Blossom Park",
+        "local": "/images/destinations/munnar/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Chinnar_Forest_20170425135309.jpg",
+        "title": "Chinnar Wildlife Sanctuary",
+        "local": "/images/destinations/munnar/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/MEESAPULIMALA_-_IDUKKI_20180706124536.jpg",
+        "title": "Meesapulimala",
+        "local": "/images/destinations/munnar/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/rose_20170425125823.jpg",
+        "title": "Rose Garden Munnar",
+        "local": "/images/destinations/munnar/attraction-12.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/mc_20230520093943.jpg",
+        "title": "Munnar Chocolate Factory"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/licensed-image_20250207223138_20250207223230.jpg",
+        "title": "Lakkom Water Falls"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/TataTeaorKDHPMuseum_20200214095722_20200214095839.jpg",
+        "title": "Tata Tea Museum (KDHP Museum)"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Munnar66_20181211014155.jpg",
+        "title": "Munnar Tea Plantations"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/kundala-dam-lake-munnar-tourism-entry-ticket-boating-price_20220110164437.jpeg",
+        "title": "Kundala Dam & Lake"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-Tree_house_20190127023229.jpg",
+        "title": "Stay in a Tree House"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/photo-point-munnar-tourism-entry-fee-timings-holidays-reviews-header_20250210232127_20250210232155.jpg",
+        "title": "Photo Point"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_123869_20220110170009.jpg",
+        "title": "Wonder Valley Adventure and Amusement Park"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_539881435_20191111181353_20191111181425.jpg",
+        "title": "Atukkad Waterfalls"
+      }
+    ]
+  },
+  {
+    "name": "Ooty",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Pichavaram",
+    "source": "https://www.holidify.com/places/pichavaram/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Pollachi",
+    "source": "https://www.holidify.com/places/pollachi/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/POLLACHI.jpg",
+        "title": "Pollachi",
+        "local": "/images/destinations/pollachi/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rameswaram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thanjavur",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tharangambadi",
+    "status": "preserved existing gallery",
+    "photos": 9
+  },
+  {
+    "name": "Thekkady",
+    "source": "https://www.holidify.com/places/thekkady/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/THEKKADY.jpg",
+        "title": "Thekkady, Kerala",
+        "local": "/images/destinations/thekkady/attraction-1.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Periyar-Wildlife-Sanctuary_20240923092536.jpg",
+        "title": "Periyar National Park",
+        "local": "/images/destinations/thekkady/attraction-2.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/attr_123875_20241209072516.jpg",
+        "title": "Kadathanadan Kalari Centre",
+        "local": "/images/destinations/thekkady/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/f4bf478f0ee8aa096c60b7d20b0d-1418280_20190214174623.jpg!d",
+        "title": "Thekkady Spice Market",
+        "local": "/images/destinations/thekkady/attraction-4.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/2911_20241209071820.jpg",
+        "title": "Periyar Tiger Trail",
+        "local": "/images/destinations/thekkady/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-Bamboo_Rafting_during_guided_tour_through_Periyar_Wild_Life_Sanctury_20190802151443.JPG",
+        "title": "Bamboo Rafting in Thekkady",
+        "local": "/images/destinations/thekkady/attraction-6.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/periyar-boat-safari-header-m_20241209072359.jpg",
+        "title": "Periyar Lake",
+        "local": "/images/destinations/thekkady/attraction-7.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/44ba6ef706e747d18a16bd8d933df780_1000x1000_20241208181430.jpg",
+        "title": "Anakkara",
+        "local": "/images/destinations/thekkady/attraction-8.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/2d_20241208180151.jpg",
+        "title": "Green Park Ayurvedic & Spices Plantation",
+        "local": "/images/destinations/thekkady/attraction-9.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/thekkady-rose-park-cafteria_20241209095207.jpg",
+        "title": "Thekkady Rose Park",
+        "local": "/images/destinations/thekkady/attraction-10.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/maxresdefault_20241209094243.jpg",
+        "title": "Elephant Junction Thekkady",
+        "local": "/images/destinations/thekkady/attraction-11.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Mangala_Devi_Kannagi_Temple-27022020110103_20241209073745.jpg",
+        "title": "Mangala Devi Temple",
+        "local": "/images/destinations/thekkady/attraction-12.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/9a946e42da466c1d29e7c8c081a232b7_1000x1000_20241208181253.jpg",
+        "title": "Chellarkovil Viewpoint"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/pm_20230425202652.jpg",
+        "title": "Pullumedu"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Idukki_20241209101358.jpgw735h350",
+        "title": "Kumily"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1434_20230406114050.jpg",
+        "title": "Murukkady"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/attr_123877_20200220112046.jpg",
+        "title": "Vandiperiyar"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/kathakali_cont_2_20190415105528.jpg",
+        "title": "Mudra Cultural Centre"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/d2aa72b26418ac97ba29acba8f5ca38f_1000x1000_20241208180830.jpg",
+        "title": "Pandikuzhi Viewpoint"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/v_20230425200147.jpg",
+        "title": "Vandanmedu"
+      }
+    ]
+  },
+  {
+    "name": "Thiruvananthapuram",
+    "source": "https://www.holidify.com/places/trivandrum/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/TRIVANDRUM.jpg",
+        "title": "Trivandrum, Kerala",
+        "local": "/images/destinations/trivandrum/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/1781.jpg?v=1.1",
+        "title": "The Zoological Park",
+        "local": "/images/destinations/trivandrum/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/6580072031_bd440e0838_b_20180205133850.jpg",
+        "title": "Sree Padmanabhaswamy Temple",
+        "local": "/images/destinations/trivandrum/attraction-3.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/neyyar-wild-life-sanctuary_20240924182408.jpg",
+        "title": "Neyyar Wildlife Sanctuary",
+        "local": "/images/destinations/trivandrum/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/j3UaJBbK_4x_20230521195009.jpg",
+        "title": "Aazhimala Siva Temple",
+        "local": "/images/destinations/trivandrum/attraction-5.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1787_20240314121217.jpg",
+        "title": "Sri Chitra Art Gallery",
+        "local": "/images/destinations/trivandrum/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1563612394_20200108111808_20200108111830.jpg",
+        "title": "Agasthyakoodam",
+        "local": "/images/destinations/trivandrum/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-Boats_at_Poovar_Island_20171011114916.jpg",
+        "title": "Poovar Island",
+        "local": "/images/destinations/trivandrum/attraction-8.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1791_20240314114609.jpg",
+        "title": "Napier Museum",
+        "local": "/images/destinations/trivandrum/attraction-9.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/280615272-5046854028766871-2543171315787257932-n-1686805023_20241203145620.jpg",
+        "title": "Magic Planet",
+        "local": "/images/destinations/trivandrum/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/ac51a1db072d8f9a3f6cc40eb7c1bf56_20180605134757.jpg",
+        "title": "Attukal Bhagavathy Temple",
+        "local": "/images/destinations/trivandrum/attraction-11.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/ganapathy-temple-trivandrum_20241203144619.jpg",
+        "title": "Pazhavangaadi Sree Maha Ganapathy Temple",
+        "local": "/images/destinations/trivandrum/attraction-12.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/the_zoological_park_thiruvananthapuram20131115172928_90_1_20241203145540.jpg",
+        "title": "Thiruvananthapuram Zoo"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/kuthiramalika_palace_museum_at_east_fort20131031110636_58_1(1)_20180604195119.jpg",
+        "title": "Kuthiramalika Palace"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/KANYAKUMARI_20240924181606.jpg",
+        "title": "Kanyakumari"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/velitouristvillage_20180226104445.jpg",
+        "title": "Veli Lake Tourist Village"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/18012896756459725002342073886034o_20230403150147.jpg",
+        "title": "Vizhinjam Lighthouse"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/2613651636_d619f96149_o_20181118004257_20181118004542.jpg",
+        "title": "Shangumugham Beach"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/thiruvallaparasuramatemple_20180226112508.jpeg",
+        "title": "Thiruvallam Parasurama Temple"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1790_20240314083613.jpg",
+        "title": "Kanakakunnu Palace"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/priyadarshini-space-planetarium-trivandrum-tourism-entry-fee-timings-holidays-reviews-header_20240314083359.jpg",
+        "title": "KSST Museum & Priyadarsini Planetarium"
+      }
+    ]
+  },
+  {
+    "name": "Tiruchendur",
+    "source": "https://www.holidify.com/places/tiruchendur/photos.html",
+    "error": "Gallery unavailable: 404"
+  },
+  {
+    "name": "Tiruchirappalli",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruvannamalai",
+    "status": "preserved existing gallery",
+    "photos": 11
+  },
+  {
+    "name": "Vagamon",
+    "source": "https://www.holidify.com/places/vagamon/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VAGAMON.jpg",
+        "title": "Vagamon, Kerala",
+        "local": "/images/destinations/vagamon/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/3701.jpg?v=1.1",
+        "title": "Kurisumala",
+        "local": "/images/destinations/vagamon/attraction-2.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/palozhukumpara-waterfalls-vagamon-orange-valley-hills-resort-vagamon_20240926103409.jpg",
+        "title": "Vagamon Falls",
+        "local": "/images/destinations/vagamon/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-A_tea_plantation_across_the_lake_(28529588066)_20190803013948.jpg",
+        "title": "Vagamon Lake",
+        "local": "/images/destinations/vagamon/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/3704_20190716175017.JPG",
+        "title": "Vagamon Meadows",
+        "local": "/images/destinations/vagamon/attraction-5.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/IDUKKI_20240926120617.jpg",
+        "title": "Idukki",
+        "local": "/images/destinations/vagamon/attraction-6.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/kurisumala30_20240926104325.jpg",
+        "title": "Kurisumala Ashram",
+        "local": "/images/destinations/vagamon/attraction-7.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/maxresdefault_20240926120008.jpg",
+        "title": "Palozhukum Para Waterfalls",
+        "local": "/images/destinations/vagamon/attraction-8.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1634238662images20-202021-10-15T004040.806_20240926104855.jpeg",
+        "title": "Thangalpara",
+        "local": "/images/destinations/vagamon/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/21956997924_37b892a71c_b_20190414194522.jpg",
+        "title": "Barren Hills",
+        "local": "/images/destinations/vagamon/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Marmala-waterfalls-kerala_20180430122850.jpg",
+        "title": "Marmala Waterfalls",
+        "local": "/images/destinations/vagamon/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1600px-Riverston_Matale_20220826105221.jpg",
+        "title": "Karikadu View Point",
+        "local": "/images/destinations/vagamon/attraction-12.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/27946446843_62cf0d0af4_b_20190116142428.jpg",
+        "title": "Vagamon Pine Forest"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1432_20190716180325.jpg",
+        "title": "Idukki Dam"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/7907661550_625ad4519b_h_20190414194340.jpg",
+        "title": "Mundakayam Ghat"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/6140_20240424151435.jpg",
+        "title": "Ulipooni Forest"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1280px-VelamkanniMathaChurch_20080216-2_20190414210149.jpg",
+        "title": "Pattumala Church"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Murugan_Mala_-_%25E0%25B4%25AE%25E0%25B5%2581%25E0%25B4%25B0%25E0%25B5%2581%25E0%25B4%2595%25E0%25B5%25BB_%25E0%25B4%25AE%25E0%25B4%25B2_01_20190116142421.jpg",
+        "title": "Murugan Mala"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/5355_20240926115634.jpg",
+        "title": "Pine Hill"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Tea_Plantations_at_Kuttikkanam2C_near_Thekkady_20190720134725.jpg",
+        "title": "Kuttikkanam"
+      }
+    ]
+  },
+  {
+    "name": "Valparai",
+    "source": "https://www.holidify.com/places/valparai/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VALPARAI.jpg",
+        "title": "Valparai",
+        "local": "/images/destinations/valparai/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Varkala",
+    "source": "https://www.holidify.com/places/varkala/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VARKALA.jpg",
+        "title": "Varkala, Kerala",
+        "local": "/images/destinations/varkala/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/44_20191003121426.jpg",
+        "title": "Varkala Beach View from the Cliff",
+        "local": "/images/destinations/varkala/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/24058690533_9e908f3c5b_b_20170923091848.jpg",
+        "title": "Jatayu Earth's Centre",
+        "local": "/images/destinations/varkala/attraction-3.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/attr_8295_20240318161414.jpg",
+        "title": "Water Sports in Varkala",
+        "local": "/images/destinations/varkala/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/39986532641_2195022d89_b_20190116142503.jpg",
+        "title": "Varkala Cliff",
+        "local": "/images/destinations/varkala/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/V1_20170919180736.PNG",
+        "title": "Varkala Beach",
+        "local": "/images/destinations/varkala/attraction-6.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/1552637164_shared_from_lightroom_mobile_15_20240924081206.jpg",
+        "title": "Black Sand Beach",
+        "local": "/images/destinations/varkala/attraction-7.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/temporary509752000b138Varkala-Janardhana-Temple_20240319101040.jpg",
+        "title": "Janardhanaswamy Temple",
+        "local": "/images/destinations/varkala/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kappil_beach_02.jpeg_20180301110730.jpeg",
+        "title": "Kappil Beach",
+        "local": "/images/destinations/varkala/attraction-9.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/ttd_1523714325m2_20240924075232.jpg",
+        "title": "Ponnumthuruthu",
+        "local": "/images/destinations/varkala/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/GH0104111639586949590_20211215222340.jpg",
+        "title": "Mangrove Forest Kayaking",
+        "local": "/images/destinations/varkala/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/varkala_20191115140334.jpg",
+        "title": "Cafes in Varkala",
+        "local": "/images/destinations/varkala/attraction-12.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/5077_20240318162621.jpg",
+        "title": "Thiruvambadi Beach"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Anchutheng_fort_20240319095901.jpg",
+        "title": "Anchuthengu Fort (Anjengo Fort)"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Varkala_sivagiri_20240319101559.jpg",
+        "title": "Sivagiri Mutt"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/lighthouse-beach1_20240924075613.jpg",
+        "title": "Varkala Lighthouse"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/CH109GqVAAAdh5h_20240924080918.jpg",
+        "title": "Varkala Bali Mandapam"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/maxresdefault_20240924080238.jpg",
+        "title": "Odayam Beach"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/377739150Edava-Beach_20240322153450.jpg",
+        "title": "Edava Beach"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/oo_20190318151938.png",
+        "title": "InDa Cafe"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Varkala-Aquarium_20240924075711.jpg",
+        "title": "Varkala Aquarium"
+      }
+    ]
+  },
+  {
+    "name": "Vellore",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Wayanad",
+    "source": "https://www.holidify.com/places/wayanad/photos.html",
+    "photos": 12,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/WAYANAD.jpg",
+        "title": "Wayanad, Kerala",
+        "local": "/images/destinations/wayanad/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/2092.jpg",
+        "title": "Wayanad Wildlife Sanctuary",
+        "local": "/images/destinations/wayanad/attraction-2.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Edakkal-1-1-1024x536_20240925153301.png",
+        "title": "Edakkal Caves",
+        "local": "/images/destinations/wayanad/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1200px-Meenmutty_Falls_20180111204928.jpg",
+        "title": "Meenmutty",
+        "local": "/images/destinations/wayanad/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/800px-Tree_house_20190410205434.jpg",
+        "title": "Stay in a Treehouse",
+        "local": "/images/destinations/wayanad/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Chembra-Peak-Wayanad_20180119201400.png",
+        "title": "Chembra Peak",
+        "local": "/images/destinations/wayanad/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/100816080236(BannerImage)SOOCHIPPARAWATERFALLSIMAGE-15_20180118201857.JPG",
+        "title": "Soochipara Falls",
+        "local": "/images/destinations/wayanad/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/Kuruva-Dweep_20180215163207.jpg",
+        "title": "Kuruva Dweep",
+        "local": "/images/destinations/wayanad/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/asdas_20190123131353.jpg",
+        "title": "Poopoli Wayanad Flower Show",
+        "local": "/images/destinations/wayanad/attraction-9.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Ripon-Tea-Factory_20241003150327.jpg",
+        "title": "Rippon Tea Factory",
+        "local": "/images/destinations/wayanad/attraction-10.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1140378593_20200116122458_20200116122531.png",
+        "title": "Banasura Sagar Dam",
+        "local": "/images/destinations/wayanad/attraction-11.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/3800_20190320113426.jpg",
+        "title": "Thirunelly Temple",
+        "local": "/images/destinations/wayanad/attraction-12.webp"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/lakkidi-view-point-wayanad-india-tourism-history_20241128173142.jpg",
+        "title": "Lakkidi View Point"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/attr_1809_20240925153646.jpg",
+        "title": "Sulthan Bathery"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_720958156_20191118144315_20191118144333.jpg",
+        "title": "Pookode Lake"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/chain-tree-wayanad-india-tourism-history_20240925153812.jpg",
+        "title": "Chain Tree"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/KABINI_20240925170051.jpg",
+        "title": "Kabini"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/32008225212_f27245267c_b_20190412141542.jpg",
+        "title": "Neelimala Viewpoint"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Wayanad_Tea_Museum_20240509155934.jpg",
+        "title": "Wayanad Tea Museum"
+      },
+      {
+        "url": "https://media.holidify.com/images/cmsuploads/compressed/Karlad_Lake_Wayanad_2465_20240509142745.jpg",
+        "title": "Karlad Lake"
+      }
+    ]
+  },
+  {
+    "name": "Alappuzha",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Athirappilly",
+    "source": "https://www.holidify.com/places/thrissur/athirapally-falls-sightseeing-3769.html",
+    "error": "No attraction photos found"
+  },
+  {
+    "name": "Bekal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chennai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chettinad",
+    "status": "preserved existing gallery",
+    "photos": 14
+  },
+  {
+    "name": "Coonoor",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Courtallam",
+    "source": "https://www.holidify.com/places/kanyakumari/courtallam-falls-sightseeing-2268.html",
+    "error": "No attraction photos found"
+  },
+  {
+    "name": "Hogenakkal",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kanchipuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kanyakumari",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kochi",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kodaikanal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kolli Hills",
+    "status": "preserved existing gallery",
+    "photos": 5
+  },
+  {
+    "name": "Kotagiri",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kovalam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kumarakom",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kumbakonam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Madurai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Mamallapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Munnar",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Ooty",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Pichavaram",
+    "source": "https://www.holidify.com/places/chidambram/pichavaram-backwaters-and-mangrove-forests-sightseeing-4364.html",
+    "error": "No attraction photos found"
+  },
+  {
+    "name": "Pollachi",
+    "source": "https://www.holidify.com/places/pollachi/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/POLLACHI.jpg",
+        "title": "Pollachi",
+        "local": "/images/destinations/pollachi/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rameswaram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thanjavur",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tharangambadi",
+    "status": "preserved existing gallery",
+    "photos": 9
+  },
+  {
+    "name": "Thekkady",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thiruvananthapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruchendur",
+    "source": "https://www.holidify.com/places/tuticorin/tiruchendur-sri-subrahmanya-swami-devasthanam-sightseeing-6084.html",
+    "error": "No attraction photos found"
+  },
+  {
+    "name": "Tiruchirappalli",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruvannamalai",
+    "status": "preserved existing gallery",
+    "photos": 11
+  },
+  {
+    "name": "Vagamon",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Valparai",
+    "source": "https://www.holidify.com/places/valparai/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VALPARAI.jpg",
+        "title": "Valparai",
+        "local": "/images/destinations/valparai/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Alappuzha",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Athirappilly",
+    "source": "https://www.holidify.com/places/thrissur/athirapally-falls-sightseeing-3769.html",
+    "photos": 9,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/at_20190109034758_20190109034951.jpg",
+        "title": "Athirappilly · view 1",
+        "local": "/images/destinations/athirapally/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_1466.jpg",
+        "title": "Athirappilly · view 2",
+        "local": "/images/destinations/athirapally/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_1877.jpg",
+        "title": "Athirappilly · view 3",
+        "local": "/images/destinations/athirapally/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_1842.jpg",
+        "title": "Athirappilly · view 4",
+        "local": "/images/destinations/athirapally/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/attr_wiki/compressed/attr_wiki_4084.jpg",
+        "title": "Athirappilly · view 5",
+        "local": "/images/destinations/athirapally/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/attr_wiki/compressed/attr_wiki_4087.jpg",
+        "title": "Athirappilly · view 6",
+        "local": "/images/destinations/athirapally/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/attr_wiki/compressed/attr_wiki_4088.jpg",
+        "title": "Athirappilly · view 7",
+        "local": "/images/destinations/athirapally/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1131886565_20191111180625.jpg",
+        "title": "Athirappilly · view 8",
+        "local": "/images/destinations/athirapally/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1464801707_20191210120022.jpg",
+        "title": "Athirappilly · view 9",
+        "local": "/images/destinations/athirapally/attraction-9.webp"
+      }
+    ]
+  },
+  {
+    "name": "Bekal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chennai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Chettinad",
+    "status": "preserved existing gallery",
+    "photos": 14
+  },
+  {
+    "name": "Coonoor",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Courtallam",
+    "source": "https://www.holidify.com/places/kanyakumari/courtallam-falls-sightseeing-2268.html",
+    "photos": 7,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/maxresdefault(13)_20180307182621.jpg",
+        "title": "Courtallam · view 1",
+        "local": "/images/destinations/kutralam/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/1465.jpg",
+        "title": "Courtallam · view 2",
+        "local": "/images/destinations/kutralam/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-Main_Falls_From_Thalavai_House_Hotel_20190729133706.jpg",
+        "title": "Courtallam · view 3",
+        "local": "/images/destinations/kutralam/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-0050_Fall_at_Courtallum_28180129_20190729133709.jpg",
+        "title": "Courtallam · view 4",
+        "local": "/images/destinations/kutralam/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-35Courtallum_Waterfall_20190729133714.jpg",
+        "title": "Courtallam · view 5",
+        "local": "/images/destinations/kutralam/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-Courtallam_Five_Falls_Tirunelveli_District_20190729133716.JPG",
+        "title": "Courtallam · view 6",
+        "local": "/images/destinations/kutralam/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/1024px-Boat_House_20190729133718.jpg",
+        "title": "Courtallam · view 7",
+        "local": "/images/destinations/kutralam/attraction-7.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hogenakkal",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kanchipuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kanyakumari",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kochi",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kodaikanal",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kolli Hills",
+    "status": "preserved existing gallery",
+    "photos": 5
+  },
+  {
+    "name": "Kotagiri",
+    "status": "preserved existing gallery",
+    "photos": 8
+  },
+  {
+    "name": "Kovalam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kumarakom",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Kumbakonam",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Madurai",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Mamallapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Munnar",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Ooty",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Pichavaram",
+    "source": "https://www.holidify.com/places/chidambram/pichavaram-backwaters-and-mangrove-forests-sightseeing-4364.html",
+    "photos": 10,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1172081407_20191209132100_20191209132124.jpg",
+        "title": "Pichavaram · view 1",
+        "local": "/images/destinations/pichavaram/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_705.jpg",
+        "title": "Pichavaram · view 2",
+        "local": "/images/destinations/pichavaram/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_710.jpg",
+        "title": "Pichavaram · view 3",
+        "local": "/images/destinations/pichavaram/attraction-3.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_768.jpg",
+        "title": "Pichavaram · view 4",
+        "local": "/images/destinations/pichavaram/attraction-4.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_769.jpg",
+        "title": "Pichavaram · view 5",
+        "local": "/images/destinations/pichavaram/attraction-5.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_903.jpg",
+        "title": "Pichavaram · view 6",
+        "local": "/images/destinations/pichavaram/attraction-6.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_911.jpg",
+        "title": "Pichavaram · view 7",
+        "local": "/images/destinations/pichavaram/attraction-7.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_955.jpg",
+        "title": "Pichavaram · view 8",
+        "local": "/images/destinations/pichavaram/attraction-8.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/compressed/attractions/attr_969.jpg",
+        "title": "Pichavaram · view 9",
+        "local": "/images/destinations/pichavaram/attraction-9.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/shutterstock_1172081407_20191209132100.jpg",
+        "title": "Pichavaram · view 10",
+        "local": "/images/destinations/pichavaram/attraction-10.webp"
+      }
+    ]
+  },
+  {
+    "name": "Pollachi",
+    "source": "https://www.holidify.com/places/pollachi/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/POLLACHI.jpg",
+        "title": "Pollachi",
+        "local": "/images/destinations/pollachi/attraction-1.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rameswaram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thanjavur",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tharangambadi",
+    "status": "preserved existing gallery",
+    "photos": 9
+  },
+  {
+    "name": "Thekkady",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Thiruvananthapuram",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruchendur",
+    "source": "https://www.holidify.com/places/tuticorin/tiruchendur-sri-subrahmanya-swami-devasthanam-sightseeing-6084.html",
+    "photos": 3,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/12606657564_35fc6f780a_k_20190414232825.jpg",
+        "title": "Tiruchendur · view 1",
+        "local": "/images/destinations/tiruchendur/attraction-1.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/temple_topview_20190414231936.jpg",
+        "title": "Tiruchendur · view 2",
+        "local": "/images/destinations/tiruchendur/attraction-2.webp"
+      },
+      {
+        "url": "https://www.holidify.com/images/cmsuploads/compressed/banner1_20190414232011.jpg",
+        "title": "Tiruchendur · view 3",
+        "local": "/images/destinations/tiruchendur/attraction-3.webp"
+      }
+    ]
+  },
+  {
+    "name": "Tiruchirappalli",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Tiruvannamalai",
+    "status": "preserved existing gallery",
+    "photos": 11
+  },
+  {
+    "name": "Vagamon",
+    "status": "preserved existing gallery",
+    "photos": 12
+  },
+  {
+    "name": "Valparai",
+    "source": "https://www.holidify.com/places/valparai/photos.html",
+    "photos": 1,
+    "items": [
+      {
+        "url": "https://www.holidify.com/images/bgImages/VALPARAI.jpg",
+        "title": "Valparai",
+        "local": "/images/destinations/valparai/attraction-1.webp"
+      }
+    ]
+  }
+]

@@ -1,0 +1,24 @@
+/* User discovery pages only. Content stays visible without JavaScript or with reduced motion. */
+.home-discovery-links {
+  display: flex;
+  gap: 20px;
+  font-size: 0.86rem;
+  flex-wrap: wrap;
+}
+.home-discovery-links a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .travel-site .scroll-reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition:
+      opacity 0.65s ease var(--reveal-delay, 0ms),
+      transform 0.65s ease var(--reveal-delay, 0ms);
+  }
+  .travel-site .scroll-reveal.is-revealed {
+    opacity: 1;
+    transform: none;
+  }
+}

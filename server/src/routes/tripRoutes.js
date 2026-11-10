@@ -1,0 +1,15 @@
+import { Router } from 'express';
+import * as c from '../controllers/tripController.js';
+import authenticate from '../middleware/authenticate.js';
+import validate from '../middleware/validate.js';
+import { schemas } from '../validators/index.js';
+import validateId from '../middleware/validateId.js';
+const router = Router();
+router.param('id', validateId);
+router.use(authenticate);
+router.get('/', c.list);
+router.post('/recommendations', validate(schemas.autoBudgetSearch), c.recommendations);
+router.get('/:id', c.detail);
+router.post('/', validate(schemas.trip), c.create);
+router.delete('/:id', c.remove);
+export default router;

@@ -1,0 +1,141 @@
+.travel-site .login-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  max-width: 960px;
+  min-height: 0;
+  margin: 48px auto;
+  padding: 32px;
+  background: linear-gradient(135deg, #eaf3ed, #fff8e9);
+  border: 1px solid #dce7db;
+  border-radius: 28px;
+}
+.travel-site .login-page::before,
+.travel-site .login-page::after {
+  display: none;
+}
+.travel-site .login-page .auth-intro {
+  margin: auto 0;
+  padding: 16px;
+}
+.travel-site .login-page .auth-intro h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  line-height: 1.15;
+  color: #254d3a;
+}
+.travel-site .login-page .auth-intro p {
+  color: #6d7e70;
+  font-size: 14px;
+}
+.travel-site .login-page > .panel {
+  margin: 0;
+  padding: 28px;
+  border: 1px solid #e0e8dc;
+  border-radius: 22px;
+  background: #fffefa;
+  box-shadow: 0 8px 28px #284c3510;
+}
+.login-form-heading > span {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background: #e9f2e6;
+  color: #356547;
+  border-radius: 12px;
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+.travel-site .login-page .login-form-heading h2 {
+  font-size: 25px;
+  margin: 0 0 5px;
+}
+.login-form-heading p {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: #7b877b;
+}
+.travel-site .login-page input {
+  font-size: 16px;
+  min-height: 48px;
+  border-radius: 12px;
+}
+.travel-site .login-page > .panel label {
+  font-size: 13px;
+}
+.travel-site .login-page > .panel .button {
+  background: #326449;
+  min-height: 48px;
+  border-radius: 12px;
+}
+@media (max-width: 650px) {
+  .travel-site .login-page {
+    display: block;
+    margin: 22px 14px;
+    padding: 16px;
+    border-radius: 22px;
+  }
+  .travel-site .login-page .auth-intro {
+    display: none;
+  }
+  .travel-site .login-page > .panel {
+    padding: 22px 18px;
+  }
+  .travel-site .login-page .login-form-heading p {
+    display: block;
+  }
+}
+
+.travel-site .login-page {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: #244e48;
+}
+.login-background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+  pointer-events: none;
+}
+.travel-site .login-page::after {
+  display: block;
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #123c3cb3, #123c3c26);
+  z-index: -1;
+  pointer-events: none;
+}
+.travel-site .login-page .auth-intro h1,
+.travel-site .login-page .auth-intro h1 em {
+  color: #fff;
+}
+.travel-site .login-page .auth-intro p,
+.travel-site .login-page .auth-intro .eyebrow {
+  color: #e1efe3;
+}
+.travel-site .login-page > .panel {
+  background: #fffefaf5;
+}
+@media (max-width: 650px) {
+  .travel-site .login-page {
+    padding: 28px 16px;
+    margin: 14px;
+  }
+  .travel-site .login-page .auth-intro {
+    display: block;
+    padding: 0 4px 22px;
+  }
+  .travel-site .login-page .auth-intro h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+  .travel-site .login-page .auth-intro p,
+  .travel-site .login-page .auth-intro .eyebrow {
+    display: none;
+  }
+}

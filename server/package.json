@@ -1,0 +1,41 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/server.js",
+  "scripts": {
+    "dev:local": "node scripts/local.js dev",
+    "start:local": "node scripts/local.js start",
+    "db:check:local": "node scripts/local.js check",
+    "admin:local": "node scripts/local.js admin",
+    "password:reset:local": "node scripts/resetLocalPassword.js",
+    "catalog:local": "node scripts/addLocalCatalog.js",
+    "catalog:international:local": "node scripts/addInternationalCatalog.js",
+    "dev": "nodemon --exec \"node --use-system-ca\" src/server.js",
+    "start": "node --use-system-ca src/server.js",
+    "test": "node --test tests/*.test.js",
+    "db:check": "node --use-system-ca scripts/checkDatabase.js",
+    "seed": "node --use-system-ca scripts/seed.js",
+    "admin": "node --use-system-ca scripts/promoteAdmin.js",
+    "smtp:check": "node --use-system-ca scripts/checkSmtp.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.11.4",
+    "nodemailer": "^10.3.1",
+    "sharp": "^0.35.5",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

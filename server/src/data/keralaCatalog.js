@@ -1,0 +1,130 @@
+// Town coordinates and daily costs are approximate planning inputs, not live quotes.
+export const keralaCatalog = [
+  [
+    'Munnar',
+    'Nature',
+    10.09,
+    77.06,
+    [
+      'Tea estate viewpoints',
+      'Mattupetty reservoir',
+      'Town market',
+      'Eravikulam visitor area',
+    ],
+  ],
+  [
+    'Wayanad',
+    'Nature',
+    11.69,
+    76.13,
+    [
+      'Banasura Sagar reservoir',
+      'Edakkal visitor area',
+      'Pookode Lake',
+      'Regional food stops',
+    ],
+  ],
+  [
+    'Alappuzha',
+    'Coast',
+    9.5,
+    76.34,
+    ['Alappuzha Beach', 'Backwater boat enquiry', 'Canal-side walks', 'Local markets'],
+  ],
+  [
+    'Kochi',
+    'City',
+    9.97,
+    76.27,
+    ['Fort Kochi', 'Mattancherry', 'Marine Drive', 'Local food markets'],
+  ],
+  [
+    'Varkala',
+    'Coast',
+    8.74,
+    76.72,
+    ['Varkala cliff promenade', 'Papanasam Beach', 'Town markets', 'Regional food stops'],
+  ],
+  [
+    'Thekkady',
+    'Nature',
+    9.6,
+    77.16,
+    ['Periyar visitor centre', 'Kumily markets', 'Spice garden visit', 'Boating enquiry'],
+  ],
+  [
+    'Kumarakom',
+    'Nature',
+    9.62,
+    76.43,
+    [
+      'Vembanad lakeside',
+      'Bird sanctuary visitor area',
+      'Village walks',
+      'Local food stops',
+    ],
+  ],
+  [
+    'Kovalam',
+    'Coast',
+    8.4,
+    76.98,
+    ['Lighthouse Beach', 'Hawa Beach', 'Coastal walks', 'Local seafood stops'],
+  ],
+  [
+    'Vagamon',
+    'Nature',
+    9.69,
+    76.91,
+    [
+      'Meadow visitor areas',
+      'Pine forest visitor area',
+      'Town viewpoints',
+      'Regional food stops',
+    ],
+  ],
+  [
+    'Thiruvananthapuram',
+    'City',
+    8.52,
+    76.94,
+    ['Napier Museum', 'City heritage streets', 'Shanghumukham Beach', 'Local markets'],
+  ],
+  [
+    'Athirappilly',
+    'Nature',
+    10.28,
+    76.57,
+    [
+      'Athirappilly Falls visitor area',
+      'Vazhachal visitor area',
+      'River viewpoints',
+      'Local food stops',
+    ],
+  ],
+  [
+    'Bekal',
+    'Heritage',
+    12.39,
+    75.03,
+    ['Bekal Fort', 'Bekal Beach', 'Coastal promenade', 'Local markets'],
+  ],
+].map(([name, category, lat, lng, activities]) => ({
+  name,
+  category,
+  lat,
+  lng,
+  activities,
+  region: 'Kerala',
+  active: true,
+  hiddenGem: ['Vagamon', 'Bekal', 'Kumarakom'].includes(name),
+  dailyBudget: category === 'Nature' ? 1800 : 1500,
+  description:
+    'Explore ' +
+    name +
+    ' with local sightseeing and food stops. Costs are planning estimates; confirm access and opening hours before travel.',
+  indoorActivities: ['Local food stop or rest at your accommodation'],
+  sourceUrl: 'https://www.keralatourism.org/destination/',
+  accessNote:
+    'Confirm weather, permits and visitor access locally. Use designated public visitor areas.',
+}));
