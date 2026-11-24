@@ -3,7 +3,7 @@ services:
     name: oor-suthalam
     runtime: node
     plan: free
-    buildCommand: npm --prefix server ci && npm --prefix client/oor-suthalam ci && npm --prefix client/oor-suthalam run build
+    buildCommand: npm --prefix server ci && npm --prefix client/oor-suthalam ci --include=dev && npm --prefix client/oor-suthalam run build
     startCommand: npm --prefix server start
     healthCheckPath: /api/health
     envVars:
@@ -21,3 +21,4 @@ services:
         generateValue: true
       - key: MONGO_URI
         sync: false
+
