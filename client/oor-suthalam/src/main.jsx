@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import App from './App';
 import './assets/styles.css';
+import './assets/mobile-travel-theme.css';
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
