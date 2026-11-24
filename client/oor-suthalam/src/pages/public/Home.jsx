@@ -32,6 +32,14 @@ export default function Home() {
   return (
     <div ref={revealRoot} className="explore-home cinematic-home refined-home">
       <ScenicHero />
+      <section className="mobile-discover-hero" aria-label="Explore Tamil Nadu and Kerala">
+        <div className="mobile-discover-copy">
+          <span>Explore a little closer</span>
+          <h1>Discover.<br />Travel.<br /><em>Remember.</em></h1>
+          <p>Unforgettable journeys,<br />crafted just for you.</p>
+        </div>
+        <img className="mobile-discover-plane" src="/images/travel-plane-realistic.png" alt="" />
+      </section>
       <form id="find-escape" className="trip-finder" onSubmit={search}>
         <label>
           <span>Destination</span>
@@ -58,6 +66,12 @@ export default function Home() {
         </label>
         <button className="button">Search destinations</button>
       </form>
+      <nav className="mobile-discover-categories" aria-label="Find your travel style">
+        <Link to="/destinations?category=Coast"><span>≈</span>Coasts</Link>
+        <Link to="/destinations?category=Nature"><span>△</span>Nature</Link>
+        <Link to="/packages"><span>✦</span>Packages</Link>
+        <Link to="/traveler/plan"><span>⌖</span>Plan a trip</Link>
+      </nav>
       <section className="explore-section">
         <div className="section-heading">
           <div>
@@ -82,6 +96,11 @@ export default function Home() {
           )}
         </Resource>
       </section>
+      <Link className="mobile-discover-getaway" to="/traveler/plan">
+        <strong>Your next little getaway</strong>
+        <span>Misty hills. Quiet shores. A trip that feels like you.</span>
+        <b>Plan your escape <span aria-hidden="true">↗</span></b>
+      </Link>
     </div>
   );
 }

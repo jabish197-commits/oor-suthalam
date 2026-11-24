@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import { fileURLToPath } from 'node:url';
 import routes from './routes/index.js';
 import errorHandler from './middleware/errorHandler.js';
 import { uploadDirectory } from './controllers/imageController.js';
@@ -12,6 +13,7 @@ const allowedOrigins = new Set(
     .split(',')
     .map((value) => value.trim()),
 );
+if (process.env.RENDER_EXTERNAL_URL) allowedOrigins.add(process.env.RENDER_EXTERNAL_URL);
 if (process.env.NODE_ENV !== 'production') {
   for (const host of ['localhost', '127.0.0.1'])
     for (const port of [5173, 5174, 8080]) allowedOrigins.add(`http://${host}:${port}`);
@@ -60,6 +62,18 @@ app.use(
   }),
 );
 app.use('/api', routes);
+if (process.env.SERVE_FRONTEND === 'true') {
+  const frontendDirectory = fileURLToPath(
+    new URL('../../client/oor-suthalam/dist/', import.meta.url),
+  );
+  app.use(express.static(frontendDirectory));
+  app.get('/{*path}', (req, res, next) => {
+    if (req.path === '/api' || req.path.startsWith('/api/') || req.path.startsWith('/socket.io'))
+      return next();
+    if (!req.accepts('html')) return next();
+    res.sendFile(`${frontendDirectory}index.html`);
+  });
+}
 app.use((_req, res) =>
   res.status(404).json({ success: false, message: 'Route not found.' }),
 );

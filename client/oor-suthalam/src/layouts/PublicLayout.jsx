@@ -7,6 +7,7 @@ import Footer from '../components/common/Footer';
 import '../assets/traveler.css';
 import MobileNavigation from '../components/common/MobileNavigation';
 import '../assets/mobile-app.css';
+import '../assets/mobile-travel-home.css';
 
 export default function PublicLayout() {
   const { user, loading } = useAuth();
@@ -17,7 +18,7 @@ export default function PublicLayout() {
   if (user?.role === 'admin') return <Navigate to="/admin" replace />;
   return (
     <div
-      className={`travel-site ${isAuth ? 'mobile-auth' : 'mobile-app'}${isAssistant ? ' assistant-mode' : ''}`}
+      className={`travel-site ${isAuth ? 'mobile-auth' : 'mobile-app'}${isAssistant ? ' assistant-mode' : ''}${pathname === '/' ? ' mobile-travel-home' : ''}`}
     >
       <a className="skip-link" href="#main">
         Skip to content

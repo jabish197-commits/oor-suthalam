@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: oor-suthalam
+    runtime: node
+    plan: free
+    buildCommand: npm --prefix server ci && npm --prefix client/oor-suthalam ci && npm --prefix client/oor-suthalam run build
+    startCommand: npm --prefix server start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 24
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: SERVE_FRONTEND
+        value: "true"
+      - key: VITE_API_URL
+        value: /api
+      - key: JWT_SECRET
+        generateValue: true
+      - key: MONGO_URI
+        sync: false
