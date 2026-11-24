@@ -149,3 +149,45 @@
     font-size: 6px;
   }
 }
+.destination-favorite { display: none; }
+.destination-save-error { color: #a32d2d; font-size: 12px; padding: 8px; }
+@media (max-width: 800px) {
+  .travel-site.mobile-travel-home .explore-home .card-grid {
+    display: grid;
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% - 20px) / 3);
+    gap: 10px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 0;
+    padding-bottom: 12px;
+    scrollbar-width: thin;
+    scrollbar-color: #9acbc5 transparent;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .destination-card {
+    scroll-snap-align: start;
+  }
+  .travel-site.mobile-travel-home .destination-card .destination-favorite {
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    z-index: 3;
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    filter: drop-shadow(0 1px 3px #063e4480);
+  }
+  .travel-site.mobile-travel-home .destination-favorite svg { width: 20px; height: 20px; }
+  .travel-site.mobile-travel-home .destination-favorite[aria-pressed='true'] { color: #6ee9df; }
+  .travel-site.mobile-travel-home .destination-favorite:focus-visible { outline: 2px solid #fff; outline-offset: -5px; }
+  .travel-site.mobile-travel-home .destination-favorite:disabled { opacity: .5; }
+}

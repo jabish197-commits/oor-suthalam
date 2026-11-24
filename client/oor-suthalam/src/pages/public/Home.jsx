@@ -88,7 +88,7 @@ export default function Home() {
                 .map((name) => data.find((place) => place.name === name))
                 .filter(Boolean)
                 .map((place) => (
-                  <DestinationCard key={place._id} destination={place} />
+                  <DestinationCard key={place._id} destination={place} showFavorite />
                 ))}
             </div>
           )}
