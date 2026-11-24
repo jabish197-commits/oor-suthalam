@@ -2,13 +2,18 @@ import { locationTowns } from '../../utils/locationTowns';
 import useCurrentLocation from '../../hooks/useCurrentLocation';
 import useVoiceRecorder from '../../hooks/useVoiceRecorder';
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { api } from '../../services/api';
 import useResource from '../../hooks/useResource';
 import Resource from '../../components/common/Resource';
 import '../../assets/assistant.css';
 
 export default function TravelAssistant() {
+  const routerLocation = useLocation();
+  const plannerDraft =
+    typeof routerLocation.state?.plannerDraft === 'string'
+      ? routerLocation.state.plannerDraft.slice(0, 2000)
+      : '';
   const location = useCurrentLocation();
   const history = useResource(() => api('/chats'));
   const towns = useResource(() => api('/destinations'));
@@ -20,7 +25,7 @@ export default function TravelAssistant() {
     ).values(),
   ].sort((a, b) => a.name.localeCompare(b.name));
   const [chat, setChat] = useState(null);
-  const [draft, setDraft] = useState('');
+  const [draft, setDraft] = useState(plannerDraft);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const [speaking, setSpeaking] = useState(false);
@@ -319,6 +324,15 @@ export default function TravelAssistant() {
             <p className="assistant-header-caption">Plan a little. Discover more.</p>
           </div>
           <div className="assistant-header-actions">
+            {plannerDraft && (
+              <Link
+                className="assistant-back-to-planner"
+                to="/traveler/plan"
+                state={{ plannerInput: routerLocation.state?.plannerInput }}
+              >
+                Back to planner
+              </Link>
+            )}
             <button
               className="assistant-show-history"
               onClick={() => setShowHistory(!showHistory)}
@@ -342,8 +356,12 @@ export default function TravelAssistant() {
           {!chat?.messages?.length && (
             <div className="assistant-welcome">
               <span aria-hidden="true">✦</span>
-              <h2>Welcome to Oor Suthalam</h2>
-              <p>Your AI travel companion.</p>
+              <h2>{plannerDraft ? 'Let’s plan your trip' : 'Welcome to Oor Suthalam'}</h2>
+              <p>
+                {plannerDraft
+                  ? 'Your trip details are ready in the message below. Edit them, then tap Send.'
+                  : 'Your AI travel companion.'}
+              </p>
             </div>
           )}
           {chat?.messages?.map((item, index) => (
@@ -535,6 +553,7 @@ export default function TravelAssistant() {
           )}
           <div className="assistant-input-row">
             <textarea
+              className={plannerDraft && !chat ? 'assistant-planner-draft' : undefined}
               aria-label="Your message"
               placeholder="Ask about your next trip…"
               rows={1}

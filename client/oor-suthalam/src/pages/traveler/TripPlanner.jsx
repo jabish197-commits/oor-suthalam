@@ -1,11 +1,12 @@
 import { useEffect, useRef, useState } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useLocation, useNavigate, useSearchParams } from 'react-router-dom';
 import { api } from '../../services/api';
 import { tripService } from '../../services/tripService';
 import { today, money } from '../../utils/format';
 import useResource from '../../hooks/useResource';
 import { destinationService } from '../../services/destinationService';
 import Button from '../../components/common/Button';
+import { plannerAssistantDraft } from '../../utils/plannerAssistantDraft';
 import '../../assets/budget-planner.css';
 const towns = [
   'Chennai',
@@ -69,7 +70,19 @@ function PlanPhoto({ destination }) {
 export default function TripPlanner() {
   const destinations = useResource(destinationService.list);
   const navigate = useNavigate();
+  const location = useLocation();
   const [params] = useSearchParams();
+  const [plannerInput, setPlannerInput] = useState(() => ({
+    budget: params.get('budget') || '',
+    origin: 'Chennai',
+    travelers: '1',
+    days: '',
+    destination: params.get('destination') || '',
+    preference: 'Any',
+    style: 'budget',
+    hiddenOnly: 'false',
+    ...location.state?.plannerInput,
+  }));
   const resultsHeading = useRef(null);
   const errorAlert = useRef(null);
   const [busy, setBusy] = useState(false),
@@ -86,6 +99,25 @@ export default function TripPlanner() {
       resultsHeading.current?.scrollIntoView({ block: 'start' });
     }
   }, [result, error]);
+  function updateInput(name, value) {
+    setPlannerInput((current) => ({ ...current, [name]: value }));
+    setResult(null);
+    setError('');
+  }
+  function changeInput(event) {
+    updateInput(event.target.name, event.target.value);
+  }
+  function openAssistant() {
+    const destinationName = destinations.data?.find(
+      (place) => place._id === plannerInput.destination,
+    )?.name;
+    navigate('/assistant', {
+      state: {
+        plannerDraft: plannerAssistantDraft(plannerInput, destinationName),
+        plannerInput,
+      },
+    });
+  }
   async function find(event) {
     event.preventDefault();
     const values = Object.fromEntries(new FormData(event.currentTarget));
@@ -139,15 +171,30 @@ export default function TripPlanner() {
           Set your group budget and starting town. Compare up to three short trips that
           fit.
         </p>
+        <div className="planner-assistant-entry">
+          <button
+            type="button"
+            className="planner-assistant-action"
+            onClick={openAssistant}
+            disabled={busy}
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.7"
+              aria-hidden="true"
+            >
+              <path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8v.5Z" />
+            </svg>
+            Plan with travel assistant
+          </button>
+          <small>Your choices open as a draft. Review it before sending.</small>
+        </div>
       </div>
-      <form
-        className="panel stack budget-planner-form"
-        onSubmit={find}
-        onChange={() => {
-          setResult(null);
-          setError('');
-        }}
-      >
+      <form className="panel stack budget-planner-form" onSubmit={find}>
         <fieldset className="budget-step" disabled={busy}>
           <legend>
             <span aria-hidden="true">1</span> Set your budget
@@ -163,12 +210,29 @@ export default function TripPlanner() {
               required
               placeholder="For example, 10000"
               aria-describedby="budget-basis"
-              defaultValue={params.get('budget') || ''}
+              value={plannerInput.budget}
+              onChange={changeInput}
             />
           </label>
           <p className="budget-field-help" id="budget-basis">
             For everyone and all days combined — not per person or per day.
           </p>
+          <div
+            className="budget-presets"
+            role="group"
+            aria-label="Quick total group budgets"
+          >
+            {[5000, 10000, 20000].map((amount) => (
+              <button
+                type="button"
+                key={amount}
+                aria-pressed={Number(plannerInput.budget) === amount}
+                onClick={() => updateInput('budget', String(amount))}
+              >
+                {money(amount)}
+              </button>
+            ))}
+          </div>
         </fieldset>
         <fieldset className="budget-step" disabled={busy}>
           <legend>
@@ -179,7 +243,8 @@ export default function TripPlanner() {
               Starting town
               <select
                 name="origin"
-                defaultValue="Chennai"
+                value={plannerInput.origin}
+                onChange={changeInput}
                 aria-describedby="budget-origin-help"
               >
                 {towns.map((town) => (
@@ -198,13 +263,19 @@ export default function TripPlanner() {
                 max="20"
                 step="1"
                 required
-                defaultValue="1"
+                value={plannerInput.travelers}
+                onChange={changeInput}
               />
               <small>Include everyone sharing the budget.</small>
             </label>
             <label>
               Trip length
-              <select name="days" defaultValue="" aria-describedby="budget-days-help">
+              <select
+                name="days"
+                value={plannerInput.days}
+                onChange={changeInput}
+                aria-describedby="budget-days-help"
+              >
                 <option value="">Suggest 1–4 days</option>
                 {[1, 2, 3, 4].map((days) => (
                   <option key={days} value={days}>
@@ -226,7 +297,11 @@ export default function TripPlanner() {
             <div className="form-grid">
               <label>
                 Destination
-                <select name="destination" defaultValue={params.get('destination') || ''}>
+                <select
+                  name="destination"
+                  value={plannerInput.destination}
+                  onChange={changeInput}
+                >
                   <option value="">Suggest a destination</option>
                   {destinations.data?.map((place) => (
                     <option key={place._id} value={place._id}>
@@ -237,7 +312,11 @@ export default function TripPlanner() {
               </label>
               <label>
                 Your kind of place
-                <select name="preference">
+                <select
+                  name="preference"
+                  value={plannerInput.preference}
+                  onChange={changeInput}
+                >
                   <option value="Any">Any type</option>
                   <option value="Nature">Hills & nature</option>
                   <option value="Coast">Coast</option>
@@ -247,7 +326,7 @@ export default function TripPlanner() {
               </label>
               <label>
                 Travel style
-                <select name="style">
+                <select name="style" value={plannerInput.style} onChange={changeInput}>
                   <option value="budget">Simple & economical</option>
                   <option value="comfortable">More comfortable</option>
                 </select>
@@ -255,7 +334,11 @@ export default function TripPlanner() {
             </div>
             <label>
               Places
-              <select name="hiddenOnly">
+              <select
+                name="hiddenOnly"
+                value={plannerInput.hiddenOnly}
+                onChange={changeInput}
+              >
                 <option value="false">All places</option>
                 <option value="true">Quieter places</option>
               </select>
@@ -269,6 +352,23 @@ export default function TripPlanner() {
           </p>
         )}
         <div className="budget-submit">
+          <div className="budget-choice-summary" aria-live="polite" aria-atomic="true">
+            <strong>
+              {Number(plannerInput.budget) > 0
+                ? `${money(Number(plannerInput.budget))} total group budget`
+                : 'Choose your total group budget'}
+            </strong>
+            <span>
+              {Number(plannerInput.travelers) > 0
+                ? `${plannerInput.travelers} ${Number(plannerInput.travelers) === 1 ? 'traveler' : 'travelers'}`
+                : 'Set your group size'}
+              {' · '}
+              {plannerInput.days
+                ? `${plannerInput.days} ${plannerInput.days === '1' ? 'day' : 'days'}`
+                : 'Suggest 1–4 days'}
+              {' · '}From {plannerInput.origin}
+            </span>
+          </div>
           <Button disabled={busy} aria-busy={busy}>
             {busy ? 'Finding trips…' : 'Find trips within my budget'}
           </Button>

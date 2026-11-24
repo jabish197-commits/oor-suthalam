@@ -37,6 +37,26 @@ export default function Navbar() {
           </span>
         </Link>
         <Link
+          className="mobile-header-assistant"
+          to="/assistant"
+          aria-label="Travel assistant"
+          aria-current={location.pathname === '/assistant' ? 'page' : undefined}
+        >
+          <svg
+            width="19"
+            height="19"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            aria-hidden="true"
+          >
+            <path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 4V6a2 2 0 0 1 2-2Z" />
+            <path d="M7 9h10M7 13h6" />
+          </svg>
+          <span>Chat</span>
+        </Link>
+        <Link
           className="mobile-header-account"
           to={user ? '/traveler/profile' : '/login'}
           aria-label={user ? 'Open your account' : 'Sign in'}
