@@ -57,3 +57,12 @@
  .mobile-discover-copy h1{font-size:38px}
 }
 
+.mobile-discover-copy{display:none}
+@media(max-width:800px){
+ .travel-site.mobile-travel-home .scenic-hero{display:flex;min-height:355px;border-radius:0}
+ .travel-site.mobile-travel-home .scenic-hero-content{display:none}
+ .travel-site.mobile-travel-home .mobile-discover-copy{display:block;max-width:100%;padding:28px 24px 62px}
+ .travel-site.mobile-travel-home .scenic-hero-shade{background:linear-gradient(90deg,#e6f5f0e8,#e6f5f075 65%,#e6f5f020)}
+ .travel-site.mobile-travel-home .mobile-discover-copy h1{font:800 43px/1.04 Arial,sans-serif;letter-spacing:-1.9px;color:#142c31;margin:13px 0 15px}
+ .travel-site.mobile-travel-home .mobile-discover-copy h1 em{color:#07868a;font-weight:800;font-style:normal}
+}

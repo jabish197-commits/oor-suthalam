@@ -31,15 +31,13 @@ export default function Home() {
   ];
   return (
     <div ref={revealRoot} className="explore-home cinematic-home refined-home">
-      <ScenicHero />
-      <section className="mobile-discover-hero" aria-label="Explore Tamil Nadu and Kerala">
+      <ScenicHero>
         <div className="mobile-discover-copy">
           <span>Explore a little closer</span>
           <h1>Discover.<br />Travel.<br /><em>Remember.</em></h1>
           <p>Unforgettable journeys,<br />crafted just for you.</p>
         </div>
-        <img className="mobile-discover-plane" src="/images/travel-plane-realistic.png" alt="" />
-      </section>
+      </ScenicHero>
       <form id="find-escape" className="trip-finder" onSubmit={search}>
         <label>
           <span>Destination</span>

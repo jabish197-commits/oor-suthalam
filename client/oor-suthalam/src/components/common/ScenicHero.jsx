@@ -3,7 +3,7 @@ import '../../assets/scenic-hero.css';
 import useResource from '../../hooks/useResource';
 import { api } from '../../services/api';
 
-export default function ScenicHero() {
+export default function ScenicHero({ children }) {
   const settings = useResource(() => api('/site-settings'));
   const heroVideo = settings.data?.heroVideo || '/videos/sunny-coast.mp4';
   const heroPoster = settings.data ? settings.data.heroPoster : '/images/sunny-coast.jpg';
@@ -73,6 +73,7 @@ export default function ScenicHero() {
           Plan a journey that feels like you.
         </p>
       </div>
+      {children}
     </section>
   );
 }
