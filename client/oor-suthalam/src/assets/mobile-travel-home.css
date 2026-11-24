@@ -111,3 +111,41 @@
     gap: 12px;
   }
 }
+@media (max-width: 800px) {
+  .travel-site.mobile-travel-home .explore-home .card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .destination-card {
+    border-radius: 12px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .destination-card > div {
+    height: 185px;
+    min-height: 185px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-body {
+    padding: 10px 8px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-body h3 {
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: -0.3px;
+    margin-bottom: 5px;
+    overflow-wrap: normal;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-body > small {
+    font-size: 7px;
+    letter-spacing: 0;
+    text-transform: none;
+    min-height: 20px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-bottom {
+    margin-top: 6px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-bottom strong {
+    font-size: 12px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-bottom small {
+    font-size: 6px;
+  }
+}
