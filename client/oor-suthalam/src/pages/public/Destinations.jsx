@@ -36,8 +36,8 @@ export default function Destinations() {
     <section ref={revealRoot} className="page">
       <div className="page-heading">
         <small className="eyebrow">EXPLORE TAMIL NADU & KERALA</small>
-        <h1>Closer places. Deeper discoveries.</h1>
-        <p>From familiar favourites to quieter towns across Tamil Nadu & Kerala.</p>
+        <h1>Explore destinations</h1>
+        <p>Find a place by name or choose a category.</p>
       </div>
 
       <SearchFilters
@@ -63,10 +63,11 @@ export default function Destinations() {
         resource={resource}
         empty={
           <>
-            <p>No destinations match your search.</p>
-            <button type="button" className="button secondary" onClick={clearFilters}>
-              Clear filters
-            </button>
+            <p role="status">
+              {resource.refreshing
+                ? 'Updating destinations…'
+                : 'No destinations match. Try another name or clear the filters above.'}
+            </p>
           </>
         }
       >

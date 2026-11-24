@@ -482,3 +482,23 @@
     font-size: 8px;
   }
 }
+@media (max-width: 800px) {
+  .travel-site.travel-site
+    #travel-navigation
+    .travel-menu-content
+    .mobile-menu-account
+    a.drawer-primary-link {
+    display: none;
+  }
+  .travel-site.travel-site.mobile-app :is(h2, h3) {
+    font-family: Inter, 'Segoe UI', sans-serif;
+  }
+  .travel-site.travel-site .budget-results h2 {
+    scroll-margin-top: 100px;
+  }
+  .travel-site.travel-site .profile-shortcuts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

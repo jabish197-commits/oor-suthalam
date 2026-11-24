@@ -71,14 +71,21 @@ export default function TripPlanner() {
   const navigate = useNavigate();
   const [params] = useSearchParams();
   const resultsHeading = useRef(null);
+  const errorAlert = useRef(null);
   const [busy, setBusy] = useState(false),
     [error, setError] = useState(''),
     [result, setResult] = useState(null),
     [search, setSearch] = useState(null),
     [date, setDate] = useState(today());
   useEffect(() => {
-    if (result) resultsHeading.current?.focus();
-  }, [result]);
+    if (error) {
+      errorAlert.current?.focus({ preventScroll: true });
+      errorAlert.current?.scrollIntoView({ block: 'start' });
+    } else if (result) {
+      resultsHeading.current?.focus({ preventScroll: true });
+      resultsHeading.current?.scrollIntoView({ block: 'start' });
+    }
+  }, [result, error]);
   async function find(event) {
     event.preventDefault();
     const values = Object.fromEntries(new FormData(event.currentTarget));
@@ -269,7 +276,13 @@ export default function TripPlanner() {
         </div>
       </form>
       {error && (
-        <div className="notice error" role="alert">
+        <div
+          className="notice error"
+          role="alert"
+          ref={errorAlert}
+          tabIndex="-1"
+          style={{ scrollMarginTop: 100 }}
+        >
           <strong>We couldn’t complete that step.</strong>
           <p>{error}</p>
           <p>Your choices are still above. Adjust them if needed, then try again.</p>
