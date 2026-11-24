@@ -66,3 +66,48 @@
  .travel-site.mobile-travel-home .mobile-discover-copy h1{font:800 43px/1.04 Arial,sans-serif;letter-spacing:-1.9px;color:#142c31;margin:13px 0 15px}
  .travel-site.mobile-travel-home .mobile-discover-copy h1 em{color:#07868a;font-weight:800;font-style:normal}
 }
+@media (max-width: 800px) {
+  .travel-site.mobile-travel-home .explore-home .card-grid .destination-card > div {
+    height: 230px;
+    min-height: 230px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .destination-art {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-body {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 0;
+    padding: 14px 12px;
+    background: linear-gradient(180deg, transparent 20%, #092e35ed 100%);
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-body h3 {
+    font: 650 17px/1.2 Inter, 'Segoe UI', sans-serif;
+    letter-spacing: -0.3px;
+    margin: 0 0 8px;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-body > small {
+    font-size: 8px;
+    line-height: 1.4;
+    letter-spacing: 0.08em;
+    margin: 0;
+    color: #d4e9e5;
+    min-height: 23px;
+  }
+  .travel-site.mobile-travel-home .explore-home .card-grid .card-bottom {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .travel-site.mobile-travel-home .explore-home .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
