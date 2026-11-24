@@ -1,11 +1,11 @@
 .mobile-discover-hero,.mobile-discover-categories,.mobile-discover-getaway{display:none}
 @media(max-width:800px){
  .travel-site.mobile-travel-home{background:#f5f9f7;color:#142c31}
- .mobile-travel-home .navbar{background:#eaf5f3;box-shadow:none;border:0}
- .mobile-travel-home .navbar .mobile-nav-toggle{background:#fff;color:#087b80}
- .mobile-travel-home .nav-journey{display:none}
- .mobile-travel-home .explore-home{padding:0 0 24px;background:#f5f9f7}
- .mobile-travel-home .scenic-hero{display:none}
+ .travel-site.mobile-travel-home .navbar{background:#eaf5f3;box-shadow:none;border:0}
+ .travel-site.mobile-travel-home .navbar .mobile-nav-toggle{background:#fff;color:#087b80}
+ .travel-site.mobile-travel-home .nav-journey{display:none}
+ .travel-site.mobile-travel-home .explore-home{padding:0 0 24px;background:#f5f9f7}
+ .travel-site.mobile-travel-home .scenic-hero{display:none}
  .mobile-discover-hero{display:block;position:relative;isolation:isolate;min-height:355px;overflow:hidden;background:linear-gradient(90deg,#e6f5f0ed 0%,#e6f5f0aa 40%,#d4efeb08 100%),url('/images/sunny-coast.jpg') center/cover}
  .mobile-discover-copy{position:relative;z-index:2;padding:25px 24px 60px;max-width:310px}
  .mobile-discover-copy>span{font-family:Georgia,serif;font-style:italic;font-size:21px;color:#187d82}
@@ -13,46 +13,47 @@
  .mobile-discover-copy h1 em{color:#07868a;font-style:normal}
  .mobile-discover-copy p{font-size:14px;line-height:1.5;color:#243d40;margin:0}
  .mobile-discover-plane{position:absolute;z-index:1;right:-70px;top:65px;width:64%;max-width:310px;pointer-events:none}
- .mobile-travel-home .trip-finder{position:relative;z-index:3;display:flex;align-items:center;gap:8px;margin:-33px 20px 0;padding:9px 10px 9px 16px;width:auto;max-width:none;min-height:59px;border-radius:22px;background:#fff;box-shadow:0 8px 24px #164b4422;border:1px solid #e2eeea}
- .mobile-travel-home .trip-finder label:first-child{flex:1;min-width:0;padding:0;border:0}
- .mobile-travel-home .trip-finder label>span,.mobile-travel-home .trip-finder label:nth-child(2){display:none}
- .mobile-travel-home .trip-finder input{font-size:13px;width:100%;padding:7px 0;background:transparent;min-height:30px}
- .mobile-travel-home .trip-finder .button{width:auto;min-height:42px;padding:10px 14px;border-radius:16px;font-size:12px;background:#078b90;color:white;border:0}
+ .travel-site.mobile-travel-home .trip-finder{position:relative;z-index:3;display:flex;align-items:center;gap:8px;margin:-33px 20px 0;padding:9px 10px 9px 16px;width:auto;max-width:none;min-height:59px;border-radius:22px;background:#fff;box-shadow:0 8px 24px #164b4422;border:1px solid #e2eeea}
+ .travel-site.mobile-travel-home .trip-finder label:first-child{flex:1;min-width:0;padding:0;border:0}
+ .travel-site.mobile-travel-home .trip-finder label>span,.travel-site.mobile-travel-home .trip-finder label:nth-child(2){display:none}
+ .travel-site.mobile-travel-home .trip-finder input{font-size:13px;width:100%;padding:7px 0;background:transparent;min-height:30px}
+ .travel-site.mobile-travel-home .trip-finder .button{width:auto;min-height:42px;padding:10px 14px;border-radius:16px;font-size:12px;background:#078b90;color:white;border:0}
  .mobile-discover-categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:18px 20px 25px;padding:17px 10px;background:white;border:1px solid #e5eeea;border-radius:20px;box-shadow:0 7px 20px #17483e08}
  .mobile-discover-categories a{display:flex;align-items:center;flex-direction:column;gap:8px;text-decoration:none;font-size:11px;font-weight:600;color:#203436}
  .mobile-discover-categories a>span{display:grid;place-items:center;border-radius:50%;height:40px;width:40px;background:#109e9e;color:white;font-size:26px}
  .mobile-discover-categories a:nth-child(2)>span{background:#f5b322}
  .mobile-discover-categories a:nth-child(3)>span{background:#349bcc}
  .mobile-discover-categories a:nth-child(4)>span{background:#9970d4}
- .mobile-travel-home .explore-section{padding:0 20px;margin:0}
- .mobile-travel-home .section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 15px}
- .mobile-travel-home .section-heading h2{font:700 19px/1.25 Arial,sans-serif;letter-spacing:-.5px;margin:0;color:#142c31;max-width:220px}
- .mobile-travel-home .section-heading p,.mobile-travel-home .home-discovery-links a:nth-child(2){display:none}
- .mobile-travel-home .home-discovery-links a{font-size:11px;white-space:nowrap;color:#127c80}
- .mobile-travel-home .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
- .mobile-travel-home .destination-card{min-width:0;border:0;border-radius:13px;overflow:hidden;box-shadow:0 5px 13px #153b3915}
- .mobile-travel-home .destination-card>div{position:relative;min-height:215px;height:100%}
- .mobile-travel-home .destination-art{position:absolute;inset:0;height:100%;border-radius:0}
- .mobile-travel-home .destination-art img{width:100%;height:100%;object-fit:cover}
- .mobile-travel-home .destination-card .tag{display:none}
- .mobile-travel-home .destination-card .card-body{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:215px;padding:12px 9px;background:linear-gradient(180deg,transparent 25%,#092e35ed 100%);color:#fff;text-decoration:none}
- .mobile-travel-home .card-body>small{font-size:8px;line-height:1.4;color:#d4e9e5;order:2}
- .mobile-travel-home .card-body h3{font:600 14px/1.2 Arial,sans-serif;color:white;letter-spacing:-.3px;margin:0 0 5px;overflow-wrap:anywhere}
- .mobile-travel-home .card-body>p{display:none}
- .mobile-travel-home .card-bottom{order:3;margin:8px 0 0;padding:0;border:0;display:block}
- .mobile-travel-home .card-bottom strong{font-size:13px;color:#fff}
- .mobile-travel-home .card-bottom small{display:block;font-size:7px;color:#d4e9e5;margin-top:3px}
+ .travel-site.mobile-travel-home .explore-section{padding:0 20px;margin:0}
+ .travel-site.mobile-travel-home .section-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 15px}
+ .travel-site.mobile-travel-home .section-heading h2{font:700 19px/1.25 Arial,sans-serif;letter-spacing:-.5px;margin:0;color:#142c31;max-width:220px}
+ .travel-site.mobile-travel-home .section-heading p,.travel-site.mobile-travel-home .home-discovery-links a:nth-child(2){display:none}
+ .travel-site.mobile-travel-home .home-discovery-links a{font-size:11px;white-space:nowrap;color:#127c80}
+ .travel-site.mobile-travel-home .card-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+ .travel-site.mobile-travel-home .destination-card{min-width:0;border:0;border-radius:13px;overflow:hidden;box-shadow:0 5px 13px #153b3915}
+ .travel-site.mobile-travel-home .destination-card>div{position:relative;min-height:215px;height:100%}
+ .travel-site.mobile-travel-home .destination-art{position:absolute;inset:0;height:100%;border-radius:0}
+ .travel-site.mobile-travel-home .destination-art img{width:100%;height:100%;object-fit:cover}
+ .travel-site.mobile-travel-home .destination-card .tag{display:none}
+ .travel-site.mobile-travel-home .destination-card .card-body{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:215px;padding:12px 9px;background:linear-gradient(180deg,transparent 25%,#092e35ed 100%);color:#fff;text-decoration:none}
+ .travel-site.mobile-travel-home .card-body>small{font-size:8px;line-height:1.4;color:#d4e9e5;order:2}
+ .travel-site.mobile-travel-home .card-body h3{font:600 14px/1.2 Arial,sans-serif;color:white;letter-spacing:-.3px;margin:0 0 5px;overflow-wrap:anywhere}
+ .travel-site.mobile-travel-home .card-body>p{display:none}
+ .travel-site.mobile-travel-home .card-bottom{order:3;margin:8px 0 0;padding:0;border:0;display:block}
+ .travel-site.mobile-travel-home .card-bottom strong{font-size:13px;color:#fff}
+ .travel-site.mobile-travel-home .card-bottom small{display:block;font-size:7px;color:#d4e9e5;margin-top:3px}
  .mobile-discover-getaway{display:flex;flex-direction:column;gap:8px;margin:24px 20px 8px;padding:23px 20px;min-height:165px;border-radius:17px;color:white;text-decoration:none;background:linear-gradient(90deg,#006773ef,#00677355),url('/images/misty-forest.jpg') center/cover}
  .mobile-discover-getaway>strong{font-size:22px;line-height:1.2;max-width:230px}
  .mobile-discover-getaway>span{font-size:12px;max-width:220px;line-height:1.5}
  .mobile-discover-getaway b{align-self:flex-start;background:#fff;color:#087d81;padding:9px 13px;border-radius:20px;font-size:11px;margin-top:5px}
- .mobile-travel-home .mobile-app-nav{background:#063e44;border:0;border-radius:22px 22px 0 0;bottom:0;left:0;right:0;width:100%;box-shadow:0 -5px 18px #053a4014}
- .mobile-travel-home .mobile-app-nav a,.mobile-travel-home .mobile-app-nav small{color:#b8d3d2}
- .mobile-travel-home .mobile-app-nav a.active,.mobile-travel-home .mobile-app-nav a.active small{color:#6ee9df}
- .mobile-travel-home .mobile-app-nav a>span,.mobile-travel-home .mobile-app-nav .mobile-plan-link>span{background:transparent;box-shadow:none}
- .mobile-travel-home .travel-assistant-launcher{bottom:90px;background:#067c82;color:white;font-size:12px;padding:12px 16px}
+ .travel-site.mobile-travel-home .mobile-app-nav{background:#063e44;border:0;border-radius:22px 22px 0 0;bottom:0;left:0;right:0;width:100%;box-shadow:0 -5px 18px #053a4014}
+ .travel-site.mobile-travel-home .mobile-app-nav a,.travel-site.mobile-travel-home .mobile-app-nav small{color:#b8d3d2}
+ .travel-site.mobile-travel-home .mobile-app-nav a.active,.travel-site.mobile-travel-home .mobile-app-nav a.active small{color:#6ee9df}
+ .travel-site.mobile-travel-home .mobile-app-nav a>span,.travel-site.mobile-travel-home .mobile-app-nav .mobile-plan-link>span{background:transparent;box-shadow:none}
+ .travel-site.mobile-travel-home .travel-assistant-launcher{bottom:90px;background:#067c82;color:white;font-size:12px;padding:12px 16px}
 }
 @media(max-width:360px){
- .mobile-travel-home .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .travel-site.mobile-travel-home .card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .mobile-discover-copy h1{font-size:38px}
 }
+
