@@ -194,3 +194,50 @@
     color: #fff;
   }
 }
+@media (max-width: 800px) {
+  .travel-site.mobile-app .navbar.menu-open nav {
+    background: #063e44;
+    color: #e4f6f1;
+  }
+  .travel-site.mobile-app .navbar nav .travel-menu-content > a.drawer-profile {
+    background: #12545c;
+    border-color: #ffffff25;
+    color: #fff;
+  }
+  .travel-site.mobile-app .drawer-profile > span {
+    background: #6ee9df;
+    color: #063e44;
+  }
+  .travel-site.mobile-app .navbar nav .travel-menu-content > a.active:not(.drawer-profile) {
+    background: #078b90;
+    color: #fff;
+  }
+  .travel-site.mobile-app .navbar nav .travel-menu-content > a > svg,
+  .travel-site.mobile-app .navbar nav .drawer-chevron,
+  .travel-site.mobile-app .mobile-menu-account a > svg,
+  .travel-site.mobile-app .drawer-heart {
+    color: #9ed5cf;
+  }
+  .travel-site.mobile-app .mobile-drawer-heading small,
+  .travel-site.mobile-app .drawer-section-label,
+  .travel-site.mobile-app .drawer-profile small,
+  .travel-site.mobile-app .drawer-profile p {
+    color: #b8d8d4;
+  }
+  .travel-site.mobile-app .mobile-drawer-heading strong,
+  .travel-site.mobile-app .mobile-drawer-heading button,
+  .travel-site.mobile-app .mobile-menu-account button {
+    color: #e4f6f1;
+  }
+  .travel-site.mobile-app .mobile-menu-account a.active {
+    background: #126069 !important;
+    color: #6ee9df !important;
+  }
+  .travel-site.mobile-app .mobile-app-nav a.active {
+    background: #126069;
+    color: #6ee9df;
+  }
+  .travel-site.mobile-app .mobile-app-nav .mobile-plan-link > span {
+    color: #b8d3d2;
+  }
+}
