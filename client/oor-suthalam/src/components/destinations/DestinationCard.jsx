@@ -26,6 +26,7 @@ export default function DestinationCard({ destination, showFavorite = false }) {
       setSaving(false);
     }
   }
+  const [failedPhotos, setFailedPhotos] = useState([]);
   const photos = [
     ...new Set(
       [
@@ -33,7 +34,7 @@ export default function DestinationCard({ destination, showFavorite = false }) {
         ...(destination.gallery || []).map((place) => place.image),
       ].filter(Boolean),
     ),
-  ];
+  ].filter((photo) => !failedPhotos.includes(photo));
   const [playing, setPlaying] = useState(false);
   const card = useRef(null);
   const [frame, setFrame] = useState(0);
@@ -71,11 +72,13 @@ export default function DestinationCard({ destination, showFavorite = false }) {
         >
           {photos.length ? (
             <img
+              key={photos[frame % photos.length]}
               src={photos[frame % photos.length]}
               alt={destination.name}
               loading="lazy"
               onError={(event) => {
-                event.currentTarget.style.display = 'none';
+                const failed = event.currentTarget.getAttribute('src');
+                setFailedPhotos((current) => current.includes(failed) ? current : [...current, failed]);
               }}
             />
           ) : (
