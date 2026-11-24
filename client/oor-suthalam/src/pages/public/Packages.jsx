@@ -3,6 +3,7 @@ import useResource from '../../hooks/useResource';
 import { packageService } from '../../services/packageService';
 import { money } from '../../utils/format';
 import Resource from '../../components/common/Resource';
+import DestinationPhoto from '../../components/destinations/DestinationPhoto';
 
 export default function Packages() {
   const [params] = useSearchParams();
@@ -34,21 +35,7 @@ export default function Packages() {
                 <article className="destination-card" key={item._id}>
                   <Link to={`/packages/${item._id}`}>
                     <div className="destination-art">
-                      {item.destination?.image ||
-                      item.destination?.gallery?.find((photo) => photo.image)?.image ? (
-                        <img
-                          src={
-                            item.destination.image ||
-                            item.destination.gallery.find((photo) => photo.image).image
-                          }
-                          alt={item.destination.name}
-                          loading="lazy"
-                        />
-                      ) : (
-                        <span className="landscape-symbol" aria-hidden="true">
-                          △
-                        </span>
-                      )}
+                      <DestinationPhoto destination={item.destination} />
 
                       <span className="tag">{item.days} days</span>
                     </div>

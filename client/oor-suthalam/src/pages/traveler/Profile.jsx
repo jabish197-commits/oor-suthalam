@@ -36,7 +36,10 @@ export default function Profile() {
         <h1>My profile.</h1>
       </div>
 
-      <p>
+      <p className="profile-shortcuts">
+        <Link className="button secondary" to="/traveler">
+          My trips
+        </Link>{' '}
         <Link className="button secondary" to="/traveler/bookings">
           My bookings & requests
         </Link>

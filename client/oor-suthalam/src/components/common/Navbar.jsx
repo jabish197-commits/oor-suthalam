@@ -97,7 +97,7 @@ export default function Navbar() {
               </div>
             </Link>
             <span className="drawer-section-label">DISCOVER</span>
-            <NavLink to="/destinations">
+            <NavLink className="drawer-primary-link" to="/destinations">
               <AdminIcon name="destination" size={18} />
               Destinations
             </NavLink>
@@ -105,8 +105,13 @@ export default function Navbar() {
               <AdminIcon name="package" size={18} />
               Packages
             </NavLink>
-            <NavLink to="/traveler/plan">Plan trip</NavLink>
+            <NavLink className="drawer-primary-link" to="/traveler/plan">
+              Plan trip
+            </NavLink>
             <NavLink to="/partners">Travel partners</NavLink>
+            <NavLink className="drawer-assistant-link" to="/assistant">
+              Travel assistant
+            </NavLink>
             <NavLink to="/about">
               <AdminIcon name="overview" size={18} />
               About
@@ -117,13 +122,9 @@ export default function Navbar() {
             </NavLink>
             <div className="mobile-menu-account">
               <span className="drawer-section-label">YOUR JOURNEY</span>
-              <NavLink to="/traveler/saved">
+              <NavLink className="drawer-primary-link" to="/traveler/saved">
                 <span className="drawer-heart">♡</span>Saved places{' '}
                 {user?.savedPlaces?.length ? '(' + user.savedPlaces.length + ')' : ''}
-              </NavLink>
-              <NavLink to={user ? '/traveler/profile' : '/login'}>
-                <AdminIcon name="users" size={18} />
-                My account{' '}
               </NavLink>
               <NavLink to="/traveler/bookings">
                 <AdminIcon name="booking" size={18} />

@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import Button from '../../components/common/Button';
 import TravelAnimation from '../../components/common/TravelAnimation';
+import PasswordField from '../../components/common/PasswordField';
+import { loginRedirect } from '../../utils/loginRedirect.js';
 
 export default function Register() {
   const { register } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -20,8 +23,8 @@ export default function Register() {
     setError('');
 
     try {
-      await register(details);
-      navigate('/', { replace: true });
+      const user = await register(details);
+      navigate(loginRedirect(user.role, location.state?.from), { replace: true });
     } catch (err) {
       setError(err.message);
     } finally {
@@ -59,18 +62,12 @@ export default function Register() {
           />
         </label>
 
-        <label>
-          Password
-          <input
-            name="password"
-            type="password"
-            required
-            minLength="10"
-            maxLength="72"
-            autoComplete="new-password"
-          />
-          <small>Use 10–72 characters.</small>
-        </label>
+        <PasswordField
+          id="register-password"
+          autoComplete="new-password"
+          minLength={10}
+          hint="Use 10–72 characters."
+        />
 
         {error && (
           <p className="error" role="alert">

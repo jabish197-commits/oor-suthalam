@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { loginRedirect } from '../../utils/loginRedirect.js';
 import Button from '../../components/common/Button';
 import '../../assets/login.css';
 import LoginVideo from '../../components/common/LoginVideo';
+import PasswordField from '../../components/common/PasswordField';
 
 export default function Login() {
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
@@ -24,7 +26,7 @@ export default function Login() {
     try {
       const user = await login(credentials);
 
-      navigate(loginRedirect(user.role), { replace: true });
+      navigate(loginRedirect(user.role, location.state?.from), { replace: true });
     } catch (err) {
       setError(err.message);
     } finally {
@@ -58,16 +60,7 @@ export default function Login() {
           <input name="email" type="email" required autoComplete="email" />
         </label>
 
-        <label>
-          Password
-          <input
-            name="password"
-            type="password"
-            required
-            maxLength="72"
-            autoComplete="current-password"
-          />
-        </label>
+        <PasswordField id="login-password" autoComplete="current-password" />
 
         {error && (
           <p className="error" role="alert">

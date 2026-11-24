@@ -34,8 +34,18 @@ export default function Home() {
       <ScenicHero>
         <div className="mobile-discover-copy">
           <span>Explore a little closer</span>
-          <h1>Discover.<br />Travel.<br /><em>Remember.</em></h1>
-          <p>Unforgettable journeys,<br />crafted just for you.</p>
+          <h1>
+            Discover.
+            <br />
+            Travel.
+            <br />
+            <em>Remember.</em>
+          </h1>
+          <p>
+            Unforgettable journeys,
+            <br />
+            crafted just for you.
+          </p>
         </div>
       </ScenicHero>
       <form id="find-escape" className="trip-finder" onSubmit={search}>
@@ -62,18 +72,26 @@ export default function Home() {
             <option value="City">City breaks</option>
           </select>
         </label>
-        <button className="button">Search destinations</button>
+        <button className="button">Search</button>
       </form>
       <nav className="mobile-discover-categories" aria-label="Find your travel style">
-        <Link to="/destinations?category=Coast"><span>≈</span>Coasts</Link>
-        <Link to="/destinations?category=Nature"><span>△</span>Nature</Link>
-        <Link to="/packages"><span>✦</span>Packages</Link>
-        <Link to="/traveler/plan"><span>⌖</span>Plan a trip</Link>
+        <Link to="/destinations?category=Coast">
+          <span>≈</span>Coasts
+        </Link>
+        <Link to="/destinations?category=Nature">
+          <span>△</span>Nature
+        </Link>
+        <Link to="/destinations?category=Heritage">
+          <span>✦</span>Heritage
+        </Link>
+        <Link to="/destinations?category=City">
+          <span>⌖</span>Cities
+        </Link>
       </nav>
       <section className="explore-section">
         <div className="section-heading">
           <div>
-            <h2>Discover Tamil Nadu & Kerala</h2>
+            <h2>Popular destinations</h2>
             <p>Choose your next stop.</p>
           </div>
           <div className="home-discovery-links">
@@ -97,7 +115,9 @@ export default function Home() {
       <Link className="mobile-discover-getaway" to="/traveler/plan">
         <strong>Your next little getaway</strong>
         <span>Misty hills. Quiet shores. A trip that feels like you.</span>
-        <b>Plan your escape <span aria-hidden="true">↗</span></b>
+        <b>
+          Plan your escape <span aria-hidden="true">↗</span>
+        </b>
       </Link>
     </div>
   );

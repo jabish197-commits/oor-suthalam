@@ -24,3 +24,13 @@ test('invalid external destinations fall back to the correct role landing page',
     assert.equal(loginRedirect('traveler', path), '/');
   }
 });
+
+test('travelers return to their intended page after authentication', () => {
+  for (const path of [
+    '/traveler/saved',
+    '/traveler/plan?destination=ooty',
+    '/assistant',
+  ]) {
+    assert.equal(loginRedirect('traveler', path), path);
+  }
+});

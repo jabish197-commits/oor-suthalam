@@ -1,4 +1,5 @@
 import DestinationLocation from '../../components/destinations/DestinationLocation';
+import DestinationPhoto from '../../components/destinations/DestinationPhoto';
 import '../../assets/discovery-filters.css';
 import PlaceGallery from '../../components/destinations/PlaceGallery';
 import { useState } from 'react';
@@ -59,10 +60,10 @@ export default function DestinationDetails() {
 
               <h1>{destination.name}</h1>
 
-              {tab === 'overview' && destination.image && (
-                <img
+              {tab === 'overview' && (
+                <DestinationPhoto
                   className="detail-image"
-                  src={destination.image}
+                  destination={destination}
                   alt={destination.name}
                 />
               )}

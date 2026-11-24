@@ -1,0 +1,11 @@
+.destination-photo-placeholder {
+  display: grid;
+  width: 100%;
+  min-height: 140px;
+  place-items: center;
+  padding: 20px;
+  background: #eaf5f3;
+  color: #4e7474;
+  font-size: 14px;
+  text-align: center;
+}

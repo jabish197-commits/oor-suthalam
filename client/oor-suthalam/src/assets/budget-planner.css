@@ -176,4 +176,136 @@
   padding: 16px;
 }
 
-.budget-option-photo { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; display: block; }
+.budget-option-photo {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+}
+
+.budget-planner .budget-planner-form {
+  max-width: 760px;
+  gap: 24px;
+}
+.budget-planner .budget-step,
+.budget-planner .budget-preference-fields {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+.budget-planner .budget-step legend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  margin-bottom: 16px;
+  color: #142c31;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.budget-planner .budget-step legend > span {
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #e1f2ed;
+  color: #087d82;
+  font-size: 0.85rem;
+}
+.budget-planner .budget-step + .budget-step {
+  border-top: 1px solid #dceae5;
+  padding-top: 22px;
+}
+.budget-planner .budget-field-help,
+.budget-planner .budget-step label > small,
+.budget-planner .budget-date > small,
+.budget-planner .budget-submit p {
+  color: #607c7e;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.budget-planner .budget-field-help {
+  margin: 8px 0 0;
+}
+.budget-planner .budget-step .form-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+.budget-planner .budget-step label {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+.budget-planner .budget-personalise > summary {
+  min-height: 44px;
+  padding: 10px 0;
+  color: #087d82;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+.budget-planner .budget-personalise > summary span {
+  font-weight: 400;
+}
+.budget-planner .budget-submit {
+  display: grid;
+  gap: 10px;
+}
+.budget-planner .budget-submit .button {
+  min-height: 48px;
+}
+.budget-planner .budget-submit p {
+  margin: 0;
+  text-align: center;
+}
+.budget-planner .budget-assumptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  background: #eaf5f1;
+  color: #365e5c;
+}
+.budget-planner .budget-assumptions strong {
+  color: #086d73;
+}
+.budget-planner .budget-results h2:focus {
+  outline: none;
+}
+.budget-planner .budget-results h2:focus-visible {
+  outline: 2px solid #078b90;
+  outline-offset: 4px;
+}
+.budget-planner .budget-per-person {
+  font-size: 0.82rem;
+  color: #607c7e;
+}
+.budget-planner .budget-cost-details > summary {
+  padding: 10px 0;
+  color: #087d82;
+}
+.budget-planner .budget-option dl {
+  margin-top: 8px;
+}
+.budget-planner .budget-date {
+  display: grid;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .budget-planner .budget-planner-form {
+    padding: 20px;
+  }
+  .budget-planner .budget-step .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .budget-planner .budget-assumptions {
+    display: grid;
+    padding: 14px 16px;
+  }
+  .budget-planner .budget-total small {
+    display: block;
+    margin-top: 4px;
+  }
+}

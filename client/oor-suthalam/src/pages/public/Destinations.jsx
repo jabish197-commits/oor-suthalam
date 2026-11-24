@@ -27,6 +27,10 @@ export default function Destinations() {
 
     setParams(next, { replace: true });
   }
+  function clearFilters() {
+    setParams({}, { replace: true });
+    location.clear();
+  }
 
   return (
     <section ref={revealRoot} className="page">
@@ -47,6 +51,7 @@ export default function Destinations() {
         nearby={Boolean(location.coordinates)}
         onQueryChange={(value) => updateFilter('q', value)}
         onCategoryChange={(value) => updateFilter('category', value)}
+        onReset={clearFilters}
       />
 
       {location.error && (
@@ -54,10 +59,24 @@ export default function Destinations() {
           {location.error}
         </p>
       )}
-      <Resource resource={resource} empty="No destinations found. Try another search.">
+      <Resource
+        resource={resource}
+        empty={
+          <>
+            <p>No destinations match your search.</p>
+            <button type="button" className="button secondary" onClick={clearFilters}>
+              Clear filters
+            </button>
+          </>
+        }
+      >
         {(data) => (
           <>
-            <p className="muted">{data.length} destinations</p>
+            <p className="muted" role="status" aria-live="polite">
+              {resource.refreshing
+                ? 'Updating destinations…'
+                : `${data.length} ${data.length === 1 ? 'destination' : 'destinations'}`}
+            </p>
 
             <div className="card-grid">
               {[...data]

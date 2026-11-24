@@ -11,7 +11,7 @@ const links = [
 
 export default function TravelerLayout() {
   return (
-    <div className="workspace">
+    <div className="workspace traveler-workspace">
       <aside className="sidebar">
         <small className="eyebrow">YOUR TRAVEL NOTEBOOK</small>
         <h2>Away we go.</h2>

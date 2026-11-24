@@ -9,6 +9,7 @@ export default function SearchFilters({
   onClearLocation,
   locating,
   nearby,
+  onReset,
 }) {
   return (
     <div className="destination-filterbar">
@@ -26,14 +27,14 @@ export default function SearchFilters({
         value={category}
         onChange={(e) => onCategoryChange(e.target.value)}
       >
-        <option value="">All</option>
+        <option value="">All categories</option>
         <option value="Nature">Nature</option>
         <option value="Heritage">Heritage</option>
         <option value="Coast">Coast</option>
         <option value="City">City</option>
       </select>
       <details className="destination-options">
-        <summary>Options</summary>
+        <summary>Filters{discovery || nearby ? ' · On' : ''}</summary>
         <div>
           <label>
             Places
@@ -62,6 +63,11 @@ export default function SearchFilters({
           <small>Location is used only after you choose Nearest to me.</small>
         </div>
       </details>
+      {(query || category || discovery || nearby) && (
+        <button type="button" className="text-button filter-reset" onClick={onReset}>
+          Clear filters
+        </button>
+      )}
     </div>
   );
 }

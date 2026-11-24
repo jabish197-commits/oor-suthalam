@@ -1,5 +1,4 @@
-import PlannerHelp from '../../components/trips/PlannerHelp';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { api } from '../../services/api';
 import { tripService } from '../../services/tripService';
@@ -44,15 +43,42 @@ const labels = {
   sightseeing: 'Sightseeing allowance',
   contingency: 'Contingency (10%)',
 };
+
+function PlanPhoto({ destination }) {
+  const photos = [
+    ...new Set(
+      [
+        destination.image,
+        ...(destination.gallery || []).map((photo) => photo.image),
+      ].filter(Boolean),
+    ),
+  ];
+  const [photoIndex, setPhotoIndex] = useState(0);
+  if (!photos[photoIndex]) return null;
+  return (
+    <img
+      className="budget-option-photo"
+      src={photos[photoIndex]}
+      alt={destination.name}
+      loading="lazy"
+      onError={() => setPhotoIndex((current) => current + 1)}
+    />
+  );
+}
+
 export default function TripPlanner() {
   const destinations = useResource(destinationService.list);
   const navigate = useNavigate();
   const [params] = useSearchParams();
+  const resultsHeading = useRef(null);
   const [busy, setBusy] = useState(false),
     [error, setError] = useState(''),
     [result, setResult] = useState(null),
     [search, setSearch] = useState(null),
     [date, setDate] = useState(today());
+  useEffect(() => {
+    if (result) resultsHeading.current?.focus();
+  }, [result]);
   async function find(event) {
     event.preventDefault();
     const values = Object.fromEntries(new FormData(event.currentTarget));
@@ -100,121 +126,177 @@ export default function TripPlanner() {
   return (
     <section className="budget-planner">
       <div className="page-heading">
-        <small className="eyebrow">TAMIL NADU · YOUR BUDGET, YOUR JOURNEY</small>
-        <h1>Budget Planner</h1>
+        <small className="eyebrow">TAMIL NADU & KERALA</small>
+        <h1>Plan your trip</h1>
         <p>
-          Tell us what you can spend. Discover short trips that fit, with every cost laid
-          out.
+          Set your group budget and starting town. Compare up to three short trips that
+          fit.
         </p>
       </div>
       <form
-        className="panel stack"
+        className="panel stack budget-planner-form"
         onSubmit={find}
         onChange={() => {
           setResult(null);
           setError('');
         }}
       >
-        <label className="budget-main-input">
-          Your total budget (₹)
-          <input
-            name="budget"
-            type="number"
-            min="1"
-            max="100000000"
-            required
-            placeholder="Enter your budget"
-            defaultValue={params.get('budget') || ''}
-          />
-        </label>
-        <Button busy={busy}>Suggest my trip</Button>
-        <details className="budget-personalise">
-          <summary>Personalise (optional)</summary>
+        <fieldset className="budget-step" disabled={busy}>
+          <legend>
+            <span aria-hidden="true">1</span> Set your budget
+          </legend>
+          <label className="budget-main-input">
+            Total group budget (₹)
+            <input
+              name="budget"
+              type="number"
+              inputMode="numeric"
+              min="1"
+              max="100000000"
+              required
+              placeholder="For example, 10000"
+              aria-describedby="budget-basis"
+              defaultValue={params.get('budget') || ''}
+            />
+          </label>
+          <p className="budget-field-help" id="budget-basis">
+            For everyone and all days combined — not per person or per day.
+          </p>
+        </fieldset>
+        <fieldset className="budget-step" disabled={busy}>
+          <legend>
+            <span aria-hidden="true">2</span> Add your trip details
+          </legend>
           <div className="form-grid">
             <label>
               Starting town
-              <select name="origin" defaultValue="Chennai">
-                {towns.map((t) => (
-                  <option key={t}>{t}</option>
+              <select
+                name="origin"
+                defaultValue="Chennai"
+                aria-describedby="budget-origin-help"
+              >
+                {towns.map((town) => (
+                  <option key={town}>{town}</option>
                 ))}
               </select>
+              <small id="budget-origin-help">Used to estimate return travel.</small>
             </label>
             <label>
-              Travelers
-              <input name="travelers" type="number" min="1" max="20" defaultValue="1" />
+              Number of travelers
+              <input
+                name="travelers"
+                type="number"
+                inputMode="numeric"
+                min="1"
+                max="20"
+                step="1"
+                required
+                defaultValue="1"
+              />
+              <small>Include everyone sharing the budget.</small>
             </label>
             <label>
-              Destination
-              <select name="destination" defaultValue={params.get('destination') || ''}>
-                <option value="">Suggest a place for me</option>
-                {destinations.data?.map((place) => (
-                  <option key={place._id} value={place._id}>
-                    {place.name}
+              Trip length
+              <select name="days" defaultValue="" aria-describedby="budget-days-help">
+                <option value="">Suggest 1–4 days</option>
+                {[1, 2, 3, 4].map((days) => (
+                  <option key={days} value={days}>
+                    {days} {days === 1 ? 'day' : 'days'}
                   </option>
                 ))}
               </select>
-            </label>
-            <label>
-              Days
-              <select name="days" defaultValue="">
-                <option value="">Suggest the duration</option>
-                {[1, 2, 3, 4].map((n) => (
-                  <option key={n} value={n}>
-                    {n} {n === 1 ? 'day' : 'days'}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <label>
-              Your kind of place
-              <select name="preference">
-                <option value="Any">Surprise me</option>
-                <option value="Nature">Hills & nature</option>
-                <option value="Coast">Coast</option>
-                <option value="Heritage">Heritage & temples</option>
-                <option value="City">City</option>
-              </select>
-            </label>
-            <label>
-              Travel style
-              <select name="style">
-                <option value="budget">Simple & economical</option>
-                <option value="comfortable">More comfortable</option>
-              </select>
+              <small id="budget-days-help">
+                Choose a duration or let your budget guide it.
+              </small>
             </label>
           </div>
-          <label>
-            Places
-            <select name="hiddenOnly">
-              <option value="false">All places</option>
-              <option value="true">Quieter places</option>
-            </select>
-          </label>
+        </fieldset>
+        <details className="budget-personalise">
+          <summary>
+            More preferences <span>(optional)</span>
+          </summary>
+          <fieldset className="budget-preference-fields" disabled={busy}>
+            <div className="form-grid">
+              <label>
+                Destination
+                <select name="destination" defaultValue={params.get('destination') || ''}>
+                  <option value="">Suggest a destination</option>
+                  {destinations.data?.map((place) => (
+                    <option key={place._id} value={place._id}>
+                      {place.name}
+                    </option>
+                  ))}
+                </select>
+              </label>
+              <label>
+                Your kind of place
+                <select name="preference">
+                  <option value="Any">Any type</option>
+                  <option value="Nature">Hills & nature</option>
+                  <option value="Coast">Coast</option>
+                  <option value="Heritage">Heritage & temples</option>
+                  <option value="City">City</option>
+                </select>
+              </label>
+              <label>
+                Travel style
+                <select name="style">
+                  <option value="budget">Simple & economical</option>
+                  <option value="comfortable">More comfortable</option>
+                </select>
+              </label>
+            </div>
+            <label>
+              Places
+              <select name="hiddenOnly">
+                <option value="false">All places</option>
+                <option value="true">Quieter places</option>
+              </select>
+            </label>
+          </fieldset>
         </details>
-        <PlannerHelp />
+        {destinations.error && (
+          <p className="budget-field-help">
+            The destination list could not load. You can still ask us to suggest a place,
+            or reload this page to choose one.
+          </p>
+        )}
+        <div className="budget-submit">
+          <Button disabled={busy} aria-busy={busy}>
+            {busy ? 'Finding trips…' : 'Find trips within my budget'}
+          </Button>
+          <p>Planning estimates only. Nothing is booked or charged.</p>
+        </div>
       </form>
       {error && (
-        <p className="notice error" role="alert">
-          {error}
-        </p>
+        <div className="notice error" role="alert">
+          <strong>We couldn’t complete that step.</strong>
+          <p>{error}</p>
+          <p>Your choices are still above. Adjust them if needed, then try again.</p>
+        </div>
       )}
       {result && (
         <section className="budget-results" aria-live="polite">
-          <p className="budget-assumptions">
-            Based on {result.assumptions?.travelers || search.travelers} traveler(s),
-            starting from {result.assumptions?.origin || search.origin}. Change these
-            under Personalise.
-          </p>
+          <div className="budget-assumptions">
+            <strong>{money(search.budget)} group budget</strong>
+            <span>
+              {search.travelers} {search.travelers === 1 ? 'traveler' : 'travelers'} ·
+              From {search.origin} ·{' '}
+              {search.days
+                ? `${search.days} ${search.days === 1 ? 'day' : 'days'}`
+                : 'Duration suggested from your budget'}
+            </span>
+          </div>
           <div className="section-heading">
             <div>
-              <h2>
+              <h2 ref={resultsHeading} tabIndex="-1">
                 {result.plans.length
                   ? 'Your budget-friendly shortlist'
                   : 'Let’s adjust the plan'}
               </h2>
               <p>
                 {result.plans.length
-                  ? 'Nearby options first. All totals stay within your group budget.'
+                  ? 'Compare the full group totals below. Choose a date, then save a trip to see its itinerary.'
                   : 'No suitable plan fits these choices. Try fewer days, a nearer starting town, another category or a higher budget.'}
               </p>
             </div>
@@ -235,23 +317,13 @@ export default function TripPlanner() {
                 onChange={(e) => setDate(e.target.value)}
                 required
               />
+              <small>Used when you save the itinerary. No reservation is made.</small>
             </label>
           )}
           <div className="budget-options">
             {result.plans.map((plan) => (
               <article className="panel stack budget-option" key={plan.destination._id}>
-                {(plan.destination.image ||
-                  plan.destination.gallery?.find((photo) => photo.image)?.image) && (
-                  <img
-                    className="budget-option-photo"
-                    src={
-                      plan.destination.image ||
-                      plan.destination.gallery.find((photo) => photo.image).image
-                    }
-                    alt={plan.destination.name}
-                    loading="lazy"
-                  />
-                )}
+                <PlanPhoto destination={plan.destination} />
                 <small className="eyebrow">
                   {plan.destination.hiddenGem
                     ? 'QUIETER DISCOVERY'
@@ -259,25 +331,34 @@ export default function TripPlanner() {
                 </small>
                 <h3>{plan.destination.name}</h3>
                 <p>
-                  {plan.destination.region} · {plan.days} days · {search.travelers}{' '}
-                  travelers
+                  {plan.destination.region} · {plan.days}{' '}
+                  {plan.days === 1 ? 'day' : 'days'} · {search.travelers}{' '}
+                  {search.travelers === 1 ? 'traveler' : 'travelers'}
                 </p>
                 <strong className="budget-total">
-                  {money(plan.estimatedCost)} <small>whole group</small>
+                  {money(plan.estimatedCost)} <small>estimated group total</small>
                 </strong>
+                <p className="budget-per-person">
+                  About{' '}
+                  {money(Math.round(plan.estimatedCost / search.travelers / plan.days))}{' '}
+                  per person / day, averaged across the trip.
+                </p>
                 <p className="success">{money(plan.remaining)} left in your budget</p>
                 <p>
                   Approx. {plan.distanceKm} km each way · {plan.travelHours} hours travel
                   each way. Road conditions and actual routes may differ.
                 </p>
-                <dl>
-                  {Object.entries(plan.costs).map(([key, value]) => (
-                    <div className="summary-row" key={key}>
-                      <dt>{labels[key]}</dt>
-                      <dd>{money(value)}</dd>
-                    </div>
-                  ))}
-                </dl>
+                <details className="budget-cost-details">
+                  <summary>View group cost breakdown</summary>
+                  <dl>
+                    {Object.entries(plan.costs).map(([key, value]) => (
+                      <div className="summary-row" key={key}>
+                        <dt>{labels[key] || key}</dt>
+                        <dd>{money(value)}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                </details>
                 <details>
                   <summary>What you could explore</summary>
                   <ul>
@@ -292,12 +373,12 @@ export default function TripPlanner() {
                   onClick={() => save(plan)}
                   disabled={!date || date < today()}
                 >
-                  Save this trip
+                  Save {plan.destination.name} trip
                 </Button>
               </article>
             ))}
           </div>
-          <details className="budget-estimate-details">
+          <details className="budget-estimate-details" open={!result.plans.length}>
             <summary>How estimates work</summary>
             <p>{result.estimateNote}</p>
           </details>

@@ -3,6 +3,7 @@ import useResource from '../../hooks/useResource';
 import { packageService } from '../../services/packageService';
 import Resource from '../../components/common/Resource';
 import BookingForm from '../../components/bookings/BookingForm';
+import DestinationPhoto from '../../components/destinations/DestinationPhoto';
 
 export default function PackageDetails() {
   const { id } = useParams();
@@ -25,13 +26,7 @@ export default function PackageDetails() {
 
               <h1>{item.title}</h1>
 
-              {item.destination?.image && (
-                <img
-                  className="detail-image"
-                  src={item.destination.image}
-                  alt={item.destination.name}
-                />
-              )}
+              <DestinationPhoto className="detail-image" destination={item.destination} />
 
               <p className="lead">{item.description}</p>
 
