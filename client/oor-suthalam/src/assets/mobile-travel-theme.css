@@ -560,3 +560,32 @@
     visibility: hidden;
   }
 }
+@media (max-width: 800px) {
+  .travel-site.travel-site .navbar {
+    grid-template-columns: minmax(0, 1fr) 44px;
+  }
+  .travel-site.travel-site .navbar .mobile-nav-toggle {
+    grid-column: 2;
+  }
+  .travel-site.travel-site .travel-assistant-launcher {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: calc(90px + env(safe-area-inset-bottom));
+    right: 16px;
+    z-index: 45;
+    min-height: 46px;
+    padding: 12px 18px;
+    border-radius: 28px;
+    background: #087d82;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 5px 18px #063e442b;
+    text-decoration: none;
+  }
+  .travel-site.travel-site .navbar.menu-open ~ .travel-assistant-launcher {
+    visibility: hidden;
+  }
+}
