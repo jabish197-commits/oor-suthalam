@@ -624,3 +624,138 @@
     animation: none;
   }
 }
+/* Compact conversation UI, with secondary actions tucked away. */
+.travel-site.assistant-mode .assistant-bubble {
+  width: fit-content;
+  max-width: 90%;
+  min-width: 0;
+  min-height: 0;
+  padding: 10px 13px;
+  margin: 0 0 10px;
+  border-radius: 18px 18px 18px 5px;
+  box-shadow: none;
+}
+.travel-site.assistant-mode .assistant-bubble.user {
+  margin-left: auto;
+  border-radius: 18px 18px 5px 18px;
+  background: #e1f3ee;
+}
+.travel-site.assistant-mode .assistant-bubble.user > strong {
+  display: none;
+}
+.travel-site.assistant-mode .assistant-bubble p {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 14px;
+}
+.travel-site.assistant-mode .assistant-bubble > strong {
+  display: block;
+  font-size: 9px;
+  margin-bottom: 4px;
+  color: #607c7e;
+}
+.travel-site.assistant-mode .assistant-listen {
+  padding: 5px 8px;
+  margin-top: 7px;
+  font-size: 10px;
+  min-height: 32px;
+}
+.travel-site.assistant-mode .assistant-messages {
+  padding: 16px 12px;
+}
+.travel-site.assistant-mode .assistant-workspace > header {
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  overflow: visible;
+  position: relative;
+  z-index: 4;
+}
+.travel-site.assistant-mode .assistant-workspace > header > div:first-child {
+  min-width: 0;
+  flex: 1;
+}
+.travel-site.assistant-mode .assistant-workspace > header h1 {
+  font:
+    650 clamp(18px, 3vw, 26px)/1.2 Georgia,
+    serif;
+  letter-spacing: -0.035em;
+  color: #086d73;
+  margin: 5px 0;
+}
+.assistant-conversation-menu {
+  position: relative;
+}
+.assistant-conversation-menu summary {
+  display: grid;
+  place-items: center;
+  list-style: none;
+  width: 44px;
+  height: 44px;
+  font-size: 27px;
+  line-height: 1;
+  border: 1px solid #cce5df;
+  border-radius: 14px;
+  background: #fff;
+  color: #086d73;
+  cursor: pointer;
+}
+.assistant-conversation-menu summary::-webkit-details-marker {
+  display: none;
+}
+.assistant-conversation-menu > div {
+  position: absolute;
+  right: 0;
+  top: 49px;
+  width: 220px;
+  display: grid;
+  gap: 3px;
+  padding: 7px;
+  background: white;
+  border: 1px solid #dceae5;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px #063e4420;
+  z-index: 20;
+}
+.travel-site.assistant-mode .assistant-conversation-menu button {
+  width: 100%;
+  min-height: 44px;
+  text-align: left;
+  padding: 10px 12px;
+  border: 0;
+  background: transparent;
+  color: #142c31;
+  border-radius: 10px;
+  font-size: 13px;
+}
+.travel-site.assistant-mode .assistant-conversation-menu button:hover {
+  background: #eaf5f1;
+}
+.assistant-conversation-menu summary:focus-visible {
+  outline: 2px solid #078b90;
+  outline-offset: 2px;
+}
+@media (max-width: 800px) {
+  .travel-site.assistant-mode .assistant-header-actions {
+    flex-shrink: 0;
+  }
+  .travel-site.assistant-mode .assistant-header-caption {
+    display: none;
+  }
+  .travel-site.assistant-mode .assistant-workspace > header h1 {
+    font-size: 20px;
+  }
+  .travel-site.assistant-mode .assistant-welcome {
+    margin: 12px auto;
+  }
+  .travel-site.assistant-mode .assistant-welcome > span {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+    margin-bottom: 8px;
+  }
+  .travel-site.assistant-mode .assistant-welcome h2 {
+    font-size: 23px;
+    margin: 5px 0 8px;
+  }
+}

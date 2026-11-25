@@ -40,6 +40,7 @@ export default function TravelAssistant() {
   const audioRequest = useRef(null);
   const audioUrl = useRef(null);
   const messages = useRef(null);
+  const conversationMenu = useRef(null);
   const mounted = useRef(true);
   const recorder = useVoiceRecorder({
     onTranscript: (text) => {
@@ -320,8 +321,10 @@ export default function TravelAssistant() {
         <header>
           <div>
             <small>OOR SUTHALAM</small>
-            <h1>Your travel companion</h1>
-            <p className="assistant-header-caption">Plan a little. Discover more.</p>
+            <h1>Your next journey starts here</h1>
+            <p className="assistant-header-caption">
+              A little inspiration. A plan that feels like you.
+            </p>
           </div>
           <div className="assistant-header-actions">
             {plannerDraft && (
@@ -333,17 +336,46 @@ export default function TravelAssistant() {
                 Back to planner
               </Link>
             )}
-            <button
-              className="assistant-show-history"
-              onClick={() => setShowHistory(!showHistory)}
-            >
-              Chat history
-            </button>
-            {chat && (
-              <button disabled={busy} onClick={remove}>
-                Delete chat
-              </button>
-            )}
+            <details className="assistant-conversation-menu" ref={conversationMenu}>
+              <summary aria-label="Conversation options">⋯</summary>
+              <div>
+                <button
+                  type="button"
+                  disabled={locked || listening}
+                  onClick={() => {
+                    stopVoice();
+                    setChat(null);
+                    setDraft('');
+                    setError('');
+                    setShowHistory(false);
+                    conversationMenu.current.open = false;
+                  }}
+                >
+                  New conversation
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setShowHistory(!showHistory);
+                    conversationMenu.current.open = false;
+                  }}
+                >
+                  Chat history
+                </button>
+                {chat && (
+                  <button
+                    type="button"
+                    disabled={busy}
+                    onClick={() => {
+                      conversationMenu.current.open = false;
+                      remove();
+                    }}
+                  >
+                    Delete this conversation
+                  </button>
+                )}
+              </div>
+            </details>
           </div>
         </header>
         <div
@@ -365,7 +397,11 @@ export default function TravelAssistant() {
             </div>
           )}
           {chat?.messages?.map((item, index) => (
-            <article key={item._id || index} className={`assistant-bubble ${item.role}`}>
+            <article
+              key={item._id || index}
+              className={`assistant-bubble ${item.role}`}
+              aria-label={item.role === 'user' ? 'Your message' : 'Assistant reply'}
+            >
               <strong>{item.role === 'user' ? 'You' : 'Travel assistant · AI'}</strong>
               <p>{item.text}</p>
               {item.cards?.length > 0 && (
