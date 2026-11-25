@@ -589,3 +589,38 @@
     visibility: hidden;
   }
 }
+/* Anchor both mobile controls to one dock so they cannot drift independently. */
+.mobile-bottom-controls {
+  display: contents;
+}
+@media (max-width: 800px) {
+  .travel-site.travel-site:not(.assistant-mode) > .mobile-bottom-controls {
+    display: block;
+    position: fixed;
+    inset: auto 0 0;
+    height: 0;
+    z-index: 50;
+    pointer-events: none;
+    transform: translateZ(0);
+  }
+  .travel-site.travel-site.mobile-app:not(.assistant-mode)
+    .mobile-bottom-controls
+    .mobile-app-nav.mobile-app-nav {
+    position: absolute;
+    pointer-events: auto;
+    bottom: max(10px, env(safe-area-inset-bottom));
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+  .travel-site.travel-site:not(.assistant-mode)
+    .mobile-bottom-controls
+    .travel-assistant-launcher {
+    position: absolute;
+    pointer-events: auto;
+    bottom: calc(90px + env(safe-area-inset-bottom));
+    transition: none;
+    transform: none;
+    animation: none;
+  }
+}

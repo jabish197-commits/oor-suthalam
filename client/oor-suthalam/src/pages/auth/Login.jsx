@@ -50,7 +50,6 @@ export default function Login() {
 
       <form className="panel stack" onSubmit={submit}>
         <div className="login-form-heading">
-          <span aria-hidden="true">↗</span>
           <h2>Welcome back</h2>
           <p>Sign in to plan your next escape.</p>
         </div>

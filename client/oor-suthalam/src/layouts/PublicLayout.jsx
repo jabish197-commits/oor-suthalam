@@ -28,12 +28,14 @@ export default function PublicLayout() {
         <Outlet />
       </main>
       {!isAssistant && <Footer />}
-      {!isAuth && <MobileNavigation />}
-      {!isAuth && pathname !== '/assistant' && (
-        <Link className="travel-assistant-launcher" to="/assistant">
-          Travel assistant
-        </Link>
-      )}
+      <div className="mobile-bottom-controls">
+        {!isAuth && <MobileNavigation />}
+        {!isAuth && pathname !== '/assistant' && (
+          <Link className="travel-assistant-launcher" to="/assistant">
+            Travel assistant
+          </Link>
+        )}
+      </div>
     </div>
   );
 }

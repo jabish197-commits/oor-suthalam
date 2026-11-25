@@ -115,9 +115,7 @@ export default function Home() {
       <Link className="mobile-discover-getaway" to="/traveler/plan">
         <strong>Your next little getaway</strong>
         <span>Misty hills. Quiet shores. A trip that feels like you.</span>
-        <b>
-          Plan your escape <span aria-hidden="true">↗</span>
-        </b>
+        <b>Plan your escape</b>
       </Link>
     </div>
   );
