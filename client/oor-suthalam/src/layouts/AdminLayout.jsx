@@ -4,6 +4,7 @@ import { Link, NavLink, Outlet, useLocation, useNavigate } from 'react-router-do
 import { useAuth } from '../context/AuthContext';
 import AdminIcon from '../components/common/AdminIcon';
 import '../assets/admin.css';
+import '../assets/admin-studio.css';
 import { AdminMessagesProvider, useAdminMessages } from '../context/AdminMessagesContext';
 
 const links = [
@@ -74,7 +75,7 @@ function AdminWorkspace() {
   }
 
   return (
-    <div className={`admin-shell${menuOpen ? ' admin-menu-open' : ''}`}>
+    <div className={`admin-shell admin-studio${menuOpen ? ' admin-menu-open' : ''}`}>
       <a className="skip-link" href="#admin-main">
         Skip to dashboard
       </a>
@@ -160,6 +161,29 @@ function AdminWorkspace() {
           <Outlet />
         </main>
       </div>
+      <nav className="admin-mobile-dock" aria-label="Admin shortcuts">
+        <NavLink to="/admin" end>
+          <AdminIcon name="overview" />
+          <span>Overview</span>
+        </NavLink>
+        <NavLink to="/admin/bookings">
+          <AdminIcon name="booking" />
+          <span>Bookings</span>
+        </NavLink>
+        <NavLink to="/admin/messages">
+          <AdminIcon name="mail" />
+          <span>Inbox{unread > 0 ? ` (${unread})` : ''}</span>
+        </NavLink>
+        <button
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-controls="admin-navigation"
+        >
+          <AdminIcon name="menu" />
+          <span>More</span>
+        </button>
+      </nav>
     </div>
   );
 }

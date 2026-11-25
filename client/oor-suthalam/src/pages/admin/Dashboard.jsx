@@ -7,247 +7,251 @@ import Resource from '../../components/common/Resource';
 import AdminIcon from '../../components/common/AdminIcon';
 import BookingStatus from '../../components/bookings/BookingStatus';
 
-function DashboardContent({ data }) {
+export function DashboardContent({ data }) {
   const { stats, recentBookings, recentInquiries } = data;
-  const cards = [
-    [
-      'Destinations',
-      stats.destinations,
-      'Published destinations',
-      'destination',
-      '/admin/destinations',
-    ],
-    [
-      'Active packages',
-      stats.activePackages,
-      'Available packages',
-      'package',
-      '/admin/packages',
-    ],
-    [
-      'Pending bookings',
-      stats.pendingBookings,
-      'Requests awaiting your review',
-      'booking',
-      '/admin/bookings',
-    ],
-    ['Travelers', stats.travelers, 'Registered travelers', 'users', '/admin/users'],
-  ];
   const statuses = [
-    ['Confirmed', stats.confirmedBookings, 'confirmed'],
-    ['Pending', stats.pendingBookings, 'pending'],
-    ['Cancelled', stats.cancelledBookings, 'cancelled'],
+    { label: 'Confirmed', value: stats.confirmedBookings, color: '#138f80' },
+    { label: 'Pending', value: stats.pendingBookings, color: '#e5b857' },
+    { label: 'Cancelled', value: stats.cancelledBookings, color: '#bd7f83' },
   ];
-
+  const total = statuses.reduce((sum, item) => sum + item.value, 0);
+  let offset = 0;
+  const metrics = [
+    ['Destinations', stats.destinations, '/admin/destinations'],
+    ['Packages', stats.activePackages, '/admin/packages'],
+    ['Travelers', stats.travelers, '/admin/users'],
+    ['Inquiries', stats.totalInquiries, '/admin/messages'],
+  ];
   return (
-    <>
-      <div className="admin-stat-grid">
-        {cards.map(([title, value, note, icon, path]) => (
-          <Link className="admin-stat-card" to={path} key={title}>
-            <div className="admin-stat-top">
-              <span>{title}</span>
-              <span className={`admin-stat-icon ${icon}`}>
-                <AdminIcon name={icon} />
-              </span>
-            </div>
+    <div className="studio-overview">
+      <section className="studio-hero">
+        <div className="studio-hero-copy">
+          <span className="studio-kicker">YOUR BUSINESS, AT A GLANCE</span>
+          <h2>
+            Good journeys.
+            <br />
+            <em>Better oversight.</em>
+          </h2>
+          <p>Everything you need to keep the next journey moving.</p>
+          <Link to="/admin/bookings" className="studio-review-link">
+            Review bookings <span>{stats.pendingBookings} pending</span>
+          </Link>
+        </div>
+        <div className="studio-value">
+          <span>Confirmed booking value</span>
+          <strong>{money(stats.confirmedValue)}</strong>
+          <small>{stats.confirmedBookings} confirmed bookings · All time</small>
+          <p>Booking value, not collected payments.</p>
+        </div>
+      </section>
+
+      <nav className="studio-metrics" aria-label="Business totals">
+        {metrics.map(([label, value, path]) => (
+          <Link to={path} key={label}>
             <strong>{value.toLocaleString('en-IN')}</strong>
-            <div className="admin-stat-foot">
-              <span>{note}</span>
-            </div>
+            <span>{label}</span>
           </Link>
         ))}
-      </div>
+      </nav>
 
-      <div className="admin-overview-grid">
-        <section className="admin-card admin-recent-bookings">
-          <div className="admin-card-heading">
+      <div className="studio-dashboard-grid">
+        <section className="studio-surface studio-booking-health">
+          <div className="studio-section-heading">
             <div>
+              <span className="studio-kicker">THE BIG PICTURE</span>
+              <h2>Booking health</h2>
+            </div>
+            <span className="studio-period">All time</span>
+          </div>
+          <div className="studio-chart-layout">
+            <div className="studio-donut">
+              <svg
+                viewBox="0 0 140 140"
+                role="img"
+                aria-label={`Booking status: ${stats.confirmedBookings} confirmed, ${stats.pendingBookings} pending, ${stats.cancelledBookings} cancelled`}
+              >
+                <circle
+                  cx="70"
+                  cy="70"
+                  r="54"
+                  fill="none"
+                  stroke="#edf1ef"
+                  strokeWidth="13"
+                />
+                {statuses.map((item) => {
+                  const percentage = total ? (item.value / total) * 100 : 0;
+                  const start = offset;
+                  offset += percentage;
+                  return (
+                    <circle
+                      key={item.label}
+                      cx="70"
+                      cy="70"
+                      r="54"
+                      fill="none"
+                      stroke={item.color}
+                      strokeWidth="13"
+                      pathLength="100"
+                      strokeDasharray={`${percentage} ${100 - percentage}`}
+                      strokeDashoffset={-start}
+                      transform="rotate(-90 70 70)"
+                    />
+                  );
+                })}
+              </svg>
+              <div>
+                <strong>{stats.totalBookings}</strong>
+                <span>requests</span>
+              </div>
+            </div>
+            <div className="studio-chart-legend">
+              {statuses.map((item) => (
+                <div key={item.label}>
+                  <span>
+                    <i style={{ background: item.color }} />
+                    {item.label}
+                  </span>
+                  <strong>
+                    {item.value}
+                    <small>{total ? Math.round((item.value / total) * 100) : 0}%</small>
+                  </strong>
+                </div>
+              ))}
+            </div>
+          </div>
+          {!total && (
+            <p className="studio-empty-note">
+              Your first booking will bring this chart to life.
+            </p>
+          )}
+          <Link className="studio-text-link" to="/admin/bookings">
+            Open booking requests
+          </Link>
+        </section>
+
+        <section className="studio-surface studio-activity">
+          <div className="studio-section-heading">
+            <div>
+              <span className="studio-kicker">KEEP THINGS MOVING</span>
               <h2>Recent bookings</h2>
             </div>
-            <Link to="/admin/bookings">View all </Link>
+            <Link to="/admin/bookings">View all</Link>
           </div>
           {recentBookings.length ? (
-            <div className="admin-table-scroll">
-              <table>
-                <thead>
-                  <tr>
-                    <th>Traveler & getaway</th>
-                    <th>Departure</th>
-                    <th>Amount</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {recentBookings.map((booking) => (
-                    <tr key={booking._id}>
-                      <td>
-                        <strong>{booking.traveler?.name || 'Traveler'}</strong>
-                        <small>{booking.package?.title || 'Archived package'}</small>
-                      </td>
-                      <td>{formatDate(booking.startDate)}</td>
-                      <td className="admin-money">
-                        {booking.priceMode === 'quote'
-                          ? 'Quote required'
-                          : money(booking.total)}
-                      </td>
-                      <td>
-                        <BookingStatus status={booking.status} />
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          ) : (
-            <div className="admin-empty-bookings">
-              <span className="admin-empty-icon">
-                <AdminIcon name="booking" size={28} />
-              </span>
-              <h3>No bookings yet.</h3>
-              <p>
-                New booking requests will appear here.
-                <br />
-                Get your catalog ready for the first journey.
-              </p>
-              <Link className="admin-inline-link" to="/admin/packages">
-                Manage packages{' '}
-              </Link>
-            </div>
-          )}
-          <div className="admin-card-footer">
-            <span>
-              <span className="admin-live-dot" /> {stats.totalBookings} total requests
-            </span>
-            <span>Latest six bookings</span>
-          </div>
-        </section>
-
-        <aside className="admin-side-stack">
-          <section className="admin-card admin-quick-actions">
-            <h2>Quick actions</h2>
-            <Link to="/admin/destinations">Manage destinations</Link>
-            <Link to="/admin/packages">Manage packages</Link>
-            <Link to="/admin/bookings">Review booking requests</Link>
-            <Link to="/admin/changes">Review package changes</Link>
-          </section>
-          <section className="admin-card admin-value-card">
-            <span className="admin-value-label">CONFIRMED BOOKING VALUE</span>
-            <strong>{money(stats.confirmedValue)}</strong>
-            <p>
-              Across {stats.confirmedBookings} confirmed booking
-              {stats.confirmedBookings === 1 ? '' : 's'}.<br />
-              Booking value, not collected payments.
-            </p>
-          </section>
-        </aside>
-
-        <section className="admin-card admin-status-card">
-          <div className="admin-card-heading">
-            <div>
-              <h2>Booking breakdown</h2>
-            </div>
-            <span className="admin-soft-label">All time</span>
-          </div>
-          <div className="admin-booking-total">
-            <strong>{stats.totalBookings}</strong>
-            <span>Total booking requests</span>
-          </div>
-          <div className="admin-status-bars">
-            {statuses.map(([label, value, status]) => (
-              <div className="admin-status-row" key={status}>
-                <div>
-                  <span>
-                    <i className={status} />
-                    {label}
+            <div className="studio-booking-list">
+              {recentBookings.map((booking) => (
+                <Link
+                  to="/admin/bookings"
+                  key={booking._id}
+                  className="studio-booking-row"
+                >
+                  <span className="studio-list-icon">
+                    <AdminIcon name="booking" size={18} />
                   </span>
-                  <strong>{value}</strong>
-                </div>
-                <div className="admin-progress-track">
-                  <span
-                    className={status}
-                    style={{
-                      width: `${stats.totalBookings ? (value / stats.totalBookings) * 100 : 0}%`,
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-          {!stats.totalBookings && (
-            <p className="admin-chart-note">
-              Activity appears with your first booking request.
-            </p>
-          )}
-        </section>
-
-        <section className="admin-card admin-inquiries-card">
-          <div className="admin-card-heading">
-            <div>
-              <h2>Latest inquiries</h2>
-            </div>
-            <span className="admin-count-badge">{stats.totalInquiries}</span>
-          </div>
-          {recentInquiries.length ? (
-            <div className="admin-inquiry-list">
-              {recentInquiries.map((inquiry) => (
-                <article key={inquiry._id}>
-                  <span className="admin-inquiry-avatar">
-                    {inquiry.name?.[0]?.toUpperCase() || '?'}
+                  <span className="studio-booking-person">
+                    <strong>{booking.traveler?.name || 'Traveler'}</strong>
+                    <small>{booking.package?.title || 'Archived package'}</small>
+                    <time>{formatDate(booking.startDate)}</time>
                   </span>
-                  <div>
-                    <div className="admin-inquiry-title">
-                      <strong>{inquiry.name}</strong>
-                      <time>{formatDate(inquiry.createdAt)}</time>
-                    </div>
-                    <p>{inquiry.message}</p>
-                    <a href={`mailto:${inquiry.email}`}>{inquiry.email}</a>
-                  </div>
-                </article>
+                  <BookingStatus status={booking.status} />
+                </Link>
               ))}
             </div>
           ) : (
-            <div className="admin-small-empty">
-              <AdminIcon name="mail" size={30} />
-              <h3>No enquiries yet.</h3>
-              <p>Messages from your contact page will appear here.</p>
+            <div className="studio-empty">
+              <AdminIcon name="booking" size={32} />
+              <h3>Ready for the first request</h3>
+              <p>New booking requests will appear here.</p>
+              <Link to="/admin/packages">Prepare your packages</Link>
             </div>
           )}
         </section>
+
+        <section className="studio-surface studio-inbox">
+          <div className="studio-section-heading">
+            <div>
+              <span className="studio-kicker">START A CONVERSATION</span>
+              <h2>Latest inquiries</h2>
+            </div>
+            <Link to="/admin/messages">Open inbox</Link>
+          </div>
+          {recentInquiries.length ? (
+            <div className="studio-inquiry-list">
+              {recentInquiries.map((inquiry) => (
+                <Link to="/admin/messages" key={inquiry._id}>
+                  <span className="studio-inquiry-initial">
+                    {inquiry.name?.[0]?.toUpperCase() || '?'}
+                  </span>
+                  <span>
+                    <strong>{inquiry.name}</strong>
+                    <p>{inquiry.message}</p>
+                    <time>{formatDate(inquiry.createdAt)}</time>
+                  </span>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="studio-empty">
+              <AdminIcon name="mail" size={28} />
+              <h3>A quiet inbox</h3>
+              <p>Contact messages will appear here when travelers get in touch.</p>
+            </div>
+          )}
+        </section>
+        <section className="studio-shortcuts" aria-label="Manage your catalog">
+          <div>
+            <span className="studio-kicker">MAKE ROOM FOR THE NEXT TRIP</span>
+            <h2>Your travel collection</h2>
+          </div>
+          <Link to="/admin/destinations">
+            <AdminIcon name="destination" />
+            Destinations
+          </Link>
+          <Link to="/admin/packages">
+            <AdminIcon name="package" />
+            Packages
+          </Link>
+          <Link to="/admin/galleries">
+            <AdminIcon name="destination" />
+            Photo galleries
+          </Link>
+        </section>
       </div>
-      <div className="admin-update-note">
-        Data refreshed{' '}
+      <p className="studio-updated">
+        Updated{' '}
         {new Date(data.updatedAt).toLocaleTimeString('en-IN', {
           hour: 'numeric',
           minute: '2-digit',
         })}{' '}
-        · Refreshes every 30 seconds while this page is visible.
-      </div>
-    </>
+        · Refreshes automatically while you’re here.
+      </p>
+    </div>
   );
 }
-
 export default function Dashboard() {
   const resource = useResource(adminService.overview, '', { keepPreviousData: true });
   useEffect(() => {
-    const interval = setInterval(() => {
+    const timer = setInterval(() => {
       if (!document.hidden) resource.reload();
     }, 30000);
-    return () => clearInterval(interval);
+    return () => clearInterval(timer);
   }, [resource.reload]);
   return (
     <>
-      <div className="admin-page-heading">
+      <div className="admin-page-heading studio-page-heading">
         <div>
+          <span className="studio-kicker">OOR SUTHALAM STUDIO</span>
           <h1>Overview</h1>
-          <p>Monitor bookings, manage your catalog and review requests.</p>
+          <p>A little clarity for your day.</p>
         </div>
         <button
           className="admin-utility-button"
           onClick={resource.reload}
-          disabled={resource.loading}
+          disabled={resource.loading || resource.refreshing}
+          aria-label="Refresh dashboard"
         >
           <AdminIcon name="refresh" size={17} />
-          Refresh data
+          <span>{resource.refreshing ? 'Updating…' : 'Refresh'}</span>
         </button>
       </div>
       <Resource resource={resource}>
