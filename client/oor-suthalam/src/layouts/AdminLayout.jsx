@@ -45,6 +45,10 @@ function AdminWorkspace() {
     .join('')
     .toUpperCase();
   useEffect(() => {
+    document.documentElement.classList.add('admin-studio-active');
+    return () => document.documentElement.classList.remove('admin-studio-active');
+  }, []);
+  useEffect(() => {
     setMenuOpen(false);
   }, [location.pathname]);
 
@@ -169,6 +173,21 @@ function AdminWorkspace() {
         <NavLink to="/admin/bookings">
           <AdminIcon name="booking" />
           <span>Bookings</span>
+        </NavLink>
+        <NavLink to="/admin/assistant">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.7"
+            aria-hidden="true"
+          >
+            <path d="M5 4h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H9l-6 4V6a2 2 0 0 1 2-2Z" />
+            <path d="M7 9h10M7 13h6" />
+          </svg>
+          <span>Assistant</span>
         </NavLink>
         <NavLink to="/admin/messages">
           <AdminIcon name="mail" />
