@@ -22,7 +22,7 @@ export function estimateTrip(destination, input) {
     stay:
       Math.max(0, input.days - 1) *
       Math.ceil(input.travelers / 2) *
-      (comfort ? 1600 : 1000),
+      (input.roomRate || (comfort ? 1600 : 1000)),
     food: input.days * input.travelers * (comfort ? 600 : 350),
     localTransport: input.days * input.travelers * (comfort ? 350 : 200),
     sightseeing: input.days * input.travelers * 200,

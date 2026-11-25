@@ -91,3 +91,41 @@ test('a named trip gets an outline and the budget follow-up retains its destinat
   assert.ok(next.cards.every((c) => String(c.destinationId) === target._id));
   assert.match(next.text, /Alappuzha/);
 });
+
+test('spoken Tamil budgets and room allowances are distinguished', () => {
+  assert.equal(extractBudget('சென்னை போக மூவாயிரரூபா plan'), 3000);
+  assert.equal(extractBudget('budget three thousand'), 3000);
+  assert.equal(extractBudget('room 1000 rupees'), null);
+  assert.equal(extractBudget('room 1000 rupees, total budget 3000'), 3000);
+});
+
+test('chat plans calculate specified group, duration and room allowance', async (t) => {
+  t.mock.method(Destination, 'find', () => query([place]));
+  t.mock.method(Package, 'find', () => query([]));
+  const result = await travelKnowledgeService.reply(
+    [
+      {
+        role: 'user',
+        text: 'From Chennai to Mamallapuram, budget 10000, 2 people, 2 days, room 1200 rupees',
+      },
+    ],
+    'en-IN',
+  );
+  assert.match(result.text, /2 traveler/);
+  assert.match(result.text, /stay ₹1,200/);
+  assert.match(result.text, /Day 1:/);
+  assert.match(result.text, /Day 2:/);
+  assert.match(result.text, /remaining/);
+  assert.ok(result.cards.every((card) => card.estimatedCost <= 10000));
+});
+
+test('impossible chat budgets do not invent affordable plans', async (t) => {
+  t.mock.method(Destination, 'find', () => query([place]));
+  t.mock.method(Package, 'find', () => query([]));
+  const result = await travelKnowledgeService.reply(
+    [{ role: 'user', text: 'Mamallapuram budget 10' }],
+    'en-IN',
+  );
+  assert.equal(result.cards.length, 0);
+  assert.match(result.text, /lowest planning estimate/);
+});

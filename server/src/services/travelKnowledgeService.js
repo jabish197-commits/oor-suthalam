@@ -1,6 +1,7 @@
 import { currentWeather } from './weatherService.js';
 import Destination from '../models/Destination.js';
 import Package from '../models/Package.js';
+import { buildItinerary } from './itineraryService.js';
 import { originCities } from '../data/tamilNaduCatalog.js';
 const tamilNames = {
   Alappuzha: 'ஆலப்புழா',
@@ -18,24 +19,67 @@ const tamilNames = {
 };
 import { suggestFromBudget, straightLineKm } from './budgetPlannerService.js';
 const money = (n) => `₹${Math.round(n).toLocaleString('en-IN')}`;
-export function extractBudget(text) {
+function normalizeAmounts(text) {
   let normalized = text.replace(/[௦-௯]/g, (c) => String('௦௧௨௩௪௫௬௭௮௯'.indexOf(c)));
   const words = {
+    'one thousand': '1000',
+    'two thousand': '2000',
+    'three thousand': '3000',
     'five thousand': '5000',
     'ten thousand': '10000',
     'twenty thousand': '20000',
     ஐந்தாயிரம்: '5000',
     பத்தாயிரம்: '10000',
     இருபதாயிரம்: '20000',
+    மூவாயிரம்: '3000',
+    மூவாயிர: '3000',
+    இரண்டாயிரம்: '2000',
+    ஆயிரம்: '1000',
   };
   for (const [word, value] of Object.entries(words))
     normalized = normalized.replaceAll(word, value);
+  return normalized;
+}
+const roomAmount =
+  /(?:room|hotel|stay|ரூம்|அறை|தங்குமிடம்)[^\d\n]{0,18}(?:₹\s*)?(\d[\d,]*)\s*(?:ரூபாய்|ரூபா|rupees|rs)?/i;
+export function extractTripPreferences(messages) {
+  const choices = {};
+  for (const message of messages.filter((m) => m.role === 'user').slice(-8)) {
+    const text = normalizeAmounts(message.text);
+    for (const name of Object.keys(originCities)) {
+      const tamilName = tamilNames[name];
+      if (
+        new RegExp(`from\\s+${name}\\b`, 'i').test(text) ||
+        (tamilName && new RegExp(`${tamilName}(?:யி|வி|ய|வி)?லிருந்து`).test(text))
+      )
+        choices.origin = name;
+    }
+    const group = text.match(
+      /(\d+)\s*(?:travelers?|travellers?|people|persons?|பேர்|பயணிகள்)/i,
+    );
+    const duration = text.match(/(\d+)\s*(?:days?|நாட்கள்|நாள்)/i);
+    const room = text.match(roomAmount);
+    if (group && Number(group[1]) >= 1 && Number(group[1]) <= 20)
+      choices.travelers = Number(group[1]);
+    if (duration && Number(duration[1]) >= 1 && Number(duration[1]) <= 4)
+      choices.days = Number(duration[1]);
+    if (
+      room &&
+      Number(room[1].replaceAll(',', '')) > 0 &&
+      Number(room[1].replaceAll(',', '')) <= 100000
+    )
+      choices.roomRate = Number(room[1].replaceAll(',', ''));
+  }
+  return choices;
+}
+export function extractBudget(text) {
+  let normalized = normalizeAmounts(text).replace(roomAmount, ' ');
   const hit =
     normalized.match(
       /(?:₹|budget|rs\.?|rupees|பட்ஜெட்|பட்ஜெட்டு|பட்ஜட்)[^\d]{0,30}(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?/i,
     ) ||
     normalized.match(
-      /(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?\s*(?:₹|rs\.?|rupees|ரூபாய்|பட்ஜெட்|budget)/i,
+      /(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?\s*(?:₹|rs\.?|rupees|ரூபாய்|ரூபா|பட்ஜெட்|budget)/i,
     );
   if (!hit) return null;
   const amount =
@@ -210,7 +254,9 @@ export const travelKnowledgeService = {
     const followUp =
       !listIntent &&
       budgetMessage &&
-      /includ|what|detail|அடங்க|என்ன|இதுல|அதுல|விவர/i.test(question);
+      /includ|what|detail|அடங்க|என்ன|இதுல|அதுல|விவர|travelers?|travellers?|people|days?|room|பேர்|நாள்|ரூம்|from /i.test(
+        question,
+      );
     const namedIntent =
       Object.keys(originCities).some((name) =>
         question.toLowerCase().includes(name.toLowerCase()),
@@ -224,7 +270,7 @@ export const travelKnowledgeService = {
       !followUp &&
       !catalogIntent &&
       !namedIntent &&
-      !/budget|பட்ஜெட்|பட்ஜட்/i.test(question)
+      !/budget|பட்ஜெட்|பட்ஜட்|room|ரூம்|தங்குமிடம்/i.test(question)
     )
       return null;
     const destinations = await Destination.find({
@@ -253,8 +299,10 @@ export const travelKnowledgeService = {
       .slice(0, -1)
       .reverse()
       .find((m) => m.role === 'user' && mentions(m.text).length);
+    const preferences = extractTripPreferences(messages);
     const chosen =
-      currentPlaces[0] ||
+      currentPlaces.find((p) => p.name !== preferences.origin) ||
+      (!preferences.origin ? currentPlaces[0] : null) ||
       (!listIntent && previousPlaceMessage
         ? mentions(previousPlaceMessage.text)[0]
         : null);
@@ -262,6 +310,7 @@ export const travelKnowledgeService = {
     if (budget) {
       const result = suggestFromBudget(destinations, {
         budget,
+        ...preferences,
         ...(chosen ? { destination: String(chosen._id) } : {}),
       });
       if (!result.plans.length)
@@ -278,9 +327,27 @@ export const travelKnowledgeService = {
       return {
         text:
           (tamil
-            ? `${money(budget)} பட்ஜெட்டுக்கு இந்தப் பயணங்கள் பொருந்துகின்றன. சென்னைலிருந்து ஒரு பயணி எனக் கணக்கிட்டுள்ளேன்.\n\n`
-            : `These trips fit ${money(budget)}. I assumed one traveler starting from Chennai.\n\n`) +
+            ? `${money(budget)} மொத்த group பட்ஜெட். ${preferences.origin || 'Chennai'}-லிருந்து ${preferences.travelers || 1} பயணி எனக் கணக்கிட்டுள்ளேன்.${preferences.roomRate ? ` அறைக்கு ஒரு இரவு ${money(preferences.roomRate)} என்ற உங்கள் அனுமானத்தைப் பயன்படுத்தினேன்.` : ''}\n\n`
+            : `These trips fit ${money(budget)}. ${preferences.origin || preferences.travelers ? `Calculated for ${preferences.travelers || 1} traveler(s) starting from ${preferences.origin || 'Chennai'}.` : 'I assumed one traveler starting from Chennai.'}${preferences.roomRate ? ` Your room allowance is ${money(preferences.roomRate)} per room per night (shared twin rooms).` : ''}\n\n`) +
           lines.join('\n\n') +
+          '\n\n' +
+          result.plans
+            .map(
+              (p) =>
+                `${p.destination.name}: ${money(p.remaining)} ${tamil ? 'மீதம்.' : 'remaining.'}\n${buildItinerary(
+                  p.destination,
+                  p.days,
+                  preferences.travelers || 1,
+                )
+                  .itinerary.map(
+                    (day) =>
+                      `${tamil ? 'நாள்' : 'Day'} ${day.day}: ${day.activities.join(', ')}`,
+                  )
+                  .join(
+                    '\n',
+                  )}${p.costs.stay === 0 ? (tamil ? '\nஒருநாள் பயணம்; இரவு தங்குமிடம் சேர்க்கப்படவில்லை.' : '\nDay trip; no overnight stay included.') : ''}`,
+            )
+            .join('\n\n') +
           (tamil
             ? '\n\nஇவை திட்டமிடும் மதிப்பீடுகள்; உறுதியான விலைகள் அல்லது booking அல்ல. Plan trip-ல் உங்கள் ஊர், பயணிகள் எண்ணிக்கையை மாற்றலாம்.'
             : '\n\nThese are planning estimates, not confirmed prices or bookings. Personalise the starting town and group size in Plan trip.'),
@@ -326,7 +393,7 @@ export const travelKnowledgeService = {
         ],
       };
     }
-    if (/plan|budget|திட்ட|பட்ஜெட்|பட்ஜட்/i.test(question))
+    if (/plan|budget|திட்ட|பட்ஜெட்|பட்ஜட்|room|ரூம்|தங்குமிடம்/i.test(question))
       return {
         text: tamil
           ? 'உங்கள் மொத்த பட்ஜெட்டை ரூபாயில் சொல்லுங்கள். உதாரணம்: “என் பட்ஜெட் ₹5000”. அதற்குள் பொருந்தும் இடம், நாட்கள், செலவுப் பிரிவைத் தருகிறேன்.'
