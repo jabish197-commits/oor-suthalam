@@ -76,10 +76,10 @@ export function extractBudget(text) {
   let normalized = normalizeAmounts(text).replace(roomAmount, ' ');
   const hit =
     normalized.match(
-      /(?:₹|budget|rs\.?|rupees|பட்ஜெட்|பட்ஜெட்டு|பட்ஜட்)[^\d]{0,30}(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?/i,
+      /(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?\s*(?:₹|rs\.?|rupees|ரூபாய்|ரூபா|பட்ஜெட்|budget)/i,
     ) ||
     normalized.match(
-      /(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?\s*(?:₹|rs\.?|rupees|ரூபாய்|ரூபா|பட்ஜெட்|budget)/i,
+      /(?:₹|budget|rs\.?|rupees|பட்ஜெட்|பட்ஜெட்டு|பட்ஜட்)[^\d]{0,30}(\d[\d,]*(?:\.\d+)?)\s*(k\b|thousand|ஆயிரம்|lakh|லட்சம்)?/i,
     );
   if (!hit) return null;
   const amount =

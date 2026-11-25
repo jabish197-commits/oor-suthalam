@@ -129,3 +129,7 @@ test('impossible chat budgets do not invent affordable plans', async (t) => {
   assert.equal(result.cards.length, 0);
   assert.match(result.text, /lowest planning estimate/);
 });
+
+test('Tamil budget before label is not confused with following traveler count', () => {
+  assert.equal(extractBudget('சென்னை செல்ல மூவாயிரரூபா பட்ஜெட், 1 பேர், 2 நாட்கள், room 1000 rupees'), 3000);
+});
