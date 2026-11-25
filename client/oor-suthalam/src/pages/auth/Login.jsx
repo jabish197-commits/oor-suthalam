@@ -56,7 +56,7 @@ export default function Login() {
 
         <label>
           Email
-          <input name="email" type="email" required autoComplete="email" />
+          <input name="email" type="email" required autoComplete="username" inputMode="email" autoCapitalize="none" autoCorrect="off" spellCheck={false} />
         </label>
 
         <PasswordField id="login-password" autoComplete="current-password" />

@@ -17,6 +17,9 @@ export default function PasswordField({ id, autoComplete, minLength, hint }) {
           minLength={minLength}
           maxLength={72}
           autoComplete={autoComplete}
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck={false}
           aria-describedby={hintId}
         />
         <button
